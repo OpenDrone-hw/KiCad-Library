@@ -9,8 +9,7 @@ for d in */; do
   echo "== $d"
   git -C "$d" submodule update --remote libs/KiCad-Library
   if ! git -C "$d" diff --quiet libs/KiCad-Library; then
-    git -C "$d" add libs/KiCad-Library
-    git -C "$d" commit -m "chore: bump KiCad-Library submodule pin"
+    git -C "$d" commit -m "chore: bump KiCad-Library submodule pin" -- libs/KiCad-Library
     echo "   pinned to $(git -C "$d/libs/KiCad-Library" rev-parse --short HEAD)"
   else
     echo "   already current"
