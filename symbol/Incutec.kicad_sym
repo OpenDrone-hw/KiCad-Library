@@ -83,7 +83,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C25744"
+		(property "LCSC" "C25744"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -237,7 +237,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C25879"
+		(property "LCSC" "C25879"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -369,7 +369,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C19842466"
+		(property "LCSC" "C19842466"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -993,7 +993,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C89334"
+		(property "LCSC" "C89334"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1173,7 +1173,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2651081"
+		(property "LCSC" "C2651081"
 			(at 0 -30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1352,7 +1352,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C152351"
+		(property "LCSC" "C152351"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3226,7 +3226,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C22458649"
+		(property "LCSC" "C22458649"
 			(at 0 -30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3958,7 +3958,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2875272"
+		(property "LCSC" "C2875272"
 			(at 0 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4324,7 +4324,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C574024"
+		(property "LCSC" "C574024"
 			(at 0 -11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5141,7 +5141,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 0.762 6.096 0)
+			(at 0 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5151,7 +5151,7 @@
 			)
 		)
 		(property "Value" "ESP32-C3FH4"
-			(at 0.762 3.556 0)
+			(at 0 -25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5193,7 +5193,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2858491"
+		(property "LCSC" "C2858491"
 			(at 0 -30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5206,8 +5206,8 @@
 		)
 		(symbol "ESP32-C3FH4_0_1"
 			(rectangle
-				(start -15.24 43.18)
-				(end 16.51 -31.75)
+				(start -16.51 22.86)
+				(end 16.51 -22.86)
 				(stroke
 					(width 0)
 					(type default)
@@ -5216,8 +5216,19 @@
 					(type background)
 				)
 			)
+			(circle
+				(center -15.24 21.59)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 			(pin unspecified line
-				(at -17.78 -26.67 0)
+				(at -19.05 17.78 0)
 				(length 2.54)
 				(name "LNA_IN"
 					(effects
@@ -5235,7 +5246,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 34.29 180)
+				(at -19.05 15.24 0)
 				(length 2.54)
 				(name "VDD3P3"
 					(effects
@@ -5253,7 +5264,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 36.83 180)
+				(at -19.05 12.7 0)
 				(length 2.54)
 				(name "VDD3P3"
 					(effects
@@ -5271,7 +5282,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 11.43 0)
+				(at -19.05 10.16 0)
 				(length 2.54)
 				(name "XTAL_32K_P"
 					(effects
@@ -5289,7 +5300,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 8.89 0)
+				(at -19.05 7.62 0)
 				(length 2.54)
 				(name "XTAL_32K_N"
 					(effects
@@ -5307,7 +5318,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -16.51 0)
+				(at -19.05 5.08 0)
 				(length 2.54)
 				(name "GPIO2"
 					(effects
@@ -5325,7 +5336,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -19.05 0)
+				(at -19.05 2.54 0)
 				(length 2.54)
 				(name "CHIP_EN"
 					(effects
@@ -5343,7 +5354,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 3.81 180)
+				(at -19.05 0 0)
 				(length 2.54)
 				(name "GPIO3"
 					(effects
@@ -5361,7 +5372,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 13.97 180)
+				(at -19.05 -2.54 0)
 				(length 2.54)
 				(name "MTMS"
 					(effects
@@ -5379,7 +5390,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 16.51 180)
+				(at -19.05 -5.08 0)
 				(length 2.54)
 				(name "MTDI"
 					(effects
@@ -5397,7 +5408,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 29.21 180)
+				(at -19.05 -7.62 0)
 				(length 2.54)
 				(name "VDD3P3_RTC"
 					(effects
@@ -5415,7 +5426,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 11.43 180)
+				(at -19.05 -10.16 0)
 				(length 2.54)
 				(name "MTCK"
 					(effects
@@ -5433,7 +5444,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 8.89 180)
+				(at -19.05 -12.7 0)
 				(length 2.54)
 				(name "MTDO"
 					(effects
@@ -5451,7 +5462,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 6.35 180)
+				(at -19.05 -15.24 0)
 				(length 2.54)
 				(name "GPIO8"
 					(effects
@@ -5469,7 +5480,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -27.94 180)
+				(at -19.05 -17.78 0)
 				(length 2.54)
 				(name "GPIO9"
 					(effects
@@ -5487,7 +5498,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -25.4 180)
+				(at -19.05 -20.32 0)
 				(length 2.54)
 				(name "GPIO10"
 					(effects
@@ -5505,7 +5516,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 26.67 180)
+				(at 19.05 -20.32 180)
 				(length 2.54)
 				(name "VDD3P3_CPU"
 					(effects
@@ -5523,7 +5534,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 31.75 180)
+				(at 19.05 -17.78 180)
 				(length 2.54)
 				(name "VDD_SPI"
 					(effects
@@ -5541,7 +5552,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -16.51 180)
+				(at 19.05 -15.24 180)
 				(length 2.54)
 				(name "SPIHD"
 					(effects
@@ -5559,7 +5570,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -13.97 180)
+				(at 19.05 -12.7 180)
 				(length 2.54)
 				(name "SPIWP"
 					(effects
@@ -5577,7 +5588,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -11.43 180)
+				(at 19.05 -10.16 180)
 				(length 2.54)
 				(name "SPICS0"
 					(effects
@@ -5595,7 +5606,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -8.89 180)
+				(at 19.05 -7.62 180)
 				(length 2.54)
 				(name "SPICLK"
 					(effects
@@ -5613,7 +5624,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -6.35 180)
+				(at 19.05 -5.08 180)
 				(length 2.54)
 				(name "SPID"
 					(effects
@@ -5631,7 +5642,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 19.05 -3.81 180)
+				(at 19.05 -2.54 180)
 				(length 2.54)
 				(name "SPIQ"
 					(effects
@@ -5649,7 +5660,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 0 0)
+				(at 19.05 0 180)
 				(length 2.54)
 				(name "GPIO18"
 					(effects
@@ -5667,7 +5678,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -2.54 0)
+				(at 19.05 2.54 180)
 				(length 2.54)
 				(name "GPIO19"
 					(effects
@@ -5685,7 +5696,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -11.43 0)
+				(at 19.05 5.08 180)
 				(length 2.54)
 				(name "U0RXD"
 					(effects
@@ -5703,7 +5714,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -13.97 0)
+				(at 19.05 7.62 180)
 				(length 2.54)
 				(name "U0TXD"
 					(effects
@@ -5721,7 +5732,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 24.13 0)
+				(at 19.05 10.16 180)
 				(length 2.54)
 				(name "XTAL_N"
 					(effects
@@ -5739,7 +5750,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 21.59 0)
+				(at 19.05 12.7 180)
 				(length 2.54)
 				(name "XTAL_P"
 					(effects
@@ -5757,7 +5768,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 36.83 0)
+				(at 19.05 15.24 180)
 				(length 2.54)
 				(name "VDDA"
 					(effects
@@ -5775,7 +5786,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 34.29 0)
+				(at 19.05 17.78 180)
 				(length 2.54)
 				(name "VDDA"
 					(effects
@@ -5793,7 +5804,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 1.27 -34.29 90)
+				(at 19.05 20.32 180)
 				(length 2.54)
 				(name "EP"
 					(effects
@@ -7562,7 +7573,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2934064"
+		(property "LCSC" "C2934064"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10530,7 +10541,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C7498014"
+		(property "LCSC" "C7498014"
 			(at -2.54 -11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12796,7 +12807,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C22434888"
+		(property "LCSC" "C22434888"
 			(at 0 -11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12964,7 +12975,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C22434896"
+		(property "LCSC" "C22434896"
 			(at 0 -11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13132,7 +13143,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C22381772"
+		(property "LCSC" "C22381772"
 			(at 0 -11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14213,7 +14224,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C19213"
+		(property "LCSC" "C19213"
 			(at 0 -26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20318,7 +20329,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C255353"
+		(property "LCSC" "C255353"
 			(at 0 -31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20706,7 +20717,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2151906"
+		(property "LCSC" "C2151906"
 			(at 0 -16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24819,7 +24830,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 10.922 21.082 0)
+			(at 0 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24829,7 +24840,7 @@
 			)
 		)
 		(property "Value" "SX1281IMLTRT"
-			(at 16.764 18.288 0)
+			(at 0 -29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24871,7 +24882,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2151551"
+		(property "LCSC" "C2151551"
 			(at 0 -24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24885,7 +24896,7 @@
 		(symbol "SX1281IMLTRT_0_1"
 			(rectangle
 				(start -15.24 16.51)
-				(end 15.24 -45.72)
+				(end 15.24 -31.75)
 				(stroke
 					(width 0)
 					(type default)
@@ -24894,8 +24905,19 @@
 					(type background)
 				)
 			)
+			(circle
+				(center -15.24 -50.8)
+				(radius 0.38)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
 			(pin unspecified line
-				(at 17.78 13.97 180)
+				(at -17.78 -13.97 0)
 				(length 2.54)
 				(name "VR_PA"
 					(effects
@@ -24913,7 +24935,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 13.97 0)
+				(at -17.78 11.43 0)
 				(length 2.54)
 				(name "VDD_IN"
 					(effects
@@ -24931,7 +24953,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -11.43 180)
+				(at 17.78 13.97 180)
 				(length 2.54)
 				(name "NRESET"
 					(effects
@@ -24949,7 +24971,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -34.29 0)
+				(at 17.78 11.43 180)
 				(length 2.54)
 				(name "XTA"
 					(effects
@@ -24967,7 +24989,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -36.83 0)
+				(at -17.78 -5.08 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -24985,7 +25007,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -39.37 0)
+				(at 17.78 8.89 180)
 				(length 2.54)
 				(name "XTB"
 					(effects
@@ -25003,7 +25025,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -8.89 180)
+				(at 17.78 6.35 180)
 				(length 2.54)
 				(name "BUSY"
 					(effects
@@ -25021,7 +25043,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 3.81 180)
+				(at 17.78 -3.81 180)
 				(length 2.54)
 				(name "DIO1"
 					(effects
@@ -25039,7 +25061,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -24.13 0)
+				(at 17.78 -1.27 180)
 				(length 2.54)
 				(name "DIO2"
 					(effects
@@ -25057,7 +25079,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 -26.67 0)
+				(at 17.78 1.27 180)
 				(length 2.54)
 				(name "DIO3"
 					(effects
@@ -25075,7 +25097,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -3.81 19.05 270)
+				(at -17.78 13.97 0)
 				(length 2.54)
 				(name "VBAT_IO"
 					(effects
@@ -25093,7 +25115,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 3.81 0)
+				(at -17.78 -19.05 0)
 				(length 2.54)
 				(name "DCC_FB"
 					(effects
@@ -25111,7 +25133,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 1.27 -48.26 90)
+				(at -17.78 -7.62 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -25129,7 +25151,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -17.78 1.27 0)
+				(at -17.78 -21.59 0)
 				(length 2.54)
 				(name "DCC_SW"
 					(effects
@@ -25147,7 +25169,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -1.27 19.05 270)
+				(at -17.78 8.89 0)
 				(length 2.54)
 				(name "VBAT"
 					(effects
@@ -25165,7 +25187,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -6.35 180)
+				(at 17.78 -16.51 180)
 				(length 2.54)
 				(name "MISO_TX"
 					(effects
@@ -25183,7 +25205,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -3.81 180)
+				(at 17.78 -13.97 180)
 				(length 2.54)
 				(name "MOSI_RX"
 					(effects
@@ -25201,7 +25223,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -1.27 180)
+				(at 17.78 -11.43 180)
 				(length 2.54)
 				(name "SCK_RTSN"
 					(effects
@@ -25219,7 +25241,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 1.27 180)
+				(at 17.78 -8.89 180)
 				(length 2.54)
 				(name "NSS_CTS"
 					(effects
@@ -25237,7 +25259,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -36.83 180)
+				(at -17.78 5.08 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -25255,7 +25277,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -34.29 180)
+				(at -17.78 2.54 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -25273,7 +25295,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -31.75 180)
+				(at 17.78 -21.59 180)
 				(length 2.54)
 				(name "RFIO"
 					(effects
@@ -25291,7 +25313,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -29.21 180)
+				(at -17.78 0 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -25309,7 +25331,7 @@
 				)
 			)
 			(pin unspecified line
-				(at 17.78 -26.67 180)
+				(at -17.78 -2.54 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -25327,7 +25349,7 @@
 				)
 			)
 			(pin unspecified line
-				(at -1.27 -48.26 90)
+				(at -17.78 -10.16 0)
 				(length 2.54)
 				(name "EP"
 					(effects
@@ -27015,7 +27037,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2861882"
+		(property "LCSC" "C2861882"
 			(at 0 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28142,7 +28164,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2071721"
+		(property "LCSC" "C2071721"
 			(at 0 -20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28357,7 +28379,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C2976675"
+		(property "LCSC" "C2976675"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29973,7 +29995,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C88374"
+		(property "LCSC" "C88374"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32055,7 +32077,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C5349953"
+		(property "LCSC" "C5349953"
 			(at 0 -19.05 0)
 			(show_name no)
 			(do_not_autoplace no)

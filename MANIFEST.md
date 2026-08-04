@@ -41,17 +41,18 @@ with the exceptions below.
 Ten RF symbols existed in both canon-RF and the FC lib. Nine differ only in the
 LCSC property name (`LCSC Part` in canon vs `LCSC` in FC). Kept canon.
 
-Two have real drawing differences (FC redrew them in Jun 2026: centered
-properties, changed pin label geometry; electrically equivalent):
+Two had real drawing differences (FC redrew them in Jun 2026). Pin-for-pin
+equality verified (numbers, names, electrical types), so the newer FC drawings
+were adopted:
 
-- `ESP32-C3FH4`: kept canon-RF drawing, FC alternate exists
-- `SX1281IMLTRT`: kept canon-RF drawing, FC alternate exists
+- `ESP32-C3FH4`: FC redraw adopted (33 pins verified identical)
+- `SX1281IMLTRT`: FC redraw adopted (25 pins verified identical)
 
 `LMR51420YDDCR` existed in ESC and FC pools; kept FC (newer).
 
-Follow-up: unify the LCSC property name across all 105 symbols in one pass
-(pick one of `LCSC` / `LCSC Part` / `LCSC Part #` based on what the BOM tooling
-and Fabrication Toolkit expect).
+Resolved: LCSC property unified to bare `LCSC` across the library (22 symbols
+renamed from `LCSC Part`). Basis: 929 vs 412 usage in existing schematics, the
+bom skill exports `LCSC`, Fabrication Toolkit accepts it.
 
 ## Footprint collisions (kept newest by mtime, all logged)
 
