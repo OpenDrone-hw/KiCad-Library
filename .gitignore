@@ -1,5 +1,21 @@
+# macOS
 .DS_Store
-fp-info-cache
+
+# KiCad backup and autosave
+*-backups/
 *.bak
+_autosave-*
+*~
+\#auto_saved_files#
+
+# KiCad generated/local
 *.lck
+fp-info-cache
+
+# Python
 __pycache__/
+*.pyc
+
+# Claude
+.claude/
+CLAUDE.md
