@@ -1,6 +1,6 @@
 #!/bin/sh
 # Bump the KiCad-Library submodule pin in every sibling repo that uses it.
-# Run from the directory containing the hardware repos (e.g. ~/OpenDrone).
+# Run from the directory containing the hardware repos (e.g. ~/OpenDrone/hardware).
 set -e
 for d in */; do
   d=${d%/}

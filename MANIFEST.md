@@ -1,22 +1,27 @@
 # Merge manifest, 2026-08-04
 
 How `Incutec.kicad_sym` (105 symbols) and `Incutec.pretty` (195 footprints) were
-assembled from the per-project libraries in the OpenDrone working dir. Recorded so
-every collision decision is auditable and reversible.
+assembled from the per-project board libraries. Recorded so every collision
+decision is auditable and reversible.
+
+Source paths below use current repo names. At merge time some repos carried their
+pre-2026-08-04 names (`4in1` is now OpenESC-30x30, `4in1-mini` is now
+OpenESC-20x20). AntAIO lives outside the hardware working dir (`~/AntAIO`,
+GitHub Just4Stan/AntAIO).
 
 ## Sources
 
 | Pool | Source | Contributed |
 |---|---|---|
-| canon-RF | this repo's pre-merge `Incutec.kicad_sym` (built Jul 2026 from OpenRX lineage) | 21 symbols |
+| canon-RF | this repo's pre-merge `Incutec.kicad_sym` (built Jun 2026 from OpenRX lineage) | 21 symbols |
 | FC | `OpenFC-Lite/hardware/lib.kicad_sym` + `lib.pretty` | 83 symbols, 84 footprints |
-| ESC | `4in1-mini/hardware/components.kicad_sym` + `4in1ESC.pretty` | 7 symbols, 22 footprints |
-| ESC30 | `4in1/hardware/4in1ESC-30x30.pretty` (footprints only) | 2 extra footprints |
-| RF | `OpenRX/shared/libs/OpenRX-Shared.pretty` + `.3dshapes` | 23 footprints |
+| ESC | `OpenESC-20x20/hardware/components.kicad_sym` + `4in1ESC.pretty` | 7 symbols, 22 footprints |
+| ESC30 | `OpenESC-30x30/hardware/4in1ESC-30x30.pretty` (footprints only) | 2 extra footprints |
+| RF | `OpenRX/shared/libs/OpenRX-Shared.pretty` + `.3dshapes` | 22 footprints |
 | RF+ | `AntAIO/shared/libs/OpenRX-Shared.pretty` (6 extra footprints) | DFN-8, IND-SMD, LGA-14, SOD-923, VQFN-15, WSON-8 |
 | whoop | `OpenAIO-Whoop/hardware/whoop.pretty` (Bluejay ESC parts) | 13 footprints |
 | sourced | `Charger/hardware/libs/sourced.kicad_sym` + `sourced.pretty` | 5 symbols, 66 footprints |
-| kicad-std | KiCad 10 bundled `Package_DFN_QFN` | 1 footprint (QFN-32-1EP 5x5) + 8 passive 3D models |
+| kicad-std | KiCad 10 bundled `Package_DFN_QFN` | 1 footprint (QFN-32-1EP 5x5) with its 3D model + 7 passive 3D models |
 
 All `Footprint` properties rewritten to the `Incutec:` nickname. All 3D model paths
 rewritten to `${KIPRJMOD}/../libs/KiCad-Library/3dmodel/<file>`.
@@ -68,7 +73,7 @@ FC evolved several RF-family footprints after they were copied (example:
   WSON-8_L2.0-W2.0-P0.50-TL-EP, WSON-8_L6.0-W5.0-P1.27-BL-EP,
   SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL, SOT-23-3/5 variants (over Charger sourced)
 - RF (OpenRX) version won: QFN-12_EP_2x2_Pitch0.5mm, QFN-16_L3.0-W3.0-P0.50-BL-EP1.7
-- ESC version won: JST_SM08B-SRSS-TB (over 4in1's copy)
+- ESC version won: JST_SM08B-SRSS-TB (over OpenESC-30x30's copy)
 - whoop version won: X2SON-4_L1.0-W1.0-P0.65-TL-EP
 - sourced version won: SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 
@@ -83,9 +88,11 @@ local lib, check this list first.
 
 ## Not merged (deliberate)
 
-- `OpenFC-Lite-rev1/hardware/lib.kicad_sym` (82 syms): legacy rev, superseded
-- `4in1-mini/20x20-ESC-QC/ESC-QC.*`: QC fixture tooling, stays project-local
-- `Incutec-Business-Card/IBCard/lib`: art project, empty symbol lib
+- `OpenFC-Lite-rev1/hardware/lib.kicad_sym` (82 syms): legacy rev, superseded;
+  repo now archived at `~/Archive/OpenFC-Lite-rev1`
+- `OpenESC-20x20/20x20-ESC-QC/ESC-QC.*`: QC fixture tooling, stays project-local
+- `Incutec-Business-Card/IBCard/lib`: art project, empty symbol lib; repo now
+  archived at `~/Archive/Incutec-Business-Card`
 - `OpenAIO/hardware/imports.kicad_sym`, `OpenAIO-Whoop/hardware/whoop.kicad_sym`:
   empty symbol files
 - Frozen local libs in each repo: left untouched by design (see README rules)
