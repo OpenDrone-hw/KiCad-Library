@@ -4,7 +4,7 @@ Shared KiCad library for the incutec OpenDrone hardware line. One symbol library
 
 ## Status
 
-**Live**, canonical since 2026-08-04, assembled by merging the per-project board libraries. Full source mapping, collision decisions, and validation record: [MANIFEST.md](MANIFEST.md). Revision history: [CHANGELOG.md](CHANGELOG.md).
+**Live**, canonical since 2026-08-04, assembled by merging the per-project board libraries. Full source mapping, collision decisions, and validation record: [MANIFEST.md](MANIFEST.md).
 
 ## Repository layout
 
@@ -88,3 +88,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 Licensed under [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt), the same license as the boards. See [LICENSE](LICENSE).
+
+## Revisions
+
+- **2026-08-04**: library assembled by merging the per-project board libraries: 105 symbols, 195 footprints, full 3D model set. LCSC property unified to `LCSC`, verified FC redraws adopted (`ESP32-C3FH4`, `SX1281IMLTRT`). Merge record in [MANIFEST.md](MANIFEST.md). `tools/bump-all.sh` fixed to commit via pathspec.
+- **2026-06-29**: initial `Incutec.kicad_sym` from the OpenRX lineage (21 symbols).
