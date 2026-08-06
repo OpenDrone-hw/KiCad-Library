@@ -12,7 +12,7 @@ Shared KiCad library for the incutec OpenDrone hardware line. One symbol library
 |---|---|
 | `symbol/Incutec.kicad_sym` | 105 symbols, one library, nickname `Incutec` |
 | `footprint/Incutec.pretty/` | 195 footprints |
-| `3dmodel/` | 336 model files (175 STEP, 161 WRL) referenced by the footprints |
+| `3dmodel/` | 336 model files (175 STEP, 161 WRL). Footprints reference the WRL, plus 19 STEP; the rest of the STEP set is the MCAD counterpart |
 | `tools/bump-all.sh` | Re-pins the submodule in every consuming repo |
 
 ## Usage
@@ -61,7 +61,7 @@ All current repos follow this. Keep new ones on the same shape.
 
 ## Updating the library
 
-1. Edit here with the KiCad symbol/footprint editors pointed at this checkout, or scripted (kicad-skip, pcbnew API). Never text-edit `.kicad_*` files.
+1. Edit here, following [CONTRIBUTING.md](CONTRIBUTING.md).
 2. Commit, push, PR to `main`.
 3. Bump the pin in consuming repos: run `tools/bump-all.sh` from the directory that contains the hardware repos. It updates and commits every submodule pin.
 
@@ -70,19 +70,11 @@ Repos always build against their pinned commit. Nothing changes under a board un
 ## Rules
 
 - New parts go here and only here. Do not create new project-local symbol or footprint files in board repos.
-otes).
-- Footprint refs inside symbols use the `Incutec:` nickname.
-- The LCSC part number property is named `LCSC`, nothing else.
-- Validate before pushing:
-
-```sh
-kicad-cli sym export svg symbol/Incutec.kicad_sym -o /tmp/symcheck
-kicad-cli fp upgrade /tmp/fpcheck   # on a copy of footprint/Incutec.pretty
-```
+- Existing boards still carry frozen pre-consolidation local libs (`OpenRX-Shared`, `lib`, `components`, `4in1ESC*`, `whoop`, `sourced`). Those are the historical record for already-routed boards. Do not add to them. Migrate a board to `Incutec:` references only during a deliberate revision pass, with ERC/DRC before and after.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Authoring rules for library edits (editing method, naming, property names, pre-PR validation) are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
