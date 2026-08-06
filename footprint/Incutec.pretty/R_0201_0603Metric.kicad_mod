@@ -1,7 +1,7 @@
 (footprint "R_0201_0603Metric"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 	(tags "resistor")
@@ -66,25 +66,16 @@
 		)
 	)
 	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
-		(start 0.7 0.35)
-		(end -0.7 0.35)
+		(start -0.7 -0.35)
+		(end 0.7 -0.35)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "fc16bce2-7731-49ee-b5bf-7b6ef96e4819")
-	)
-	(fp_line
-		(start 0.7 -0.35)
-		(end 0.7 0.35)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "d9f306da-43a9-477b-8f73-4fa9404894c1")
+		(uuid "e199e398-ddfc-4d7e-b083-4a29832bae4c")
 	)
 	(fp_line
 		(start -0.7 0.35)
@@ -97,34 +88,34 @@
 		(uuid "2d8600dd-9b78-4c44-bf9e-18ee9c362107")
 	)
 	(fp_line
-		(start -0.7 -0.35)
-		(end 0.7 -0.35)
+		(start 0.7 -0.35)
+		(end 0.7 0.35)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "e199e398-ddfc-4d7e-b083-4a29832bae4c")
+		(uuid "d9f306da-43a9-477b-8f73-4fa9404894c1")
 	)
 	(fp_line
-		(start 0.3 0.15)
-		(end -0.3 0.15)
+		(start 0.7 0.35)
+		(end -0.7 0.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fc16bce2-7731-49ee-b5bf-7b6ef96e4819")
+	)
+	(fp_line
+		(start -0.3 -0.15)
+		(end 0.3 -0.15)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "a6853481-9368-45cb-a470-4f7fb4a8495b")
-	)
-	(fp_line
-		(start 0.3 -0.15)
-		(end 0.3 0.15)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-		(uuid "47d85037-599d-49cb-9c6d-58adbd046d2c")
+		(uuid "f3374c35-ec8d-4b2a-9169-a55521fc3324")
 	)
 	(fp_line
 		(start -0.3 0.15)
@@ -137,14 +128,24 @@
 		(uuid "681bf769-8015-496d-8431-cd05b05698b5")
 	)
 	(fp_line
-		(start -0.3 -0.15)
-		(end 0.3 -0.15)
+		(start 0.3 -0.15)
+		(end 0.3 0.15)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "f3374c35-ec8d-4b2a-9169-a55521fc3324")
+		(uuid "47d85037-599d-49cb-9c6d-58adbd046d2c")
+	)
+	(fp_line
+		(start 0.3 0.15)
+		(end -0.3 0.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a6853481-9368-45cb-a470-4f7fb4a8495b")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 -0.68 0)

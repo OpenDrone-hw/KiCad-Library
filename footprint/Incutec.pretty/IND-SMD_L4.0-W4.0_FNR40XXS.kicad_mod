@@ -1,27 +1,169 @@
-(module easyeda2kicad:IND-SMD_L4.0-W4.0_FNR40XXS (layer F.Cu) (tedit 5DC5F6A4)
+(footprint "IND-SMD_L4.0-W4.0_FNR40XXS"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "168c0c07-3cc3-4a93-95f4-35578681414b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "IND-SMD_L4.0-W4.0_FNR40XXS"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "c6c91848-ee31-4a6b-960b-fe099113151b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "56040cbd-8a88-4917-a41c-6a02274059db")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "04081077-1bc3-42ce-a0b9-fe0f412297d9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C167836"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40f70a2c-0a12-4e2b-a537-0b0024ed69ba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
 	(attr smd)
-	(fp_text reference REF** (at 0.000 -4.000) (layer F.SilkS)
-		(effects (font (size 1 1) (thickness 0.15)))
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -2.1)
+		(end 2 -2.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2c23af9b-c0d0-4442-86c6-e7e288b5fcb8")
 	)
-	(fp_text value IND-SMD_L4.0-W4.0_FNR40XXS (at 0.000 4.000) (layer F.Fab)
-		(effects (font (size 1 1) (thickness 0.15)))
+	(fp_line
+		(start -2 2.1)
+		(end 2 2.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1e51b258-f824-444a-9c24-bdd1de920710")
 	)
-	(fp_text user %R (at 0 0) (layer F.Fab)
-		(effects (font (size 1 1) (thickness 0.15)))
+	(fp_circle
+		(center -2 2)
+		(end -1.97 2)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f012ce66-f30b-497a-b347-c6f2884e9d30")
 	)
-	(property "LCSC Part" "C167836")
-	(fp_line (start -2.00 -2.10) (end 2.00 -2.10) (layer F.SilkS) (width 0.20))
-	(fp_line (start -2.00 2.10) (end 2.00 2.10) (layer F.SilkS) (width 0.20))
-	(pad 1 smd rect (at -1.50 0.00 0.00) (size 1.600 3.900) (layers F.Cu F.Paste F.Mask))
-	(pad 2 smd rect (at 1.50 0.00 0.00) (size 1.600 3.900) (layers F.Cu F.Paste F.Mask))
-	(fp_circle (center -2.00 2.00) (end -1.97 2.00) (layer F.SilkS) (width 0.06))
-	(fp_line (start -2.00 2.00) (end -2.00 -2.00) (layer F.CrtYd) (width 0.05))
-	(fp_line (start -2.00 -2.00) (end 2.00 -2.00) (layer F.CrtYd) (width 0.05))
-	(fp_line (start 2.00 -2.00) (end 2.00 2.00) (layer F.CrtYd) (width 0.05))
-	(fp_line (start 2.00 2.00) (end -2.00 2.00) (layer F.CrtYd) (width 0.05))
+	(fp_line
+		(start -2 -2)
+		(end 2 -2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8cac00c5-c768-4010-b093-b46fd5d523b7")
+	)
+	(fp_line
+		(start -2 2)
+		(end -2 -2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7cf32b76-018d-46b3-8545-8729ad9e00d1")
+	)
+	(fp_line
+		(start 2 -2)
+		(end 2 2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f1758166-0842-451e-bbc2-7495f2cac196")
+	)
+	(fp_line
+		(start 2 2)
+		(end -2 2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2ed253b1-e6b1-4d85-9053-5426dc29826f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "1ce0120d-4e7f-4a8d-9d96-f082de87128d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.5 0)
+		(size 1.6 3.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "525702c7-4690-42ba-bb65-f1e019b7b8da")
+	)
+	(pad "2" smd rect
+		(at 1.5 0)
+		(size 1.6 3.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "91adb1a0-b412-4d8e-b3bd-290a940eb890")
+	)
+	(embedded_fonts no)
 	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/IND-SMD_L4.0-W4.0-H2.6_FNR40XXS.wrl"
-		(offset (xyz 0.000 0.000 0.000))
-		(scale (xyz 1 1 1))
-		(rotate (xyz 0 0 90))
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
 	)
 )

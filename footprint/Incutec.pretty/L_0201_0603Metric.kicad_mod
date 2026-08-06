@@ -1,7 +1,7 @@
 (footprint "L_0201_0603Metric"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "Inductor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 	(tags "inductor")
@@ -66,25 +66,16 @@
 		)
 	)
 	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
-		(start 0.7 0.35)
-		(end -0.7 0.35)
+		(start -0.7 -0.35)
+		(end 0.7 -0.35)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "241f10a0-56bb-430a-a912-9a1dd4bf2898")
-	)
-	(fp_line
-		(start 0.7 -0.35)
-		(end 0.7 0.35)
-		(stroke
-			(width 0.05)
-			(type solid)
-		)
-		(layer "F.CrtYd")
-		(uuid "aefd9fbc-4dd0-4f82-8f12-a9a8a8939a6a")
+		(uuid "18f0c20b-6c7f-48a0-b148-028b0db9b16b")
 	)
 	(fp_line
 		(start -0.7 0.35)
@@ -97,34 +88,34 @@
 		(uuid "fd33690e-e6ad-4029-ae38-5efc4d6276aa")
 	)
 	(fp_line
-		(start -0.7 -0.35)
-		(end 0.7 -0.35)
+		(start 0.7 -0.35)
+		(end 0.7 0.35)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "18f0c20b-6c7f-48a0-b148-028b0db9b16b")
+		(uuid "aefd9fbc-4dd0-4f82-8f12-a9a8a8939a6a")
 	)
 	(fp_line
-		(start 0.3 0.15)
-		(end -0.3 0.15)
+		(start 0.7 0.35)
+		(end -0.7 0.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "241f10a0-56bb-430a-a912-9a1dd4bf2898")
+	)
+	(fp_line
+		(start -0.3 -0.15)
+		(end 0.3 -0.15)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "80053b54-8b57-4212-a6da-be8d9ef6016e")
-	)
-	(fp_line
-		(start 0.3 -0.15)
-		(end 0.3 0.15)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-		(uuid "672cfe96-cb20-4837-808e-b156882efbe3")
+		(uuid "955481fb-7b90-48d3-b1ee-ade3ef8f43a5")
 	)
 	(fp_line
 		(start -0.3 0.15)
@@ -137,14 +128,24 @@
 		(uuid "18b57c3a-75b2-4217-b42b-3415ea54576a")
 	)
 	(fp_line
-		(start -0.3 -0.15)
-		(end 0.3 -0.15)
+		(start 0.3 -0.15)
+		(end 0.3 0.15)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "955481fb-7b90-48d3-b1ee-ade3ef8f43a5")
+		(uuid "672cfe96-cb20-4837-808e-b156882efbe3")
+	)
+	(fp_line
+		(start 0.3 0.15)
+		(end -0.3 0.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "80053b54-8b57-4212-a6da-be8d9ef6016e")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 -0.68 0)
