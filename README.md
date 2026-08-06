@@ -1,10 +1,23 @@
 # KiCad-Library
 
-Shared KiCad library for the incutec OpenDrone hardware line. One symbol library, one footprint library, and a full 3D model set cover every product family: OpenRX receivers, OpenFC flight controllers, OpenESC 4-in-1 ESCs, OpenAIO, Whoop, Charger. Board repos consume it as a pinned git submodule through project-local lib tables, so a library edit never silently alters a released design.
+Reference library for the incutec OpenDrone hardware line: a semi-maintained
+mirror of parts we have already used and stocked. Its job is lookup, not
+enforcement. If a part is here, we have shipped it on a board, so it is
+already sourced and footprinted and reusing it is cheaper than drawing
+something new.
+
+Local project libraries are the working default for board design. Nothing
+requires a part to live here first.
 
 ## Status
 
-**Live**, canonical since 2026-08-04, assembled by merging the per-project board libraries.
+**Live**, mirror role since 2026-08-06. Assembled 2026-08-04 from the
+per-project libraries; footprints and symbols upgraded to KiCad 10 format
+from Bastian's branch 2026-08-06.
+
+Open question, being settled in person: whether board repos keep the submodule
+copy or point at one shared clone through an environment variable. No board
+currently references `Incutec:`, so nothing depends on the answer yet.
 
 ## Repository layout
 
@@ -14,6 +27,8 @@ Shared KiCad library for the incutec OpenDrone hardware line. One symbol library
 | `footprint/Incutec.pretty/` | 195 footprints |
 | `3dmodel/` | 336 model files (175 STEP, 161 WRL). Footprints reference the WRL, plus 19 STEP; the rest of the STEP set is the MCAD counterpart |
 | `tools/bump-all.sh` | Re-pins the submodule in every consuming repo |
+| `PARTS-USED.md` | Every LCSC part used on a board, and which boards use it |
+| `tools/build-parts-index.py` | Regenerates `PARTS-USED.md` from the schematics |
 
 ## Usage
 
