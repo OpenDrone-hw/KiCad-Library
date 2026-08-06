@@ -14,7 +14,7 @@ Shared KiCad library for the incutec OpenDrone hardware line. One symbol library
 | `footprint/Incutec.pretty/` | 195 footprints |
 | `3dmodel/` | 336 model files (175 STEP, 161 WRL) referenced by the footprints |
 | `tools/bump-all.sh` | Re-pins the submodule in every consuming repo |
-| `MANIFEST.md` | Merge provenance: sources, collisions, validation |
+ |
 
 ## Usage
 
@@ -71,7 +71,7 @@ Repos always build against their pinned commit. Nothing changes under a board un
 ## Rules
 
 - New parts go here and only here. Do not create new project-local symbol or footprint files in board repos.
-- Existing boards still carry frozen pre-consolidation local libs (`OpenRX-Shared`, `lib`, `components`, `4in1ESC*`, `whoop`, `sourced`). Those are historical record for already-routed boards. Do not add to them. Migrate a board to `Incutec:` references only during a deliberate revision pass, with ERC/DRC before and after (see [MANIFEST.md](MANIFEST.md) for drift notes).
+otes).
 - Footprint refs inside symbols use the `Incutec:` nickname.
 - The LCSC part number property is named `LCSC`, nothing else.
 - Validate before pushing:
