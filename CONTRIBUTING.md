@@ -8,6 +8,17 @@ git clone https://github.com/incutec-hw/KiCad-Library.git
 
 No submodules here; this repo is the submodule the board repos pin. Use KiCad 10.
 
+## What belongs here
+
+Parts we have actually used on a board. This library mirrors reality, it does
+not lead it. Draw parts in the board repo first; promote a part here once the
+board is real, so the library stays a trustworthy answer to "have we used this
+before".
+
+Do not add a symbol for every value of a passive. If you need to know which
+capacitors or resistors we already use, read [PARTS-USED.md](PARTS-USED.md),
+which is generated from the board schematics and needs no library symbol.
+
 ## Workflow
 
 - `main` is protected. Work on a feature branch and open a pull request.
