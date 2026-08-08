@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-git clone https://github.com/incutec-hw/KiCad-Library.git
+git clone https://github.com/OpenDrone-hw/KiCad-Library.git
 ```
 
 No submodules here; this repo is the submodule the board repos pin. Use KiCad 10.

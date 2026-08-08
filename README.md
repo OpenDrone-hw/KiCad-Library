@@ -36,7 +36,7 @@ Git submodule plus project-local lib tables. No global libraries. Every consumin
 
 ```text
 <repo>/
-├─ .gitmodules                  # pins incutec-hw/KiCad-Library
+├─ .gitmodules                  # pins OpenDrone-hw/KiCad-Library
 ├─ libs/KiCad-Library/          # the submodule
 └─ hardware/                    # KiCad project, one level below repo root
    ├─ <board>.kicad_pro
@@ -47,7 +47,7 @@ Git submodule plus project-local lib tables. No global libraries. Every consumin
 Add it to a repo:
 
 ```sh
-git submodule add https://github.com/incutec-hw/KiCad-Library.git libs/KiCad-Library
+git submodule add https://github.com/OpenDrone-hw/KiCad-Library.git libs/KiCad-Library
 ```
 
 Project-local table entries (KiCad: Preferences -> Manage Symbol/Footprint Libraries -> Project Specific, or edit the tables directly):
