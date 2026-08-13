@@ -1,0 +1,11 @@
+{
+  "Charger": "status-planned",
+  "OpenAIO": "status-planned",
+  "OpenAIO-Whoop": "status-planned",
+  "OpenESC-20x20": "status-alpha",
+  "OpenESC-30x30": "status-alpha",
+  "OpenFC-Lite": "status-alpha",
+  "OpenFC-Lite-Mini": "status-alpha",
+  "OpenFrame": "status-in-progress",
+  "OpenRX": "status-alpha"
+}

@@ -1,20 +1,24 @@
 # Parts used
 
-Every component with an LCSC code used on an OpenDrone board, generated
-from the board schematics. A part listed here is already sourced and
-footprinted, so reuse is cheaper than drawing something new.
+Every component that has actually been manufactured on an OpenDrone board.
+
+A part is listed here only if it is used on a board whose repo is at
+`status-alpha` or beyond, which means it has been through a real assembly
+run: sourced, footprinted, and it survived a reflow oven. Parts that exist
+only on a planned or in-progress design are deliberately absent, however
+good they look on paper. When a board reaches alpha, its parts join.
 
 Regenerate: `python3 tools/build-parts-index.py`
 
-214 distinct parts across 8 boards.
+118 parts across 5 manufactured boards: OpenESC-20x20, OpenESC-30x30, OpenFC-Lite, OpenFC-Lite-Mini, OpenRX.
 
 | LCSC | Value | MPN | Footprint | Boards |
 |---|---|---|---|---|
 | C106225 | 10k | RC0201FR-0710KL | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenFC-Lite, OpenFC-Lite-Mini, OpenRX |
-| C105226 | 22uF | CL05A226MQ5QUNC | C_0402_1005Metric | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenFC-Lite, OpenFC-Lite-Mini |
 | C160407 | SM08B-SRSS-TB | SM08B-SRSS-TB(LF)(SN) | JST_SM08B-SRSS-TB | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenFC-Lite, OpenFC-Lite-Mini |
 | C270365 | 10k | 0201WMF1001TEE | R0201 | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenFC-Lite, OpenFC-Lite-Mini |
 | C2762594 | 22uF | CL10A226MO7JZNC | C_0603_1608Metric | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenFC-Lite, OpenFC-Lite-Mini |
+| C105226 | 22uF | CL05A226MQ5QUNC | C_0402_1005Metric | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenFC-Lite |
 | C23733 | 4.7uF | CL05A475MP5NRNC | C_0402_1005Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini, OpenRX |
 | C274342 | 10k |  | R0201 | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30, OpenRX |
 | C2976675 | TS2306A 240GF MSM 9_C2976675 | TS2306A 240gf MSM 9 | SW-SMD_4P-L3.0-W2.0-P0.85-LS3.5 | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini, OpenRX |
@@ -31,25 +35,19 @@ Regenerate: `python3 tools/build-parts-index.py`
 | C274878 | 75R | RC0201FR-0775RL | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C2765098 | AT32F421G8U7 | AT32F421G8U7 | QFN-28_L4.0-W4.0-P0.40-TL-EP2.4 | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30 |
 | C2849580 | AP1606 | AP1606 | DFN-3L_L1.0-W0.6-P0.65-BR | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
-| C28646385 | RB161QS-40_C28646385 | RB161QS-40 | SOD-882_L1.0-W0.6-RD | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C307331 | 100nF | CL05B104KB54PNC | C_0402_WIDE | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30 |
-| C320695 | 13.7k | RC-01W1372FT | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
-| C3235557 | TPS2116DRLR | TPS2116DRLR | SOT-583-8_L2.1-W1.6-P0.50-LS1.6-BL | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C37635340 | XTM25012000JT00351001 | XTM25012000JT00351001 | CRYSTAL-SMD_4P-L2.5-W2.0-BL-A | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C39846837 | XRTC303020D4R7MBCA | XRTC303020D4R7MBCA | IND-SMD_L3.0-W3.0_AFE303020S | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C41414478 | NSG2065Q | NSG2065Q | QFN-24_L4.0-W4.0-P0.50-TL-EP2.8 | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30 |
 | C42411119 | AOTA-B201610S3R3-101-T | AOTA-B201610S3R3-101-T | IND-SMD_L2.0-W1.6_AOTA-B201610S3R3-101-T | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C459538 | DMN1150UFB-7B |  | DFN-3L_L1.0-W0.6-P0.65-BR | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C473048 | 10k |  | R0201 | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30 |
-| C473053 | 39k | 0201WMF3902TEE | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C473542 | 15R | 0201WMF150JTEE | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30 |
 | C474437 | 7.5k |  | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C5187472 | TYPE-C 16P QTWT | TYPE-C 16P QTWT | USB-TYPE-C-SMD_TYPE-C-16P-QTWT | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
-| C5219261 | TI LMR51430YFDDCR | TI LMR51430YFDDCR | SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C524780 | LP5912-3.3DRVR | LP5912-3.3DRVR | WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C5267406 | LSM6DSV16XTR | LSM6DSV16XTR | LGA-14_L3.0-W2.5-P0.50-BR | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C52923 | 1uF | CL05A105KA5NQNC | C_0402_1005Metric | Charger, OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
-| C5383002 | LMR51420YDDCR |  | SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C57784 | 510R |  | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
 | C695806 | 0.2mR | ASR-S-3-0.2F | R_2512_6332Metric | OpenAIO, OpenAIO-Whoop, OpenESC-20x20, OpenESC-30x30 |
 | C76923 | 20p | GRM0335C1H200JA01D | C_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite, OpenFC-Lite-Mini |
@@ -73,14 +71,17 @@ Regenerate: `python3 tools/build-parts-index.py`
 | C2861882 | TLV75533PDQNR |  | X2SON-4_L1.0-W1.0-P0.65-TL-EP | OpenAIO, OpenAIO-Whoop, OpenRX |
 | C2875272 | CJ17-400001010B20 |  | CRYSTAL-SMD_4P-L1.6-W1.2-BL | OpenAIO, OpenAIO-Whoop, OpenRX |
 | C2876045 | TLV7031DPWR | TLV7031DPWR | X2SON-4_L0.8-W0.8-P0.48-TL-A | OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
+| C320695 | 13.7k | RC-01W1372FT | R_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini |
 | C41378174 | RP2354A | RP2354A | QFN-60_L7.0-W7.0-P0.40-TL-EP3.4 | OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini |
 | C423739 | 1.4k | 0201WMF1401TEE | R_0201_0603Metric | OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
 | C46594347 | FTC160808S4R7MBCA | FTC160808S4R7MBCA | IND-SMD_L1.6-W0.8_FTC160865SR47MBCA | OpenAIO, OpenESC-20x20, OpenESC-30x30 |
 | C473509 | 680R | 0201WMF6800TEE | R_0201_0603Metric | OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
 | C48391583 | XRIM160808SR47MBCD |  | IND-SMD_L1.6-W0.8_FTC160865SR47MBCA | OpenAIO, OpenESC-20x20, OpenESC-30x30 |
 | C498185 | TF-021B-H265 |  | TF-SMD_TF-021B-H265 | OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini |
+| C5219261 | TI LMR51430YFDDCR | TI LMR51430YFDDCR | SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL | OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini |
 | C5219316 | LMR54406DBVR | LMR54406DBVR | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR | OpenAIO, OpenESC-20x20, OpenESC-30x30 |
 | C526944 | 470p | CC0201JRX7R9BB471 | C_0201_0603Metric | OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
+| C5383002 | LMR51420YDDCR |  | SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL | OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini |
 | C66942 | 1nF |  | C_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenRX |
 | C7463385 | COS8051SOT | COS8051SOT | SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR | OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
 | C76928 | 100n | GRM033R60J104KE19D | C_0201_0603Metric | OpenAIO, OpenFC-Lite, OpenFC-Lite-Mini |
@@ -90,137 +91,44 @@ Regenerate: `python3 tools/build-parts-index.py`
 | C85895 | 1.2pF |  | C_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenRX |
 | C85926 | 470nF |  | C_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenRX |
 | C86125 | 2.0nH |  | L_0201_0603Metric | OpenAIO, OpenAIO-Whoop, OpenRX |
-| C893189 | NCV8187AMT180TAG | NCV8187AMT180TAG | WDFN-6_L2.0-W2.0-P0.65-BL-EP | OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini |
 | C89334 | 2450AT18A100E |  | ANT-SMD_L3.2-W1.6 | OpenAIO, OpenAIO-Whoop, OpenRX |
 | C89632 | 10uF | CL31B106KBHNNNE | C_1206_3216Metric | OpenAIO, OpenESC-20x20, OpenESC-30x30 |
-| C1977154 | SMF24A-T13 | SMF24A-T13 | SOD-123FL_L2.7-W1.8-LS3.7-RD | OpenAIO, OpenESC-20x20 |
-| C2932476 | 10uF |  | C_0805_2012Metric | OpenAIO, OpenAIO-Whoop |
+| C2836813 | BMI270 | BMI270 | LGA-14_L3.0-W2.5-P0.50-BR | OpenFC-Lite, OpenFC-Lite-Mini |
+| C2876234 | LP5912-1.8DRVR | LP5912-1.8DRVR | WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm_ThermalVias | OpenFC-Lite, OpenFC-Lite-Mini |
+| C415703 | 22uF | GRM155R60J226ME11D | C_0402_1005Metric | OpenFC-Lite, OpenFC-Lite-Mini |
 | C49441966 | DOY180N03T | DOY180N03T | Diodes_PowerDI3333-8 | OpenAIO, OpenESC-20x20 |
+| C64890 | DSK24 | DSK24 | SOD-123_L2.8-W1.8-LS3.7-RD | OpenFC-Lite, OpenFC-Lite-Mini |
 | C1035 | 10uH |  | L_0603_1608Metric | OpenRX |
 | C106224 | 100k |  | R_0201_0603Metric | OpenRX |
-| C113998 | SMBJ30A | SMBJ30A | SMB_L4.6-W3.6-LS5.3-RD | Charger |
-| C11616 | 510k | 0402WGF5103TCE | R_0402_1005Metric | Charger |
-| C12891 | 22uF/25V | CL31A226KAHNNNE | C_1206_3216Metric | Charger |
-| C129895 | 24AA025E48 | 24AA025E48T-I/OT | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL | Charger |
-| C131394 | 0.1uF | CL05B104KO5NNNC | C_0402_1005Metric | Charger |
-| C134638 | 100uF/63V | RXW101M1JBK-0815 | CAP-SMD_BD6.3-L6.6-W6.6-FD | Charger |
-| C13530 | TPS54160 | TPS54160DGQR | MSOP-10_L3.0-W3.0-P0.50-LS5.0-BL-EP | Charger |
-| C13533 | 330pF | CL05C331JB5NNNC | C_0402_1005Metric | Charger |
-| C144398 | XH-7 | B7B-XH-A | CONN-TH_7P-P2.50_B7B-XH-A-LF-SN | Charger |
-| C15193 | 3.3nF | CL05B332KB5NNNC | C_0402_1005Metric | Charger |
-| C15195 | 10nF | CL05B103KB5NNNC | C_0402_1005Metric | Charger |
 | C152351 | 47948-0001 |  | ANT-SMD_47948-0001 | OpenRX |
-| C1525 | 100nF | CL05B104KO5NNNC | C_0402_1005Metric | Charger |
-| C1546 | 470nF | CC0402KRX7R7BB474 | C_0402_1005Metric | Charger |
-| C1555 | 100pF | CL05C101JB5NNNC | C_0402_1005Metric | Charger |
-| C15850 | 10uF/25V | CL21A106KAYNNNE | C_0805_2012Metric | Charger |
+| C160403 | SM03B-SRSS-TB | SM03B-SRSS-TB(LF)(SN) | CONN-SMD_SM03B-SRSS-TB-LF-SN-P | OpenFC-Lite |
+| C160404 | SM04B-SRSS-TB | SM04B-SRSS-TB(LF)(SN) | CONN-SMD_4P-P1.00_SM04B-SRSS-TB-LF-SN | OpenFC-Lite |
 | C161488 | 2.2nF |  | C_0201_0603Metric | OpenRX |
-| C165948 | USB-C | TYPE-C-31-M-12 | USB-C_SMD-TYPE-C-31-M-12_1 | Charger |
-| C167257 | 3.3uH | SWPA4030S3R3MT | IND-SMD_L4.0-W4.0_FNR40XXS | Charger |
-| C167258 | 4.7uH | SWPA4030S4R7MT | IND-SMD_L4.0-W4.0_FNR40XXS | Charger |
-| C167968 | 12uH | FNR5040S120MT | IND-SMD_L4.0-W4.0_FNR40XXS | Charger |
-| C18191323 | SI2319 | SI2319CDS-JSM | SOT-23 | Charger |
-| C190095 | 10k | RT0402BRD0710KL | R_0402_1005Metric | Charger |
-| C19077578 | SMBJ24A | SMBJ24A | SMB_L4.5-W3.7-LS5.4-RD | OpenESC-30x30 |
-| C191884 | TPS54202 | TPS54202DDCR | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL | Charger |
 | C19213 | RFX2401C |  | QFN-16_L3.0-W3.0-P0.50-BL-EP1.7 | OpenRX |
 | C192855 | 47nH |  | L_0402_1005Metric | OpenRX |
 | C194437 | 10uH |  | L_0603_1608Metric | OpenRX |
 | C19842466 | 0900PC16J0042001E |  | FILTER-SMD_10P-L2.0-W1.6-BL | OpenRX |
 | C20069240 | 10pF |  | C_0201_0603Metric | OpenRX |
-| C20526 | MMBT3904 | MMBT3904 | SOT-23 | Charger |
 | C2074788 | 220 |  | R_0201_0603Metric | OpenRX |
 | C22381772 | OW7EL89CENUYO3YLC-32M |  | OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z | OpenRX |
 | C22385416 | SP40N01GHNK | SP40N01GHNK | PDFN-8L_L6.0-W5.0-P1.27 | OpenESC-30x30 |
-| C22466709 | SP40N03GNJ |  | POWERPAK-1212-8_L3.0-W3.0-P0.65-LS3.3-BL | OpenAIO-Whoop |
-| C23130 | 4.7uF | CL21A475KAQNNNE | C_0805_2012Metric | Charger |
-| C24833806 | HUSB238A | HUSB238A-BB001-QN16R | QFN-16_L3.0-W3.0-P0.50-BL-EP1.7 | Charger |
-| C25076 | 10R | 0402WGF100JTCE | R_0402_1005Metric | Charger |
-| C25117 | 470R | 0402WGF4700TCE | R_0402_1005Metric | Charger |
-| C25741 | 100k | 0402WGF1003TCE | R_0402_1005Metric | Charger |
-| C25744 | 10k | 0402WGF1002TCE | R_0402_1005Metric | Charger |
-| C25751 | 127k | 0402WGF1273TCE | R_0402_1005Metric | Charger |
-| C25761 | 13.3k | 0402WGF1332TCE | R_0402_1005Metric | Charger |
-| C25768 | 10M | 0402WGF1005TCE | R_0402_1005Metric | Charger |
-| C25771 | 2.0k | 0402WGF2001TCE | R_0402_1005Metric | Charger |
-| C25784 | 3.0k | 0402WGF3001TCE | R_0402_1005Metric | Charger |
-| C25794 | 140k | 0402WGF1403TCE | R_0402_1005Metric | Charger |
-| C25800 | 22k | 0402WGF2202TCE | R_0402_1005Metric | Charger |
-| C25803 | 30.1k | 0402WGF3012TCE | R_0402_1005Metric | Charger |
-| C25819 | 15.4k | 0402WGF1542TCE | R_0402_1005Metric | Charger |
-| C25900 | 4.7k | 0402WGF4701TCE | R_0402_1005Metric | Charger |
-| C25901 | 43.2k | 0402WGF4322TCE | R_0402_1005Metric | Charger |
-| C25925 | 93.1k | 0402WGF9312TCE | R_0402_1005Metric | Charger |
-| C26083 | 1M | 0402WGF1004TCE | R_0402_1005Metric | Charger |
-| C262657 | FPC 12P 0.5mm | KH-CL0.5-H2.0-12PIN | FPC-SMD_P0.50-8P_FGS-XJ-H2.0 | Charger |
-| C2687116 | USBLC6-2SC6 | USBLC6-2SC6 | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL | Charger |
 | C274337 | 200 |  | R_0201_0603Metric | OpenRX |
 | C274876 | 680R |  | R_0201_0603Metric | OpenRX |
-| C2838502 | ESP32-C3-MINI-1-N4 | ESP32-C3-MINI-1-N4 | WIFIM-SMD_ESP32-C3-MINI-1 | Charger |
-| C284203 | 0.47uF/25V | CL05A474KP5NNNC | C_0402_1005Metric | Charger |
-| C2848703 | SMBJ28A | SMBJ28A | SMB_L4.6-W3.6-LS5.3-RD | Charger |
-| C2848704 | SMBJ36A | SMBJ36A | SMB_L4.6-W3.6-LS5.3-RD | Charger |
 | C2858491 | ESP32-C3FH4 |  | QFN-32_L5.0-W5.0-P0.50-TL-EP3.7 | OpenRX |
-| C2866175 | TLA2528 | TLA2528IRTER | WQFN-16_L3.0-W3.0-P0.50-TL-EP1.7 | Charger |
-| C2891809 | MMBT3906 | MMBT3906 | SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR | Charger |
-| C2903482 | 5mR | HoJLR2512-3W-5mR | R_2512_6332Metric | Charger |
-| C2913204 | ESP32-S3-WROOM-1-N8R2 | ESP32-S3-WROOM-1-N8R2 | WIRELM-SMD_ESP32-S3-WROOM-1 | Charger |
-| C2918502 | 10uF/50V | CS3225X7R106K500NRL | C_1210_3225Metric | Charger |
-| C2933102 | 4.99k | FRC0402F4991TS | R_0402_1005Metric | Charger |
-| C2941042 | LM74700 | LM74700QDBVRQ1 | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL | Charger |
-| C2960799 | 57.6k | FRC0402F5762TS | R_0402_1005Metric | Charger |
-| C2988648 | 5mR | HoLLR1206-1W-5mR | R_1206_3216Metric | Charger |
-| C2991196 | EC11 encoder | EC11L1525G01 | SW-TH_EC11XXXXXXXX | Charger |
-| C3011705 | 0.1uF/100V | GRM188R72A104KA35J | R_0603_1608Metric | Charger |
-| C3013155 | 16.5k | FRC0402F1652TS | R_0402_1005Metric | Charger |
-| C318884 | SW | TS-1187A-B-A-B | SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5 | Charger |
-| C33222334 | BQ25758RRVR | BQ25758RRVR | QFN-36_L6.0-W5.0-P0.50-BL-EP-1 | Charger |
-| C33435 | XH-9 | XH-9A | CONN-TH_XH2.54-9A | Charger |
-| C34731 | LMV331 | LMV331IDBVR | SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL | Charger |
-| C37208 | Header 1x6 | Header-Male-2.54_1x6 | HDR-TH_6P-P2.54-V-M-1 | Charger |
+| C320741 | 19.1k | RC-01W1912FT | R_0201_0603Metric | OpenFC-Lite |
+| C332577 | 8.87k |  | R_0201_0603Metric | OpenFC-Lite |
 | C384956 | 10pF |  | C_0201_0603Metric | OpenRX |
 | C393941 | TF PUSH | TF PUSH | TF-SMD_TF-PUSH | OpenFC-Lite |
 | C39843328 | RP2354B_C39843328 | RP2354B | QFN-80_L10.0-W10.0-P0.40-TL-EP3.4 | OpenFC-Lite |
-| C403170 | 33uH | SWPA6045S330MT | IND-SMD_L4.0-W4.0_FNR40XXS | Charger |
-| C41433639 | SiLM2660CD-DG | SiLM2660CD-DG | TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL | Charger |
-| C4147 | 91k | 0402WGF9102TCE | R_0402_1005Metric | Charger |
-| C42166327 | TPS26750 | TPS26750RJRR | QFN-32_L4.0-W4.0-P0.40-BL-EP2.7 | Charger |
-| C428722 | XT60 female | XT60PW-F | TH_2P-XT60PW-F | Charger |
-| C43131250 | TPD4S480 | TPD4S480RUKR | WQFN-20_L3.0-W3.0-P0.40-BL-EP1.7 | Charger |
-| C43251 | 4.02k | 0402WGF4021TCE | R_0402_1005Metric | Charger |
-| C437568 | 10uF/63V | GRM32ER71J106KA12L | C_1210_3225Metric | Charger |
-| C438169 | SMDJ51A | SMDJ51A | D_SMC | Charger |
-| C440127 | BLM03HD331SN1D |  | L_0201_0603Metric | OpenAIO-Whoop |
-| C45783 | 22uF | CL21A226MAQNNNE | C_0805_2012Metric | Charger |
-| C477924 | TCA9554APWR | TCA9554APWR | TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL | Charger |
-| C50385346 | TPS560430X | TPS560430XDBVR-MS | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL | Charger |
-| C5118908 | SFS08R03GNF 80V | SFS08R03GNF | POWERVDFN-8_L6.2-W5.2-P1.27-LS6.0-BL | Charger |
+| C45262770 | LMR51635YDDCR | LMR51635YDDCR | SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL | OpenFC-Lite |
 | C5349953 | XL-1010RGBC-WS2812B |  | LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B | OpenRX |
-| C53531 | SS1H10 100V | SS1H10-7-F | D_SMA | Charger |
-| C5443713 | AP40P04G 40V P-FET | AP40P04G | PDFN-8_L5.8-W4.9-P1.27-LS6.1-BL-A | Charger |
-| C57525 | 5A fuse | 0466005.NRHF | R_1206_3216Metric | Charger |
-| C61897 | 1.62k | 0402WGF1621TCE | R_0402_1005Metric | Charger |
 | C62164 | 18pF |  | C_0201_0603Metric | OpenRX |
 | C62548 | 220pF |  | C_0201_0603Metric | OpenRX |
-| C65009 | SS56 60V 5A | SS56 | D_SMA | Charger |
 | C6808014 | 10uH |  | L_0603_1608Metric | OpenRX |
-| C7337013 | 27R | RC2512FK-7W27RL | R_2512_6332Metric | Charger |
-| C7431072 | USB-C 5A EPR | TYPE-C-16PIN-5A | USB-C_SMD-TYPE-C-31-M-12_1 | Charger |
 | C7498014 | LR1121IMLTRT |  | QFN-32_L5.0-W5.0-P0.50-BL-EP3.7 | OpenRX |
-| C7543836 | 40N06D 60V | 40N06D | PDFN3333-8_L3.1-W3.2-P0.65-LS3.4-BL_1 | Charger |
 | C76921 | 10pF |  | C_0201_0603Metric | OpenRX |
 | C76927 | 0.3pF |  | C_0201_0603Metric | OpenRX |
-| C76947 | 1nF | GRM1555C1H102JA01D | C_0402_1005Metric | Charger |
-| C77131 | 10k NTC | NCP15XH103F03RC | R_0402_1005Metric | Charger |
-| C780191 | 10uH | SRP6540-100M | IND-SMD_L7.2-W6.6_GPSR0730 | Charger |
-| C82050 | 12V | MMSZ5242BT1G | D_SOD-123 | Charger |
-| C82720 | TL432 | TL432AIDBZR | SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR | Charger |
-| C840531 | 10uH | SRP1265A-100M | IND-SMD_L13.5-W12.5 | Charger |
-| C85202 | BSS84 | BSS84 | SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR | Charger |
-| C852472 | 100k | RT0402BRD07100KL | R_0402_1005Metric | Charger |
-| C8545 | 2N7002 | 2N7002 | SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR | Charger |
 | C85908 | 47p |  | C_0201_0603Metric | OpenRX |
 | C85934 | 1n |  | C_0201_0603Metric | OpenRX |
-| C88374 | Conn_Coaxial_Small |  | U.FL_Hirose_U.FL-R-SMT-1_Vertical | OpenRX |
+| C88374 | Conn_Coaxial |  | U.FL_Hirose_U.FL-R-SMT-1_Vertical | OpenRX |
 | C907939 | 220pF |  | C_0201_0603Metric | OpenRX |
-| C98732 | XT60 male | XT60PW-M | CONN-TH_XT60PW-M | Charger |

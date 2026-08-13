@@ -84,8 +84,20 @@ Repos always build against their pinned commit. Nothing changes under a board un
 
 ## Rules
 
-- New parts go here and only here. Do not create new project-local symbol or footprint files in board repos.
-- Existing boards still carry frozen pre-consolidation local libs (`OpenRX-Shared`, `lib`, `components`, `4in1ESC*`, `whoop`, `sourced`). Those are the historical record for already-routed boards. Do not add to them. Migrate a board to `Incutec:` references only during a deliberate revision pass, with ERC/DRC before and after.
+**Membership.** A symbol, footprint or 3D model belongs here only if it is used
+on a board whose repo is at `status-alpha` or beyond. Alpha means the board was
+manufactured, so everything here has been through a real assembly run. Parts
+that exist only on a planned or in-progress design do not qualify, however good
+they look on paper. When a board reaches alpha, its parts join.
+
+**Copy out, do not reference.** Board repos keep their own local libraries and
+copy what they need out of this one. A board then keeps working when this
+library changes. No board currently references `Incutec:` and none needs to.
+
+**Check before you trust it.** `python3 tools/build-parts-index.py --check`
+reports every symbol whose part is on no manufactured board, every symbol with
+no LCSC number, and every manufactured part still missing from the library.
+Run it after any change here and after any board reaches alpha.
 
 ## Contributing
 
