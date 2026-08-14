@@ -120,7 +120,7 @@
 		(uuid "f87fcf91-1617-4ddf-a57c-7377d0a26818")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/CRYSTAL-SMD_4P-L2.5-W2.0-BL-A.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/CRYSTAL-SMD_4P-L2.5-W2.0-BL-A.wrl"
 		(offset
 			(xyz 0 -0 -0)
 		)

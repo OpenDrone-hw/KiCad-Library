@@ -1,0 +1,16 @@
+{
+  "$schema": "https://go.kicad.org/pcm/schemas/v1#/definitions/Repository",
+  "name": "OpenDrone",
+  "maintainer": {
+    "name": "incutec",
+    "contact": {
+      "web": "https://opendrone.be"
+    }
+  },
+  "packages": {
+    "url": "https://raw.githubusercontent.com/OpenDrone-hw/KiCad-Library/main/pcm/packages.json",
+    "sha256": "0079a98e5fc94acef536c94dc47a5f4dd1eb82aded403b86a7638796d8f7f701",
+    "update_timestamp": 1786701276,
+    "update_time_utc": "2026-08-14 09:54:36"
+  }
+}

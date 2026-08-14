@@ -169,7 +169,7 @@
 		(uuid "ccbf49a9-2fdb-42f2-a709-1e5e23eb9959")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/CONN-SMD_SR1.00-WS-6P.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/CONN-SMD_SR1.00-WS-6P.wrl"
 		(offset
 			(xyz 0 -0.11 -0)
 		)

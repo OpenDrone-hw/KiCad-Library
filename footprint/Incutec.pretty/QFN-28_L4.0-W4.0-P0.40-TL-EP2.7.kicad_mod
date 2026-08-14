@@ -399,7 +399,7 @@
 		(uuid "20031ce2-aa23-4c85-93e9-89cfa9a0ea4e")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/QFN-28_L4.0-W4.0-P0.40-TL-EP2.7.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/QFN-28_L4.0-W4.0-P0.40-TL-EP2.7.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

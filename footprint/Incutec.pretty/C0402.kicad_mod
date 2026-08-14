@@ -240,7 +240,7 @@
 		(uuid "95474590-0078-40ef-ad62-2be915900768")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/C0402_L1.0-W0.5-H0.5.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/C0402_L1.0-W0.5-H0.5.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

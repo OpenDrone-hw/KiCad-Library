@@ -194,7 +194,7 @@
 		(uuid "b0634acd-bc12-47cb-8ab5-dd12fcf6ac60")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/CONN-SMD_SR1.00-WS-8P.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/CONN-SMD_SR1.00-WS-8P.wrl"
 		(offset
 			(xyz 0 -0.17 0)
 		)

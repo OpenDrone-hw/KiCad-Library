@@ -383,7 +383,7 @@
 		(uuid "589b92ac-77e5-4024-ae2e-3b74e9142a55")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/CONN-TH_XT60PW-M.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/CONN-TH_XT60PW-M.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

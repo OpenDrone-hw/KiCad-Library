@@ -1,86 +1,64 @@
 # KiCad-Library
 
-Reference library for the incutec OpenDrone hardware line: a semi-maintained
-mirror of parts we have already used and stocked. Its job is lookup, not
-enforcement. If a part is here, we have shipped it on a board, so it is
-already sourced and footprinted and reusing it is cheaper than drawing
-something new.
-
-Local project libraries are the working default for board design. Nothing
-requires a part to live here first.
-
-## Status
-
-**Live**, mirror role since 2026-08-06. Assembled 2026-08-04 from the
-per-project libraries; footprints and symbols upgraded to KiCad 10 format
-from Bastian's branch 2026-08-06.
-
-Open question, being settled in person: whether board repos keep the submodule
-copy or point at one shared clone through an environment variable. No board
-currently references `Incutec:`, so nothing depends on the answer yet.
+The parts catalogue of the OpenDrone hardware line: every symbol, footprint
+and 3D model here is used on a board that has been through a real assembly
+run, so it is sourced, footprinted and reflow-proven. Its job is lookup, not
+enforcement. Board repos keep their own local libraries and nothing requires
+a part to live here first.
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
-| `symbol/Incutec.kicad_sym` | 105 symbols, one library, nickname `Incutec` |
-| `footprint/Incutec.pretty/` | 195 footprints |
-| `3dmodel/` | 336 model files (175 STEP, 161 WRL). Footprints reference the WRL, plus 19 STEP; the rest of the STEP set is the MCAD counterpart |
-| `tools/bump-all.sh` | Re-pins the submodule in every consuming repo |
-| `PARTS-USED.md` | Every LCSC part used on a board, and which boards use it |
-| `tools/build-parts-index.py` | Regenerates `PARTS-USED.md` from the schematics |
+| `symbol/Incutec.kicad_sym` | 41 symbols, one library, nickname `Incutec` |
+| `footprint/Incutec.pretty/` | 143 footprints |
+| `3dmodel/` | 244 model files (129 STEP, 115 WRL). Footprints reference the WRL set; the STEP set is the MCAD counterpart |
+| `PARTS-USED.md` | Every LCSC part used on a manufactured board, and which boards use it |
+| `tools/build-parts-index.py` | Regenerates `PARTS-USED.md`; `--check` audits membership |
+| `tools/build-pcm.py` | Builds the KiCad PCM package and repository metadata |
+| `pcm/` | The PCM repository files KiCad reads |
 
 ## Usage
 
-Git submodule plus project-local lib tables. No global libraries. Every consuming repo pins this library at a fixed path:
+**As a KiCad package (easiest).** Preferences > Plugin and Content Manager >
+Manage repositories, add:
 
 ```text
-<repo>/
-├─ .gitmodules                  # pins OpenDrone-hw/KiCad-Library
-├─ libs/KiCad-Library/          # the submodule
-└─ hardware/                    # KiCad project, one level below repo root
-   ├─ <board>.kicad_pro
-   ├─ sym-lib-table             # project-local, references the submodule
-   └─ fp-lib-table
+https://raw.githubusercontent.com/OpenDrone-hw/KiCad-Library/main/pcm/repository.json
 ```
 
-Add it to a repo:
+Install "OpenDrone KiCad Library" from the Libraries tab. KiCad places the
+content in its third-party directory and registers the libraries with a
+`PCM_` prefix.
 
-```sh
-git submodule add https://github.com/OpenDrone-hw/KiCad-Library.git libs/KiCad-Library
-```
-
-Project-local table entries (KiCad: Preferences -> Manage Symbol/Footprint Libraries -> Project Specific, or edit the tables directly):
+**As a checkout.** Clone the repo, then in KiCad set a path variable
+`OPENDRONE_LIB` (Preferences > Configure Paths) to the checkout directory.
+Footprint 3D paths resolve through it. Add the libraries per project or
+globally:
 
 ```text
-(lib (name "Incutec")(type "KiCad")(uri "${KIPRJMOD}/../libs/KiCad-Library/symbol/Incutec.kicad_sym")(options "")(descr "incutec shared library"))
-(lib (name "Incutec")(type "KiCad")(uri "${KIPRJMOD}/../libs/KiCad-Library/footprint/Incutec.pretty")(options "")(descr "incutec shared library"))
+(lib (name "Incutec")(type "KiCad")(uri "${OPENDRONE_LIB}/symbol/Incutec.kicad_sym")(options "")(descr "OpenDrone parts catalogue"))
+(lib (name "Incutec")(type "KiCad")(uri "${OPENDRONE_LIB}/footprint/Incutec.pretty")(options "")(descr "OpenDrone parts catalogue"))
 ```
 
-Cloning a consuming repo:
-
-```sh
-git clone --recursive <repo-url>
-# or, after a plain clone:
-git submodule update --init
-```
+**For a board design, copy out.** Board repos copy the symbol, footprint and
+3D model into their own `lib` libraries rather than referencing this one: a
+board keeps working when the catalogue changes. No OpenDrone board references
+`Incutec:` directly.
 
 ### Path contract (do not break)
 
-Footprint 3D model paths are written as `${KIPRJMOD}/../libs/KiCad-Library/3dmodel/<file>`. This resolves only when:
-
-1. the submodule lives at `<repo>/libs/KiCad-Library`, and
-2. the KiCad project directory sits exactly one level below the repo root (`hardware/`, or a named project dir like `OpenRX-Lite/`).
-
-All current repos follow this. Keep new ones on the same shape.
+Footprint 3D model paths are written as `${OPENDRONE_LIB}/3dmodel/<file>`.
+`tools/build-pcm.py` rewrites them to the KiCad third-party directory when
+packaging. Keep new footprints on the same form.
 
 ## Updating the library
 
 1. Edit here, following [CONTRIBUTING.md](CONTRIBUTING.md).
 2. Commit, push, PR to `main`.
-3. Bump the pin in consuming repos: run `tools/bump-all.sh` from the directory that contains the hardware repos. It updates and commits every submodule pin.
-
-Repos always build against their pinned commit. Nothing changes under a board until its pin is bumped.
+3. After a merge that changes library content, rebuild and publish the
+   package: `python3 tools/build-pcm.py <version>`, commit `pcm/`, then
+   `gh release create pcm-v<version> dist/OpenDrone-KiCad-Library_<version>.zip`.
 
 ## Rules
 
@@ -89,10 +67,6 @@ on a board whose repo is at `status-alpha` or beyond. Alpha means the board was
 manufactured, so everything here has been through a real assembly run. Parts
 that exist only on a planned or in-progress design do not qualify, however good
 they look on paper. When a board reaches alpha, its parts join.
-
-**Copy out, do not reference.** Board repos keep their own local libraries and
-copy what they need out of this one. A board then keeps working when this
-library changes. No board currently references `Incutec:` and none needs to.
 
 **Check before you trust it.** `python3 tools/build-parts-index.py --check`
 reports every symbol whose part is on no manufactured board, every symbol with
@@ -109,5 +83,10 @@ Licensed under [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt), the same li
 
 ## Revisions
 
+- **2026-08-14**: pruned to the membership rule: 41 symbols, 143 footprints,
+  244 models remain, all on manufactured boards or awaiting an LCSC number.
+  3D paths recontracted from the removed submodule layout to
+  `${OPENDRONE_LIB}`. First PCM package published. `tools/bump-all.sh`
+  deleted with the submodule model.
 - **2026-08-04**: library assembled by merging the per-project board libraries: 105 symbols, 195 footprints, full 3D model set. LCSC property unified to `LCSC`, verified FC redraws adopted (`ESP32-C3FH4`, `SX1281IMLTRT`). `tools/bump-all.sh` fixed to commit via pathspec.
 - **2026-06-29**: initial `Incutec.kicad_sym` from the OpenRX lineage (21 symbols).

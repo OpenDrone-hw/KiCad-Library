@@ -184,7 +184,7 @@
 		(uuid "718db219-0c44-4c9c-a3d1-f76aefcb42de")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/IND-SMD_PSTMAA160808-4R7MB.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/IND-SMD_PSTMAA160808-4R7MB.wrl"
 		(offset
 			(xyz 0 -0 -0)
 		)

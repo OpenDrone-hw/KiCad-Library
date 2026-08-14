@@ -313,7 +313,7 @@
 		(uuid "b779d21f-10e1-424f-bf5c-cbdc74266b38")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/ESSOP-10_L4.9-W3.9-P1.0-LS6.0-TL-EP.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/ESSOP-10_L4.9-W3.9-P1.0-LS6.0-TL-EP.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -576,7 +576,7 @@
 		(uuid "7a48767c-3462-4c8b-9d59-57fdabc447cd")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/WIFIM-SMD_ESP32-C3-MINI-1.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/WIFIM-SMD_ESP32-C3-MINI-1.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

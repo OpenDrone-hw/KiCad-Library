@@ -176,7 +176,7 @@
 		(uuid "93f3ea8f-48d6-4e04-a2a9-a2ba927cd912")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/FILTER-SMD_4P-L1.0-W0.5-H0.4-L_DEA102700LT-XXX.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/FILTER-SMD_4P-L1.0-W0.5-H0.4-L_DEA102700LT-XXX.wrl"
 		(offset
 			(xyz 0 0 -0)
 		)

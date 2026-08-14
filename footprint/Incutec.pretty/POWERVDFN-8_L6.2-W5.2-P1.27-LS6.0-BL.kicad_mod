@@ -372,7 +372,7 @@
 		(uuid "18eea21f-bfc3-466f-b26b-9bcc9bb60fa1")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/POWERVDFN-8_L5.8-W4.9-H1.0-P1.27.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/POWERVDFN-8_L5.8-W4.9-H1.0-P1.27.wrl"
 		(offset
 			(xyz 0 0 0)
 		)
