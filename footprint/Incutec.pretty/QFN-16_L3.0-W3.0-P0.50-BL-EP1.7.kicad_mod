@@ -486,7 +486,7 @@
 		(uuid "3d0d278d-7e17-4162-b5c8-99c88cc244f9")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/RFX2401C_QFN-16_L3.0-W3.0-P0.50-EP1.7.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/RFX2401C_QFN-16_L3.0-W3.0-P0.50-EP1.7.wrl"
 		(offset
 			(xyz -951.61 821.31 -0)
 		)

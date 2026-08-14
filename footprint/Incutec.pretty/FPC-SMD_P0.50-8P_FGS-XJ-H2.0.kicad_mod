@@ -383,7 +383,7 @@
 		(uuid "2e5c8e63-ef84-4c96-96b4-b247b258f85f")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/FPC-SMD_P0.50-8P_FGS-XJ-H2.0.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/FPC-SMD_P0.50-8P_FGS-XJ-H2.0.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

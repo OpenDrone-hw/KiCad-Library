@@ -18,7 +18,7 @@ pull request that cannot be merged.
 git clone https://github.com/OpenDrone-hw/KiCad-Library.git
 ```
 
-No submodules here; this repo is the submodule the board repos pin. Use KiCad 10.
+No submodules; boards copy parts out of this catalogue rather than referencing it. Use KiCad 10.
 
 ## What belongs here
 
@@ -50,7 +50,7 @@ comm -23 <(grep -o '"Incutec:[^"]*"' symbol/Incutec.kicad_sym | tr -d '"' | sed 
 # prints nothing when clean. kicad-cli does not flag a dangling footprint ref, so run this too
 ```
 
-After a PR merges, re-pin the consuming repos: see [Updating the library](README.md#updating-the-library).
+After a PR merges, republish the PCM package: see [Updating the library](README.md#updating-the-library).
 
 ## Documentation
 

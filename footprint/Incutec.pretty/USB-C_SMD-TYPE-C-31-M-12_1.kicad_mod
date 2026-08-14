@@ -378,7 +378,7 @@
 		(uuid "1a5c0332-5fd2-4135-bdea-74b979ee8881")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/USB-C_SMD-TYPE-C-31-M-12_1.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/USB-C_SMD-TYPE-C-31-M-12_1.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -200,7 +200,7 @@
 		(uuid "92b4f2bf-0b1e-46cd-a65b-b64cad3a9beb")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/RF-SMD_FRF05002-JSS103M.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/RF-SMD_FRF05002-JSS103M.wrl"
 		(offset
 			(xyz 0 0.76 -0)
 		)

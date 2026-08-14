@@ -801,7 +801,7 @@
 		(uuid "79a1f756-d71e-4507-ac47-50d53325d655")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/TF-SMD_TF-PUSH.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/TF-SMD_TF-PUSH.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -639,7 +639,7 @@
 		(uuid "f5303ef9-1468-44bb-bd17-aacd0a4a48aa")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm.step"
+	(model "${OPENDRONE_LIB}/3dmodel/QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

@@ -259,7 +259,7 @@
 		(uuid "764df73a-bc94-46d0-bc3c-a071e905d0cf")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/TH_2P-XT60PW-F.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/TH_2P-XT60PW-F.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

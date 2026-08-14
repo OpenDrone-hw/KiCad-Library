@@ -98,7 +98,7 @@
 		(uuid "8ddd8735-f91d-4844-8a73-897d500d3339")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/SolderPad_1.0x1.5mm.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/SolderPad_1.0x1.5mm.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

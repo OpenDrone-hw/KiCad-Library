@@ -135,7 +135,7 @@
 		(uuid "0d77396b-d82b-4f64-97f7-2a8f17f30f51")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/ANT-SMD_L3.2-W1.6-H1.3.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/ANT-SMD_L3.2-W1.6-H1.3.wrl"
 		(offset
 			(xyz 0 -0 -0)
 		)

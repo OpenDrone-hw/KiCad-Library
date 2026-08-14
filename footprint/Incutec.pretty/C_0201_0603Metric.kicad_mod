@@ -187,7 +187,7 @@
 		(uuid "18361610-6432-4c0a-a6c8-ed9ac8433bbd")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/C_0201_0603Metric.step"
+	(model "${OPENDRONE_LIB}/3dmodel/C_0201_0603Metric.step"
 		(offset
 			(xyz 0 0 0)
 		)

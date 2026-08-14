@@ -293,7 +293,7 @@
 		(uuid "6e4a6a4a-9262-4f06-8f3f-ea4a1cf504e6")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/USB-TYPE-C-SMD_TYPE-C-16P-QTWT.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/USB-TYPE-C-SMD_TYPE-C-16P-QTWT.wrl"
 		(offset
 			(xyz -0 -1.25 0.7)
 		)

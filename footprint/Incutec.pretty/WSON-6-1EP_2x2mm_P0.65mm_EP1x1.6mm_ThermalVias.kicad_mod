@@ -329,7 +329,7 @@
 		(uuid "08e44a7e-cb36-4af7-bc73-f534428358a6")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm.step"
+	(model "${OPENDRONE_LIB}/3dmodel/WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

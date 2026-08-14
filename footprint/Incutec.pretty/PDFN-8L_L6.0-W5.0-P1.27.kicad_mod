@@ -280,7 +280,7 @@
 		(uuid "afc21a63-0141-4966-adda-faa23656af23")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/PDFN-8_L6.0-W5.0-P1.27_HGQ065NE4A.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/PDFN-8_L6.0-W5.0-P1.27_HGQ065NE4A.wrl"
 		(offset
 			(xyz 0 -0 -0)
 		)

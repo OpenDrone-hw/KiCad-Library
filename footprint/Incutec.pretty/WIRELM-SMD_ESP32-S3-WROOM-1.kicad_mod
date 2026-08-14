@@ -650,7 +650,7 @@
 		(uuid "44cb0f46-0d91-4387-be72-a3296b4375fd")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/WIRELM-SMD_ESP32-S3-WROOM-1.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/WIRELM-SMD_ESP32-S3-WROOM-1.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

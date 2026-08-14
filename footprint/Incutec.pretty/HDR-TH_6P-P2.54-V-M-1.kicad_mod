@@ -222,7 +222,7 @@
 		(uuid "a723c229-cf03-4b3c-838b-a95398564d72")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/HDR2.54-M-LI-1X6P.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/HDR2.54-M-LI-1X6P.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

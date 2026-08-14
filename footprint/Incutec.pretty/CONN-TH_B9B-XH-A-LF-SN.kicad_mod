@@ -374,7 +374,7 @@
 		(uuid "a06e5381-60f6-47cf-a9c4-7c6f48512798")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/CONN-TH_B9B-XH-A-LF-SN.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/CONN-TH_B9B-XH-A-LF-SN.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

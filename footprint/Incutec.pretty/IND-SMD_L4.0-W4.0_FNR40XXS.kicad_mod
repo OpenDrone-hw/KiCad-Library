@@ -155,7 +155,7 @@
 		(uuid "91adb1a0-b412-4d8e-b3bd-290a940eb890")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/IND-SMD_L4.0-W4.0-H2.6_FNR40XXS.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/IND-SMD_L4.0-W4.0-H2.6_FNR40XXS.wrl"
 		(offset
 			(xyz 0 0 0)
 		)

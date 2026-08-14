@@ -263,7 +263,7 @@
 		(uuid "be17c6ea-79ac-4288-9f01-c4045022c45a")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/X2SON-6_L1.0-W0.8-H0.4-BL.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/X2SON-6_L1.0-W0.8-H0.4-BL.wrl"
 		(offset
 			(xyz 0 -0 -0)
 		)

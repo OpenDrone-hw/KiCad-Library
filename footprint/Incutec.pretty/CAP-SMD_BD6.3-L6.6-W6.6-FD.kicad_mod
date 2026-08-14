@@ -271,7 +271,7 @@
 		(uuid "996a7176-6fc9-4a52-bdb5-d6471188b09e")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libs/KiCad-Library/3dmodel/CAP-SMD_BD6.3-L6.6-W6.6-FD.wrl"
+	(model "${OPENDRONE_LIB}/3dmodel/CAP-SMD_BD6.3-L6.6-W6.6-FD.wrl"
 		(offset
 			(xyz 0 0 0)
 		)
