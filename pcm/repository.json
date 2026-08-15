@@ -9,8 +9,8 @@
   },
   "packages": {
     "url": "https://raw.githubusercontent.com/OpenDrone-hw/KiCad-Library/main/pcm/packages.json",
-    "sha256": "0079a98e5fc94acef536c94dc47a5f4dd1eb82aded403b86a7638796d8f7f701",
-    "update_timestamp": 1786701276,
-    "update_time_utc": "2026-08-14 09:54:36"
+    "sha256": "60e29b82e6bb4009259919e7e751e7fa729c65eee94837dc67c73901f5b02be1",
+    "update_timestamp": 1786800218,
+    "update_time_utc": "2026-08-15 13:23:38"
   }
 }

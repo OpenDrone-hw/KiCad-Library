@@ -92,7 +92,7 @@ def scan_boards():
 
 def library_symbols():
     """name -> LCSC (or None) for every symbol in the library."""
-    path = os.path.join(HERE, '..', 'symbol', 'Incutec.kicad_sym')
+    path = os.path.join(HERE, '..', 'symbol', 'OpenDrone.kicad_sym')
     text = open(path, encoding='utf-8', errors='ignore').read()
     out = {}
     for m in re.finditer(r'^\t\(symbol "([^"]+)"', text, re.M):

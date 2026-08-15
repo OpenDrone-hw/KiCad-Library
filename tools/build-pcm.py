@@ -37,17 +37,17 @@ def main():
     stage = "dist/stage"
     shutil.rmtree("dist", ignore_errors=True)
     os.makedirs(f"{stage}/symbols", exist_ok=True)
-    os.makedirs(f"{stage}/footprints/Incutec.pretty", exist_ok=True)
-    os.makedirs(f"{stage}/3dmodels/Incutec.3dshapes", exist_ok=True)
+    os.makedirs(f"{stage}/footprints/OpenDrone.pretty", exist_ok=True)
+    os.makedirs(f"{stage}/3dmodels/OpenDrone.3dshapes", exist_ok=True)
 
-    shutil.copy("symbol/Incutec.kicad_sym", f"{stage}/symbols/Incutec.kicad_sym")
-    model_base = f"{THIRD_PARTY}/3dmodels/{IDENT}/Incutec.3dshapes"
-    for f in os.listdir("footprint/Incutec.pretty"):
-        s = open(f"footprint/Incutec.pretty/{f}").read()
+    shutil.copy("symbol/OpenDrone.kicad_sym", f"{stage}/symbols/OpenDrone.kicad_sym")
+    model_base = f"{THIRD_PARTY}/3dmodels/{IDENT}/OpenDrone.3dshapes"
+    for f in os.listdir("footprint/OpenDrone.pretty"):
+        s = open(f"footprint/OpenDrone.pretty/{f}").read()
         s = s.replace("${OPENDRONE_LIB}/3dmodel", model_base)
-        open(f"{stage}/footprints/Incutec.pretty/{f}", "w").write(s)
+        open(f"{stage}/footprints/OpenDrone.pretty/{f}", "w").write(s)
     for f in os.listdir("3dmodel"):
-        shutil.copy(f"3dmodel/{f}", f"{stage}/3dmodels/Incutec.3dshapes/{f}")
+        shutil.copy(f"3dmodel/{f}", f"{stage}/3dmodels/OpenDrone.3dshapes/{f}")
 
     meta = {
         "$schema": "https://go.kicad.org/pcm/schemas/v1",
