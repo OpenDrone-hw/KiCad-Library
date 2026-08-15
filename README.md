@@ -54,7 +54,7 @@ packaging. Keep new footprints on the same form.
 
 ## Updating the library
 
-1. Edit here, following [CONTRIBUTING.md](CONTRIBUTING.md).
+1. Edit here, following the [rules](#rules).
 2. Commit, push, PR to `main`.
 3. After a merge that changes library content, rebuild and publish the
    package: `python3 tools/build-pcm.py <version>`, commit `pcm/`, then
@@ -73,9 +73,27 @@ reports every symbol whose part is on no manufactured board, every symbol with
 no LCSC number, and every manufactured part still missing from the library.
 Run it after any change here and after any board reaches alpha.
 
+**Authoring.** Edit symbols and footprints in the KiCad editors, or scripted
+via kicad-skip or the pcbnew API; never text-edit `.kicad_sym` or `.kicad_mod`
+files. Footprint references inside symbols use the `Incutec:` nickname, the
+LCSC part number property is named `LCSC`, and 3D model paths follow the
+[path contract](#path-contract-do-not-break). Do not add a symbol for every
+value of a passive: [PARTS-USED.md](PARTS-USED.md) already answers which
+resistors and capacitors we use. Validate before opening a PR:
+
+```sh
+kicad-cli sym export svg symbol/Incutec.kicad_sym -o /tmp/symcheck
+kicad-cli fp upgrade /tmp/fpcheck   # on a copy of footprint/Incutec.pretty
+
+# every Incutec: footprint ref in the symbol lib resolves to a committed .kicad_mod
+comm -23 <(grep -o '"Incutec:[^"]*"' symbol/Incutec.kicad_sym | tr -d '"' | sed 's/Incutec://' | sort -u) \
+         <(ls footprint/Incutec.pretty | sed 's/\.kicad_mod$//' | sort)
+# prints nothing when clean. kicad-cli does not flag a dangling footprint ref, so run this too
+```
+
 ## Contributing
 
-Authoring rules for library edits (editing method, naming, property names, pre-PR validation) are in [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
