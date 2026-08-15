@@ -10,8 +10,8 @@ a part to live here first.
 
 | Path | Contents |
 |---|---|
-| `symbol/Incutec.kicad_sym` | 41 symbols, one library, nickname `Incutec` |
-| `footprint/Incutec.pretty/` | 143 footprints |
+| `symbol/OpenDrone.kicad_sym` | 41 symbols, one library, nickname `OpenDrone` |
+| `footprint/OpenDrone.pretty/` | 143 footprints |
 | `3dmodel/` | 244 model files (129 STEP, 115 WRL). Footprints reference the WRL set; the STEP set is the MCAD counterpart |
 | `PARTS-USED.md` | Every LCSC part used on a manufactured board, and which boards use it |
 | `tools/build-parts-index.py` | Regenerates `PARTS-USED.md`; `--check` audits membership |
@@ -31,26 +31,30 @@ Install "OpenDrone KiCad Library" from the Libraries tab. KiCad places the
 content in its third-party directory and registers the libraries with a
 `PCM_` prefix.
 
+**In a board repo.** Every repo started from
+[hardware-template](https://github.com/OpenDrone-hw/hardware-template) carries
+this library as the git submodule `hardware/KiCad-Library`, pinned to a commit,
+with the project's `OPENDRONE_LIB` text variable pointing at it. Parts place
+straight from the `OpenDrone` library; `git submodule update --remote` pulls a
+newer catalogue in. How to set that up and update it is in the org
+[CONTRIBUTING](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md).
+
 **As a checkout.** Clone the repo, then in KiCad set a path variable
 `OPENDRONE_LIB` (Preferences > Configure Paths) to the checkout directory.
 Footprint 3D paths resolve through it. Add the libraries per project or
 globally:
 
 ```text
-(lib (name "Incutec")(type "KiCad")(uri "${OPENDRONE_LIB}/symbol/Incutec.kicad_sym")(options "")(descr "OpenDrone parts catalogue"))
-(lib (name "Incutec")(type "KiCad")(uri "${OPENDRONE_LIB}/footprint/Incutec.pretty")(options "")(descr "OpenDrone parts catalogue"))
+(lib (name "OpenDrone")(type "KiCad")(uri "${OPENDRONE_LIB}/symbol/OpenDrone.kicad_sym")(options "")(descr "OpenDrone parts catalogue"))
+(lib (name "OpenDrone")(type "KiCad")(uri "${OPENDRONE_LIB}/footprint/OpenDrone.pretty")(options "")(descr "OpenDrone parts catalogue"))
 ```
-
-**For a board design, copy out.** Board repos copy the symbol, footprint and
-3D model into their own `lib` libraries rather than referencing this one: a
-board keeps working when the catalogue changes. No OpenDrone board references
-`Incutec:` directly.
 
 ### Path contract (do not break)
 
 Footprint 3D model paths are written as `${OPENDRONE_LIB}/3dmodel/<file>`.
-`tools/build-pcm.py` rewrites them to the KiCad third-party directory when
-packaging. Keep new footprints on the same form.
+Board repos define `OPENDRONE_LIB` as a project text variable, checkouts as a
+KiCad path variable, and `tools/build-pcm.py` rewrites the prefix to the KiCad
+third-party directory when packaging. Keep new footprints on the same form.
 
 ## Updating the library
 
@@ -75,19 +79,19 @@ Run it after any change here and after any board reaches alpha.
 
 **Authoring.** Edit symbols and footprints in the KiCad editors, or scripted
 via kicad-skip or the pcbnew API; never text-edit `.kicad_sym` or `.kicad_mod`
-files. Footprint references inside symbols use the `Incutec:` nickname, the
+files. Footprint references inside symbols use the `OpenDrone:` nickname, the
 LCSC part number property is named `LCSC`, and 3D model paths follow the
 [path contract](#path-contract-do-not-break). Do not add a symbol for every
 value of a passive: [PARTS-USED.md](PARTS-USED.md) already answers which
 resistors and capacitors we use. Validate before opening a PR:
 
 ```sh
-kicad-cli sym export svg symbol/Incutec.kicad_sym -o /tmp/symcheck
-kicad-cli fp upgrade /tmp/fpcheck   # on a copy of footprint/Incutec.pretty
+kicad-cli sym export svg symbol/OpenDrone.kicad_sym -o /tmp/symcheck
+kicad-cli fp upgrade /tmp/fpcheck   # on a copy of footprint/OpenDrone.pretty
 
-# every Incutec: footprint ref in the symbol lib resolves to a committed .kicad_mod
-comm -23 <(grep -o '"Incutec:[^"]*"' symbol/Incutec.kicad_sym | tr -d '"' | sed 's/Incutec://' | sort -u) \
-         <(ls footprint/Incutec.pretty | sed 's/\.kicad_mod$//' | sort)
+# every OpenDrone: footprint ref in the symbol lib resolves to a committed .kicad_mod
+comm -23 <(grep -o '"OpenDrone:[^"]*"' symbol/OpenDrone.kicad_sym | tr -d '"' | sed 's/OpenDrone://' | sort -u) \
+         <(ls footprint/OpenDrone.pretty | sed 's/\.kicad_mod$//' | sort)
 # prints nothing when clean. kicad-cli does not flag a dangling footprint ref, so run this too
 ```
 
@@ -101,6 +105,10 @@ Licensed under [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt), the same li
 
 ## Revisions
 
+- **2026-08-15**: library nickname and files renamed `Incutec` to `OpenDrone`
+  (`symbol/OpenDrone.kicad_sym`, `footprint/OpenDrone.pretty`). PCM package
+  1.1.0. Board repos now carry the library as a pinned submodule from the
+  template.
 - **2026-08-14**: pruned to the membership rule: 41 symbols, 143 footprints,
   244 models remain, all on manufactured boards or awaiting an LCSC number.
   3D paths recontracted from the removed submodule layout to

@@ -28,7 +28,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:FILTER-SMD_10P-L2.0-W1.6-BL"
+		(property "Footprint" "OpenDrone:FILTER-SMD_10P-L2.0-W1.6-BL"
 			(at 0 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -304,7 +304,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:ANT-SMD_L3.2-W1.6"
+		(property "Footprint" "OpenDrone:ANT-SMD_L3.2-W1.6"
 			(at 0 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -462,7 +462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:FILTER-SMD_4P-L1.0-W0.5-L"
+		(property "Footprint" "OpenDrone:FILTER-SMD_4P-L1.0-W0.5-L"
 			(at 0 -20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -663,7 +663,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:ANT-SMD_47948-0001"
+		(property "Footprint" "OpenDrone:ANT-SMD_47948-0001"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -857,7 +857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:IND-SMD_L2.0-W1.6_AOTA-B201610S3R3-101-T"
+		(property "Footprint" "OpenDrone:IND-SMD_L2.0-W1.6_AOTA-B201610S3R3-101-T"
 			(at 0 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1026,7 +1026,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:CRYSTAL-SMD_4P-L1.6-W1.2-BL"
+		(property "Footprint" "OpenDrone:CRYSTAL-SMD_4P-L1.6-W1.2-BL"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1253,7 +1253,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:FILTER-SMD_4P-L1.0-W0.5-L_DEA102700LT-XXX"
+		(property "Footprint" "OpenDrone:FILTER-SMD_4P-L1.0-W0.5-L_DEA102700LT-XXX"
 			(at 0 -8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1410,7 +1410,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:DFN-3L_L1.0-W0.6-P0.65-BR"
+		(property "Footprint" "OpenDrone:DFN-3L_L1.0-W0.6-P0.65-BR"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1730,7 +1730,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-32_L5.0-W5.0-P0.50-BL-EP3.7"
+		(property "Footprint" "OpenDrone:QFN-32_L5.0-W5.0-P0.50-BL-EP3.7"
 			(at 0 -27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2403,7 +2403,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:SOT-363_SC-70-6"
+		(property "Footprint" "OpenDrone:SOT-363_SC-70-6"
 			(at 0 -17.78 0)
 			(effects
 				(font
@@ -2670,7 +2670,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL"
+		(property "Footprint" "OpenDrone:SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3545,7 +3545,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:LGA-14_L3.0-W2.5-P0.50-BR"
+		(property "Footprint" "OpenDrone:LGA-14_L3.0-W2.5-P0.50-BR"
 			(at 0 -15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3887,7 +3887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8"
+		(property "Footprint" "OpenDrone:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8"
 			(at 0 -10.16 0)
 			(effects
 				(font
@@ -4436,7 +4436,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:OSC-SMD_4P-L3.2-W2.5-BL"
+		(property "Footprint" "OpenDrone:OSC-SMD_4P-L3.2-W2.5-BL"
 			(at 0 -8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4604,7 +4604,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
+		(property "Footprint" "OpenDrone:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
 			(at 0 -8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4772,7 +4772,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
+		(property "Footprint" "OpenDrone:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
 			(at 0 -8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4940,7 +4940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:Receiver"
+		(property "Footprint" "OpenDrone:Receiver"
 			(at 0 1.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5210,7 +5210,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-16_L3.0-W3.0-P0.50-BL-EP1.7"
+		(property "Footprint" "OpenDrone:QFN-16_L3.0-W3.0-P0.50-BL-EP1.7"
 			(at 0 -21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5601,7 +5601,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-60_L7.0-W7.0-P0.40-TL-EP3.4"
+		(property "Footprint" "OpenDrone:QFN-60_L7.0-W7.0-P0.40-TL-EP3.4"
 			(at 0 -67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6817,7 +6817,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
+		(property "Footprint" "OpenDrone:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
 			(at 0 -58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8371,7 +8371,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:X3-DFN0603-2_L0.6-W0.3-RD"
+		(property "Footprint" "OpenDrone:X3-DFN0603-2_L0.6-W0.3-RD"
 			(at 0 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8505,7 +8505,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-12_EP_2x2_Pitch0.5mm"
+		(property "Footprint" "OpenDrone:QFN-12_EP_2x2_Pitch0.5mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8813,7 +8813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-14_L2.0-W2.0-P0.45-BL-EP"
+		(property "Footprint" "OpenDrone:QFN-14_L2.0-W2.0-P0.45-BL-EP"
 			(at 0 -21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9223,7 +9223,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-12_L2.0-W2.0-P0.50-BL-EP0.8"
+		(property "Footprint" "OpenDrone:QFN-12_L2.0-W2.0-P0.50-BL-EP0.8"
 			(at 0 -13.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9542,7 +9542,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:CONN-SMD_SM06B-SRSS-TB-LF-SN"
+		(property "Footprint" "OpenDrone:CONN-SMD_SM06B-SRSS-TB-LF-SN"
 			(at 0 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9776,7 +9776,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:JST_SM08B-SRSS-TB"
+		(property "Footprint" "OpenDrone:JST_SM08B-SRSS-TB"
 			(at 0 -22.86 0)
 			(effects
 				(font
@@ -10053,7 +10053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:CONN-TH_SM08B-SRSS-TB-LF-SN"
+		(property "Footprint" "OpenDrone:CONN-TH_SM08B-SRSS-TB-LF-SN"
 			(at 0 -22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10329,7 +10329,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:X2SON-6_L1.0-W0.8-BL"
+		(property "Footprint" "OpenDrone:X2SON-6_L1.0-W0.8-BL"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10533,7 +10533,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:QFN-24_L4.0-W4.0-P0.50-TL-EP2.6"
+		(property "Footprint" "OpenDrone:QFN-24_L4.0-W4.0-P0.50-TL-EP2.6"
 			(at 0 -21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11068,7 +11068,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:TF-SMD_TF-021B-H265"
+		(property "Footprint" "OpenDrone:TF-SMD_TF-021B-H265"
 			(at 0 -13.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11344,7 +11344,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:TF-SMD_TF-PUSH"
+		(property "Footprint" "OpenDrone:TF-SMD_TF-PUSH"
 			(at 0 -22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11707,7 +11707,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:X2SON-4_L1.0-W1.0-P0.65-TL-EP"
+		(property "Footprint" "OpenDrone:X2SON-4_L1.0-W1.0-P0.65-TL-EP"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11887,7 +11887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:WSON-6_L2.0-W2.0-P0.65-TL-EP"
+		(property "Footprint" "OpenDrone:WSON-6_L2.0-W2.0-P0.65-TL-EP"
 			(at 0 -10.16 0)
 			(effects
 				(font
@@ -12110,7 +12110,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:SW-SMD_4P-L3.0-W2.0-P0.85-LS3.5"
+		(property "Footprint" "OpenDrone:SW-SMD_4P-L3.0-W2.0-P0.85-LS3.5"
 			(at 0 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12256,7 +12256,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:USB-TYPE-C-SMD_TYPE-C-16P-QTWT"
+		(property "Footprint" "OpenDrone:USB-TYPE-C-SMD_TYPE-C-16P-QTWT"
 			(at 0 -21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12586,7 +12586,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:RF-SMD_FRF05002-JSS103M"
+		(property "Footprint" "OpenDrone:RF-SMD_FRF05002-JSS103M"
 			(at 0 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12725,7 +12725,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B"
+		(property "Footprint" "OpenDrone:LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B"
 			(at 0 -16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12887,7 +12887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:IND-SMD_L1.6-W0.8_FTC160865SR47MBCA"
+		(property "Footprint" "OpenDrone:IND-SMD_L1.6-W0.8_FTC160865SR47MBCA"
 			(at 0 -10.16 0)
 			(effects
 				(font
@@ -13048,7 +13048,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:IND-SMD_L3.0-W3.0_AFE303020S"
+		(property "Footprint" "OpenDrone:IND-SMD_L3.0-W3.0_AFE303020S"
 			(at 0 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13206,7 +13206,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Incutec:CRYSTAL-SMD_4P-L2.5-W2.0-BL-A"
+		(property "Footprint" "OpenDrone:CRYSTAL-SMD_4P-L2.5-W2.0-BL-A"
 			(at 0 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
