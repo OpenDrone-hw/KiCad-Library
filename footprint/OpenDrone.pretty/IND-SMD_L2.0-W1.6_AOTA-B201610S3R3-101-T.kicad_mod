@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -4 0)
 		(layer "F.SilkS")
-		(uuid "a15ac471-176d-4a6b-989b-a1445c719461")
+		(uuid "b23a8a32-9858-4e5c-a0a8-c8d9873fb15c")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "IND-SMD_L2.0-W1.6_AOTA-B201610S3R3-101-T"
 		(at 0 4 0)
 		(layer "F.Fab")
-		(uuid "7c082e27-54fe-4ab2-99bf-fd5d71303775")
+		(uuid "33c70ef5-1a3c-4a88-917e-60f1a0581402")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8d3ac723-9f03-46c5-99b0-3bafaaac0806")
+		(uuid "524dde2a-9554-403d-b4d4-2e85e9083674")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f5775970-577e-45ba-b0b9-50851777601d")
+		(uuid "161dbb31-f783-477a-a65b-8b246d9248ee")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "1c0d36d6-0da1-46c0-914b-8fdf9b86b667")
+		(uuid "5ec708ed-1857-43bb-88f1-ba921acbb8e3")
 	)
 	(fp_line
 		(start -0.27 0.8)
@@ -67,7 +67,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a825a539-72b0-4bed-9521-9d7cee7bb846")
+		(uuid "63c310d8-e617-454b-9489-bb75210caf38")
 	)
 	(fp_circle
 		(center 0.9 -1.1)
@@ -78,7 +78,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "b6ef2619-9c0a-4d60-bd18-273aa4d69207")
+		(uuid "720835e2-bfd8-4ffd-9029-4c59c7220875")
 	)
 	(fp_circle
 		(center 1 -0.5)
@@ -89,7 +89,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "afa25d97-c266-41f0-888a-86d12bfcfa63")
+		(uuid "890c041f-e7eb-4ec3-ad43-9340ece4bb1e")
 	)
 	(fp_circle
 		(center -1 0.8)
@@ -100,12 +100,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "3bc6545f-3331-41ac-841e-edba358a9c50")
+		(uuid "02c41168-accb-457b-8923-dcf75ee4c225")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "37f87400-1f5f-4c3f-829d-9e84477ce437")
+		(uuid "6fe1784e-710b-420e-81a0-180278408549")
 		(effects
 			(font
 				(size 1 1)
@@ -117,18 +117,18 @@
 		(at -1 0)
 		(size 1 1.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "eb4fc0b8-8c28-41db-a6bf-47b8539c2112")
+		(uuid "b085329f-8af0-41a3-a109-4c841da2dcad")
 	)
 	(pad "2" smd rect
 		(at 1 0)
 		(size 1 1.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "efd338dd-fe9c-45df-9fd1-7c4e7d14a067")
+		(uuid "79d6f4e3-2369-4190-911f-20d75b82e3ef")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/IND-SMD_L2.0-W1.6_AOTA-B201610S3R3-101-T.wrl"
+	(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Murata_DFE201610P.step"
 		(offset
-			(xyz 0 -0 -0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)

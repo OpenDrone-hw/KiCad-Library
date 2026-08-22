@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -4.32 0)
 		(layer "F.SilkS")
-		(uuid "c3ac430c-fe9d-4596-aa16-8058a5389863")
+		(uuid "3b18239a-ee35-4312-b6e8-bf1a4348d5ff")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "X2SON-4_L1.0-W1.0-P0.65-TL-EP"
 		(at 0 4.32 0)
 		(layer "F.Fab")
-		(uuid "a023c600-f5f2-4477-b9a4-0404283ac1b4")
+		(uuid "2a719ee8-0cb6-4056-bccb-c5e0558911eb")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c14a18eb-7f13-4883-af76-44e203dd32e3")
+		(uuid "9f4d3639-3148-44ec-ba3b-2b8453e2452f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "9d30acf9-517e-4f4b-98a0-63f5ab539b63")
+		(uuid "8366d3c2-3c5c-4028-8272-d922222f6168")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b87d6c22-aa9e-4be0-9c13-8db0f8724e8c")
+		(uuid "97d242f3-ae51-47a1-a3fe-9dd5965690d2")
 	)
 	(fp_line
 		(start -0.55 -0.02)
@@ -67,7 +67,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "789b6bfc-e415-42bc-a049-e6dd2e8ab3ed")
+		(uuid "b303a005-e9ba-48c4-b0b3-0e74e0f7dbbd")
 	)
 	(fp_line
 		(start -0.55 -0.02)
@@ -77,7 +77,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "69437fa5-ae84-408d-9c3c-461007d59734")
+		(uuid "a5ce4272-37c3-4f78-b9f4-0c2a51e041a7")
 	)
 	(fp_line
 		(start -0.37 0.55)
@@ -87,7 +87,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "5dbafe32-0c58-4a08-ad83-f602d5ecbd3b")
+		(uuid "e27bcfd3-2ead-4987-a656-e45c15e6da49")
 	)
 	(fp_line
 		(start -0.37 0.55)
@@ -97,7 +97,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "970d50c1-d76c-4b34-8e62-bf3fd0e135c6")
+		(uuid "726958d4-df65-4ce7-8070-a94301e7ac4c")
 	)
 	(fp_line
 		(start 0.55 -0.08)
@@ -107,7 +107,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "144ff51c-5494-4851-bcb5-5e97368d4f18")
+		(uuid "784f862e-7caf-4380-92cf-cdd7016268d2")
 	)
 	(fp_circle
 		(center -0.77 -0.33)
@@ -118,7 +118,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "b24449f4-7e4c-4b57-a7f4-3bbc9a01a996")
+		(uuid "97f1f886-bc84-4b36-a0cb-ac78e047684e")
 	)
 	(fp_circle
 		(center -0.63 -0.32)
@@ -129,7 +129,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "7bb14f82-6749-4fc2-a46e-bc84d281845c")
+		(uuid "7b5a2502-7b82-4e29-9c43-201f2225e862")
 	)
 	(fp_rect
 		(start -0.8 -0.6)
@@ -140,7 +140,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "57657145-1c41-4aae-9583-82e6ed6683c3")
+		(uuid "2047f354-b3af-4081-a8fe-c583750be6d0")
 	)
 	(fp_circle
 		(center -0.5 -0.5)
@@ -151,12 +151,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "130633b8-fe30-4382-8e36-8e73e8d3dddf")
+		(uuid "7cc5e708-dab6-44dd-91b2-9074a44ed5fe")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "78294f36-b108-41b8-83e9-a1403ec0c835")
+		(uuid "2ab664ed-1bd7-4fe7-8285-6875b595aaa1")
 		(effects
 			(font
 				(size 1 1)
@@ -182,7 +182,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "d7223cc7-a43a-4f31-b6b3-764964790ca8")
+		(uuid "5f88abbb-3414-42bb-8c46-c86ca984aa0a")
 	)
 	(pad "2" smd custom
 		(at -0.43 0.32)
@@ -202,7 +202,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "5a197921-639a-438b-884d-ba873d296944")
+		(uuid "87ed11a1-4f8f-4e7a-9b9e-9d6bd87a513f")
 	)
 	(pad "3" smd custom
 		(at 0.43 0.32)
@@ -222,7 +222,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "6a7bb416-ae56-489a-94a3-6681356fad3f")
+		(uuid "cd42a1d9-10ee-44bb-9a99-bffdec982919")
 	)
 	(pad "4" smd custom
 		(at 0.43 -0.32)
@@ -242,24 +242,24 @@
 				(fill yes)
 			)
 		)
-		(uuid "5a9fddd3-4068-42bc-862e-d261bfc12ce9")
+		(uuid "ed166ba6-0c48-4173-b82f-4fb82cef64ec")
 	)
 	(pad "5" smd rect
 		(at 0 0 45)
 		(size 0.48 0.48)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f61a2cea-b2f5-4e34-a2c3-a3be64374876")
+		(uuid "8144f72d-a2d2-4907-a182-d59ef906af75")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/X2SON-4_L1.0-W1.0-H0.4-P0.65-TL-EPSLDPRT.wrl"
+	(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/OnSemi_XDFN4-1EP_1.0x1.0mm_EP0.52x0.52mm.step"
 		(offset
-			(xyz -0 -0 -0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 270)
+			(xyz 0 0 0)
 		)
 	)
 )

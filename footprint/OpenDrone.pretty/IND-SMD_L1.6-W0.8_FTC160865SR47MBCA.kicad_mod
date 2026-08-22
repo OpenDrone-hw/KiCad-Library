@@ -9,7 +9,7 @@
 		(at -0.006731 -2.669723 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "fc5b8228-0c36-4849-b436-294b4479f13f")
+		(uuid "65b91b4a-6a24-4d7f-a44c-4826b1f8cf58")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 	(property "Value" "XRIM160808SR47MBCD"
 		(at -0.006731 2.651486 0)
 		(layer "F.Fab")
-		(uuid "0d891a04-417d-47ec-b7de-5f4bb2fd93ef")
+		(uuid "57ad1ccd-3c1f-45c1-b20c-1f7cbb18abd1")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "39caa2c9-7dae-4ba2-a709-4ffc52168201")
+		(uuid "30a9c17a-c2ea-4b20-84cf-d11525a478ec")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44,7 +44,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "76c5eb86-4ce5-4fa7-92b7-4cfbc2f81b2d")
+		(uuid "2319f3b2-8601-4770-a868-37bad84f1920")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e46ec5c6-ee03-40b6-8890-5d04242b7d3f")
+		(uuid "43a557fd-5896-4be0-89b9-fed276699a40")
 		(effects
 			(font
 				(size 1 1)
@@ -75,7 +75,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8fd2cc5f-8f3f-4610-ad61-76a0fb09e75a")
+		(uuid "c76d5f39-3053-4a0c-b278-88f4354a467b")
 	)
 	(fp_line
 		(start -1.424105 0.499136)
@@ -85,7 +85,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "f7468683-0129-420c-9f3d-2ee0f56f7bc9")
+		(uuid "dbe0f224-c61d-4158-8e8c-c4a94a14ac2d")
 	)
 	(fp_line
 		(start -1.271679 -0.669723)
@@ -95,7 +95,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "118e7d4b-303d-489e-b405-a475e3c176e7")
+		(uuid "9497b4cd-5a7a-431d-b15d-8a373ed2321c")
 	)
 	(fp_line
 		(start -1.271679 0.651486)
@@ -105,7 +105,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "d0d005c2-8287-4ef4-b67b-a236b1306993")
+		(uuid "a1b49863-4c08-485a-b516-ad815a870a97")
 	)
 	(fp_line
 		(start -1.271679 0.651486)
@@ -115,7 +115,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b1c86f93-c047-4f72-8f5c-92d563d4ebf3")
+		(uuid "c45fb6b1-c22f-46e3-95f5-9627206f6179")
 	)
 	(fp_line
 		(start 1.258344 -0.669723)
@@ -125,7 +125,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "6ce37c90-98a1-4c07-b5df-3f0332f0c28e")
+		(uuid "1a4df6c8-20f5-4a01-85f0-60621600e6af")
 	)
 	(fp_line
 		(start 1.258344 -0.669723)
@@ -135,7 +135,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "60975bfd-e8bc-493c-832b-eeb4dee9ff63")
+		(uuid "223a1c05-26fa-41b3-917b-2d6c34b2d551")
 	)
 	(fp_line
 		(start 1.258344 0.651486)
@@ -145,7 +145,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "c43d4c46-6eb7-4159-8cd0-834a46404643")
+		(uuid "79df76d0-412a-40fe-a5b1-f286ffdea4a7")
 	)
 	(fp_line
 		(start 1.410643 -0.517297)
@@ -155,7 +155,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "3b80cf09-3010-4460-a0c4-ed44f91a1a50")
+		(uuid "1b964986-5c43-463c-b993-e8951436de04")
 	)
 	(fp_line
 		(start 1.410643 0.499136)
@@ -165,7 +165,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "47e8d402-a4df-4336-9603-f0491f9591e9")
+		(uuid "30aa933d-337f-4178-b88f-7fcf265a08c1")
 	)
 	(fp_circle
 		(center 0.800102 -0.400051)
@@ -176,12 +176,12 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "046c9247-f92f-48dd-b7dd-587229837d4a")
+		(uuid "b92d332b-939f-4620-8830-5a8de1aa47b6")
 	)
 	(fp_text user "REF**"
 		(at -0.006731 4.651486 0)
 		(layer "F.Fab")
-		(uuid "34afaf0f-064a-447c-8805-e2929ef07d1e")
+		(uuid "8921e592-3d53-4009-bbee-043ca6bf5d66")
 		(effects
 			(font
 				(size 1 1)
@@ -193,16 +193,16 @@
 		(at 0.700025 0)
 		(size 0.8 0.864008)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "c6a41faf-644a-49ee-9d49-d2c2f9be4818")
+		(uuid "385f82b6-2f87-4497-be6d-6fe05d672c3f")
 	)
 	(pad "2" smd rect
 		(at -0.700025 0)
 		(size 0.8 0.864008)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "498dc168-2d0e-48a4-8335-b50cebb6001c")
+		(uuid "c55379ad-2aac-43cb-aa41-d4f821797a1e")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/IND-SMD_L1.6-W0.8_FTC160865SR47MBCA.step"
+	(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Changjiang_FTC160808S.step"
 		(offset
 			(xyz 0 0 0)
 		)
