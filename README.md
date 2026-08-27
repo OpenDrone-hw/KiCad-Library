@@ -14,6 +14,7 @@ a part to live here first.
 | `footprint/OpenDrone.pretty/` | 143 footprints |
 | `3dmodel/` | 244 model files (129 STEP, 115 WRL). Footprints reference the WRL set; the STEP set is the MCAD counterpart |
 | `PARTS-USED.md` | Every LCSC part used on a manufactured board, and which boards use it |
+| `ALTERNATES.md` | Second sources for the FETs and gate drivers, grouped by land pattern and pinout |
 | `tools/build-parts-index.py` | Regenerates `PARTS-USED.md`; `--check` audits membership |
 | `tools/build-pcm.py` | Builds the KiCad PCM package and repository metadata |
 | `pcm/` | The PCM repository files KiCad reads |
