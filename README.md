@@ -1,21 +1,23 @@
 # KiCad-Library
 
-The parts catalogue of the OpenDrone hardware line: every symbol, footprint
-and 3D model here is used on a board that has been through a real assembly
-run, so it is sourced, footprinted and reflow-proven. Its job is lookup, not
-enforcement. Board repos keep their own local libraries and nothing requires
-a part to live here first.
+The parts catalogue of the OpenDrone hardware line: every physical symbol
+links to an exact, committed datasheet, and every symbol, footprint and 3D
+model here is used on a board that has been through a real assembly run. Its
+job is lookup, not enforcement. Board repos pin this repository and keep only
+parts that have not yet qualified in their local libraries.
 
 ## Repository layout
 
 | Path | Contents |
 |---|---|
-| `symbol/OpenDrone.kicad_sym` | 41 symbols, one library, nickname `OpenDrone` |
+| `symbol/OpenDrone.kicad_sym` | 39 symbols, one library, nickname `OpenDrone` |
 | `footprint/OpenDrone.pretty/` | 143 footprints |
 | `3dmodel/` | 244 model files (129 STEP, 115 WRL). Footprints reference the WRL set; the STEP set is the MCAD counterpart |
+| `datasheet/` | Exact component PDFs, deduplicated by document and tracked by `manifest.json` |
 | `PARTS-USED.md` | Every LCSC part used on a manufactured board, and which boards use it |
 | `ALTERNATES.md` | Second sources for the FETs and gate drivers, grouped by land pattern and pinout |
 | `tools/build-parts-index.py` | Regenerates `PARTS-USED.md`; `--check` audits membership |
+| `tools/check-datasheets.py` | Verifies symbol coverage, paths, PDF signatures and SHA-256 hashes |
 | `tools/build-pcm.py` | Builds the KiCad PCM package and repository metadata |
 | `pcm/` | The PCM repository files KiCad reads |
 
@@ -52,10 +54,11 @@ globally:
 
 ### Path contract (do not break)
 
-Footprint 3D model paths are written as `${OPENDRONE_LIB}/3dmodel/<file>`.
-Board repos define `OPENDRONE_LIB` as a project text variable, checkouts as a
-KiCad path variable, and `tools/build-pcm.py` rewrites the prefix to the KiCad
-third-party directory when packaging. Keep new footprints on the same form.
+Footprint 3D model paths are written as `${OPENDRONE_LIB}/3dmodel/<file>` and
+symbol datasheet fields as `${OPENDRONE_LIB}/datasheet/<file>.pdf`. Board repos
+define `OPENDRONE_LIB` as a project text variable, checkouts as a KiCad path
+variable, and `tools/build-pcm.py` rewrites both prefixes to KiCad's third-party
+directories when packaging. Keep new library items on those forms.
 
 ## Updating the library
 
@@ -73,6 +76,14 @@ manufactured, so everything here has been through a real assembly run. Parts
 that exist only on a planned or in-progress design do not qualify, however good
 they look on paper. When a board reaches alpha, its parts join.
 
+**Datasheets.** Every custom symbol for an orderable physical component maps to
+one exact PDF in `datasheet/manifest.json`; a family PDF may serve several
+symbols and is stored once. Set its `Datasheet` field to
+`${OPENDRONE_LIB}/datasheet/<file>.pdf`. Virtual/interface symbols require an
+explicit manifest exemption. Generic R/C/L primitives stay in KiCad's standard
+libraries and do not get custom symbols or datasheet entries here. Product
+repositories do not duplicate these PDFs.
+
 **Check before you trust it.** `python3 tools/build-parts-index.py --check`
 reports every symbol whose part is on no manufactured board, every symbol with
 no LCSC number, and every manufactured part still missing from the library.
@@ -89,6 +100,7 @@ resistors and capacitors we use. Validate before opening a PR:
 ```sh
 kicad-cli sym export svg symbol/OpenDrone.kicad_sym -o /tmp/symcheck
 kicad-cli fp upgrade /tmp/fpcheck   # on a copy of footprint/OpenDrone.pretty
+python3 tools/check-datasheets.py
 
 # every OpenDrone: footprint ref in the symbol lib resolves to a committed .kicad_mod
 comm -23 <(grep -o '"OpenDrone:[^"]*"' symbol/OpenDrone.kicad_sym | tr -d '"' | sed 's/OpenDrone://' | sort -u) \
@@ -103,9 +115,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## License
 
 Licensed under [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt), the same license as the boards. See [LICENSE](LICENSE).
+Third-party PDFs retain their publishers' copyrights and notices.
 
 ## Revisions
 
+- **2026-09-01**: exact component PDFs moved into the shared catalogue, linked
+  through `OPENDRONE_LIB`, hash-checked by a manifest and included in PCM builds.
 - **2026-08-15**: library nickname and files renamed `Incutec` to `OpenDrone`
   (`symbol/OpenDrone.kicad_sym`, `footprint/OpenDrone.pretty`). PCM package
   1.1.0. Board repos now carry the library as a pinned submodule from the

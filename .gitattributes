@@ -1,0 +1,7 @@
+*.kicad_sym -text
+*.kicad_mod -text
+*.pdf binary
+*.step binary
+*.stp binary
+*.wrl binary
+

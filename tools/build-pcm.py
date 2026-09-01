@@ -6,9 +6,9 @@ Produces:
   pcm/packages.json                            package list served to PCM
   pcm/repository.json                          the URL users add to KiCad
 
-The archive follows the PCM library layout: symbols/, footprints/,
-3dmodels/, with footprint model paths rewritten from ${OPENDRONE_LIB}
-to the 3rd-party dir KiCad manages for PCM content.
+The archive follows the PCM library layout: symbols/, footprints/, 3dmodels/
+and resources/. Footprint model and symbol datasheet paths are rewritten from
+${OPENDRONE_LIB} to the 3rd-party directories KiCad manages for PCM content.
 
 Run from the repo root: python3 tools/build-pcm.py <version>
 Then attach the zip to a GitHub release tagged pcm-v<version>.
@@ -39,8 +39,12 @@ def main():
     os.makedirs(f"{stage}/symbols", exist_ok=True)
     os.makedirs(f"{stage}/footprints/OpenDrone.pretty", exist_ok=True)
     os.makedirs(f"{stage}/3dmodels/OpenDrone.3dshapes", exist_ok=True)
+    os.makedirs(f"{stage}/resources/{IDENT}/datasheet", exist_ok=True)
 
-    shutil.copy("symbol/OpenDrone.kicad_sym", f"{stage}/symbols/OpenDrone.kicad_sym")
+    symbol_text = open("symbol/OpenDrone.kicad_sym").read()
+    datasheet_base = f"{THIRD_PARTY}/resources/{IDENT}/datasheet"
+    symbol_text = symbol_text.replace("${OPENDRONE_LIB}/datasheet", datasheet_base)
+    open(f"{stage}/symbols/OpenDrone.kicad_sym", "w").write(symbol_text)
     model_base = f"{THIRD_PARTY}/3dmodels/{IDENT}/OpenDrone.3dshapes"
     for f in os.listdir("footprint/OpenDrone.pretty"):
         s = open(f"footprint/OpenDrone.pretty/{f}").read()
@@ -48,12 +52,15 @@ def main():
         open(f"{stage}/footprints/OpenDrone.pretty/{f}", "w").write(s)
     for f in os.listdir("3dmodel"):
         shutil.copy(f"3dmodel/{f}", f"{stage}/3dmodels/OpenDrone.3dshapes/{f}")
+    for f in os.listdir("datasheet"):
+        if f.endswith(".pdf"):
+            shutil.copy(f"datasheet/{f}", f"{stage}/resources/{IDENT}/datasheet/{f}")
 
     meta = {
         "$schema": "https://go.kicad.org/pcm/schemas/v1",
         "name": "OpenDrone KiCad Library",
-        "description": "Symbols, footprints and 3D models for every part manufactured on an OpenDrone board.",
-        "description_full": "The parts catalogue of the OpenDrone open source FPV hardware line by incutec: every symbol, footprint and 3D model here is used on a board that has been through a real JLCPCB assembly run. Symbols carry LCSC part numbers for JLCPCB ordering. Hardware line: https://github.com/OpenDrone-hw",
+        "description": "Symbols, footprints, 3D models and pinned datasheets for manufactured OpenDrone parts.",
+        "description_full": "The parts catalogue of the OpenDrone open source FPV hardware line by incutec: every physical symbol links to an exact, packaged datasheet, and every component has been used on a board through a real JLCPCB assembly run. Symbols carry LCSC part numbers for JLCPCB ordering. Hardware line: https://github.com/OpenDrone-hw",
         "identifier": IDENT,
         "type": "library",
         "author": {"name": "incutec", "contact": {"web": "https://opendrone.be"}},

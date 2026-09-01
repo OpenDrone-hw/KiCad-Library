@@ -17,6 +17,7 @@ import os, re, glob, json, collections, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOARDS = os.path.abspath(os.path.join(HERE, '..', '..'))
 CACHE = os.path.join(HERE, '.status-cache.json')
+DATASHEET_MANIFEST = os.path.join(HERE, '..', 'datasheet', 'manifest.json')
 SKIP = {'KiCad-Library'}
 PRODUCED = {'status-alpha', 'status-beta', 'status-launched'}
 PROP = re.compile(r'\(property "([^"]+)" "([^"]*)"')
@@ -64,7 +65,8 @@ def symbol_blocks(text):
             yield dict(PROP.findall(block))
 
 
-def scan_boards():
+def scan_boards(catalog_by_value=None):
+    catalog_by_value = catalog_by_value or {}
     parts = collections.defaultdict(lambda: {'boards': set(), 'value': '', 'fp': '', 'mpn': ''})
     repos = []
     for repo in sorted(os.listdir(BOARDS)):
@@ -79,7 +81,8 @@ def scan_boards():
             except OSError:
                 continue
             for props in symbol_blocks(text):
-                lcsc = (props.get('LCSC') or '').strip()
+                lcsc = (props.get('LCSC') or props.get('LCSC Part') or
+                        catalog_by_value.get(props.get('Value', '')) or '').strip()
                 if not re.fullmatch(r'C\d+', lcsc):
                     continue
                 e = parts[lcsc]
@@ -107,14 +110,16 @@ def library_symbols():
                     break
             i += 1
         props = dict(PROP.findall(text[start:i]))
-        lcsc = (props.get('LCSC') or '').strip()
+        lcsc = (props.get('LCSC') or props.get('LCSC Part') or '').strip()
         out[m.group(1)] = lcsc if re.fullmatch(r'C\d+', lcsc) else None
     return out
 
 
 def main():
     check = '--check' in sys.argv
-    parts, repos = scan_boards()
+    syms = library_symbols()
+    catalog_by_value = {name: lcsc for name, lcsc in syms.items() if lcsc}
+    parts, repos = scan_boards(catalog_by_value)
     status = repo_status(repos)
     made = {r for r in repos if status.get(r) in PRODUCED}
 
@@ -146,13 +151,17 @@ def main():
     if not check:
         return 0
 
-    syms = library_symbols()
+    exemptions = set()
+    if os.path.exists(DATASHEET_MANIFEST):
+        exemptions = set(json.load(open(DATASHEET_MANIFEST)).get('exempt_symbols', {}))
     by_lcsc = {v: k for k, v in syms.items() if v}
     stale = sorted(n for n, l in syms.items() if l and l not in kept)
-    unmapped = sorted(n for n, l in syms.items() if not l)
+    unmapped = sorted(n for n, l in syms.items() if not l and n not in exemptions)
     missing = sorted(l for l in kept if l not in by_lcsc)
 
-    print(f"\nlibrary: {len(syms)} symbols, {len(by_lcsc)} carry an LCSC number")
+    lcsc_count = sum(bool(value) for value in syms.values())
+    print(f"\nlibrary: {len(syms)} symbols, {lcsc_count} carry "
+          f"{len(by_lcsc)} unique LCSC numbers")
     print(f"\n  {len(stale):>3} symbols whose part is on no manufactured board")
     for n in stale[:20]:
         print(f"        {n}  ({syms[n]})")

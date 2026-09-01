@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "documents": {
+    "0900PC16J0042001E.pdf": {
+      "symbols": ["0900PC16J0042001E"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8efe48688efd6d819c6dde82b4d4471.pdf?productCode=C19842466",
+      "sha256": "195ea917bf0fd31967ced80f524b22d25f038ff3d21209bb39c598e5143979c4"
+    },
+    "2450AT18A100E.pdf": {
+      "symbols": ["2450AT18A100E"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/c87dff78bbd34c51b049f74f3fe01d84.pdf?productCode=C89334",
+      "sha256": "c051a99d2eb7ef9b9733b07da106d108fed493ceec90133a48298816a595d048"
+    },
+    "2450FM07D0034T.pdf": {
+      "symbols": ["2450FM07D0034T"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/ae321d7d717f94645c947fed61e37a58.pdf?productCode=C2651081",
+      "sha256": "5f6f8d16413813684ffaaa542ccfd0170d9a8ab65e39d74dad1b1af6307b0efd"
+    },
+    "47948-0001.pdf": {
+      "symbols": ["47948-0001"],
+      "source_url": "https://www.farnell.com/datasheets/2696888.pdf",
+      "sha256": "713c6352616497cdef269952171413660c182ed25d41db5c81258276c20b3ac7"
+    },
+    "AOTA-B201610S3R3-101-T.pdf": {
+      "symbols": ["AOTA-B201610S3R3-101-T"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/0ca6a1bbc70fd13a89f7695ff7dd8558.pdf?productCode=C42411119",
+      "sha256": "b15dcb32224c50ddf5c7643358bdef49177b451d72933d7fbb02f3756aca7827"
+    },
+    "CJ17-400001010B20.pdf": {
+      "symbols": ["CJ17-400001010B20"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/c8b76024e4ef51cd716e9632a86f6b39.pdf?productCode=C2875272",
+      "sha256": "632f38938949569b2434fcec2b24b3014b15d152edfe533af8172cbbd4b91de4"
+    },
+    "DEA102700LT-6307A2.pdf": {
+      "symbols": ["DEA102700LT-6307A2"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/65adb563221306da606b60f091db3f88.pdf?productCode=C574024",
+      "sha256": "f90fdee93709ddb5d67401f1fb1fe680380bc6dd58111997d2b8f64b0f7df70c"
+    },
+    "DMN1150UFB-7B.pdf": {
+      "symbols": ["DMN1150UFB-7B"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8cad6b28c9eb5739a9571c63cd7409f.pdf?productCode=C459538",
+      "sha256": "98d2cb93975eed7847ca6378a44f7530cf25023ee5d0e04d1b7573bf3efadefe"
+    },
+    "ESP32-C3FH4.pdf": {
+      "symbols": ["ESP32-C3FH4"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f09556da75fd022dc111fe5517530eae.pdf?productCode=C2858491",
+      "sha256": "85ca330ab81d69674f941ee22d8e0ac785cd293b4d5f9698109f441661d8bb30"
+    },
+    "INA186A3IDCKR.pdf": {
+      "symbols": ["INA186A3IDCKR"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/41988dc4b496b8350137e0236fc4339f.pdf?productCode=C2058245",
+      "sha256": "1517831c6395c89f72aee6afbd997d5683c8fa1e015631e1311a6f56c372f550"
+    },
+    "JST-SH-SR-Series.pdf": {
+      "symbols": ["SM06B-SRSS-TB(LF)(SN)", "SM08B-SRSS-TB", "SM08B-SRSS-TB(LF)(SN)"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/e03a82bcc66e3c3589917313e54d45e2.pdf?productCode=C160405",
+      "sha256": "8f01930d3601fd55f889f635c8bd71aae1154cbbec2401d07ec740c98e8186d0"
+    },
+    "LMR51420YDDCR.pdf": {
+      "symbols": ["LMR51420YDDCR"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/5e19be5dd53d60c1459b26475bdff8d3.pdf?productCode=C5383002",
+      "sha256": "0ad3d2ef438f42cac8d7200b261afce2bb2ef1a43cf63ae5a0cbc3fb37c7e051"
+    },
+    "LR1121IMLTRT.pdf": {
+      "symbols": ["LR1121IMLTRT"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/2622341ceb0fb8e7ef53786c73036201.pdf?productCode=C7498014",
+      "sha256": "f36bcf2d912cab2360a4cd185e731aee87314bee092fbd047f1f5a765d878fb9"
+    },
+    "LSM6DSV16XTR.pdf": {
+      "symbols": ["LSM6DSV16XTR"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/7d66556bb254f99e058243c7371e051d.pdf?productCode=C5267406",
+      "sha256": "ec53c0e5952fc0c9587ed32b56d066016c2954bc6e9d18355b13a1c4cda17894"
+    },
+    "NSG2065Q.pdf": {
+      "symbols": ["NSG2065Q"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/572cbac628b395c28845645e0a176c8c.pdf?productCode=C41414478",
+      "sha256": "7fe2bc9d97064839cd582e1b5b0011756c1de52a67e30c1700bd2472b4c126dc"
+    },
+    "RFX2401C.pdf": {
+      "symbols": ["RFX2401C"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/cafc8667c8cc440ea391621934037a09.pdf?productCode=C19213",
+      "sha256": "d09a22901ef8c7c99d1cfc6cf46c6c6686d844aa814eea564e535793614162f0"
+    },
+    "RP2350.pdf": {
+      "symbols": ["RP2354A", "RP2354B_C39843328"],
+      "source_url": "https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf",
+      "sha256": "2877d0f270fb6d6a57943bee58aaad536aa027bea1e5b1c4ce2541a3230d4be8"
+    },
+    "SDM02U30LP3-7B.pdf": {
+      "symbols": ["SDM02U30LP3-7B"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/acaf7828f5bc830b7503d2283250fd9c.pdf?productCode=C151629",
+      "sha256": "460e61cfa7216c245ac333bc0189d9ea217ce96d639564e0b34e5051d92115f8"
+    },
+    "SKY13373-460LF.pdf": {
+      "symbols": ["SKY13373-460LF"],
+      "source_url": "https://www.skyworksinc.com/-/media/SkyWorks/Documents/Products/601-700/SKY13373_460LF_201264O.pdf",
+      "sha256": "f4310ed8f7808b093ee9186b50da8fda04c3e7978d901fcbd69ffa221287d5cc"
+    },
+    "SKY13414-485LF.pdf": {
+      "symbols": ["SKY13414-485LF"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/226e6f816916d79fc5debb0453d8c748.pdf?productCode=C255353",
+      "sha256": "b6b914faf052d5cc60770b3f12247d4e0f4814744bf1012ce5cacd2760390c3f"
+    },
+    "SN74LVC1G3157DTBR.pdf": {
+      "symbols": ["SN74LVC1G3157DTBR"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f2adb6469adea4e6a80ab1e7aeca9799.pdf?productCode=C2673087",
+      "sha256": "7ecaeaa214c93e1df84913ea23bb9e2d3f139180b5caf1b8d1a1fcfeaada2b58"
+    },
+    "SX1281IMLTRT.pdf": {
+      "symbols": ["SX1281IMLTRT"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/a45ba65d2c8690c33c912536eaac205e.pdf?productCode=C2151551",
+      "sha256": "ff541551f0d9ac7cb84c96d0ac0e364c68689fdf4ba3d38b0ad5562b45e1fa5c"
+    },
+    "TF-021B-H265.pdf": {
+      "symbols": ["TF-021B-H265"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/649033837db010158dd715a72dbc0940.pdf?productCode=C498185",
+      "sha256": "469b6864442a1b074b73e3c8e1d5dbb78547c3f90779bf52a4a42d9238ff7156"
+    },
+    "TFPUSH.pdf": {
+      "symbols": ["TFPUSH"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/dc83ceb7bc09989eab2815b685da60e4.pdf?productCode=C393941",
+      "sha256": "0c38fd72c20e453a250014e8fcd771b43f3c042746db08ff700b7be96397ca04"
+    },
+    "TLV75533PDQNR.pdf": {
+      "symbols": ["TLV75533PDQNR"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/345a969f8a31f5b0eab8be5fce3a1a5e.pdf?productCode=C2861882",
+      "sha256": "56edc23c4774bdf4db8eb814c3ce8a95b17780a20f39157b4de14d4113544780"
+    },
+    "TLV76733DRVR.pdf": {
+      "symbols": ["TLV76733DRVR"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/8f9ae569d9e00b4f6c6b122dbc277210.pdf?productCode=C2848334",
+      "sha256": "4b6c90cec1ba8e19f68575cfdfeb5666913d6124be1a7a0715dd8064d81823c3"
+    },
+    "TS2306A240GFMSM9-C2976675.pdf": {
+      "symbols": ["TS2306A240GFMSM9_C2976675"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/032019575f882951d1b777f1587529ce.pdf?productCode=C2976675",
+      "sha256": "6e5ddc9c3538152ee9eef800a124d894c22e800a73e34f3586a2f293c23a9b35"
+    },
+    "TXC-OW-Series.pdf": {
+      "symbols": ["OW7EL89CENUNFAYLC-52M", "OW7EL89CENUYO3YLC-32M"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/59950255efca2f8b573029002ac76a55.pdf?productCode=C22434888",
+      "sha256": "51fd169c901eb310906fa112cafb9d45d98832826c8ead38e57f49450f4dd892"
+    },
+    "TYPE-C16PQTWT.pdf": {
+      "symbols": ["TYPE-C16PQTWT"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/d3846d73123f7a78a150a5dc80fdd645.pdf?productCode=C5187472",
+      "sha256": "9d6d8a60a594feabe12d467c548536872af4b41b7a3798c258b9d49f24d3e4ab"
+    },
+    "U.FL-R-SMT-1-80.pdf": {
+      "symbols": ["U.FL-R-SMT-1(80)"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/ade8681cf25347ad817fa65440db6a2c.pdf?productCode=C88374",
+      "sha256": "3e7b368a3ae1167260baf0352c70629776490ea65e1e860824dac32a26db430a"
+    },
+    "XL-1010RGBC-WS2812B.pdf": {
+      "symbols": ["XL-1010RGBC-WS2812B"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/61bc6c9c567c27d05ec28078af87ff60.pdf?productCode=C5349953",
+      "sha256": "6d4f13f2c2ed3bb16805d15b42b5ffde9566e926dbfd1ae9e9eae03d766d3a37"
+    },
+    "XRIM160808SR47MBCD.pdf": {
+      "symbols": ["XRIM160808SR47MBCD"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/7b61316e4ff636e5ce42006c3fc37d41.pdf?productCode=C48391583",
+      "sha256": "75b985b49d9abedcb5f92475b8e30c9c6b24394dc03d6b3ffd45dbe8ba146c20"
+    },
+    "XRTC303020D4R7MBCA.pdf": {
+      "symbols": ["XRTC303020D4R7MBCA"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/885b80f22c6c785fc546f167f8abcc37.pdf?productCode=C39846837",
+      "sha256": "67d7ff900e8a0039cac70faef99fdae7e351ad61350e349bcf2424f470479af3"
+    },
+    "XTM25012000JT00351001.pdf": {
+      "symbols": ["XTM25012000JT00351001"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/b1834cc40950f3b74c36f8374e7b751a.pdf?productCode=C37635340",
+      "sha256": "9adc12a5ba08ac6e4d15c8460080353c221e7d2db62b6378f5ea15fc76402b32"
+    }
+  },
+  "exempt_symbols": {
+    "Receiver": "Virtual receiver interface; no orderable physical part."
+  }
+}
