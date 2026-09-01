@@ -10,7 +10,7 @@ parts that have not yet qualified in their local libraries.
 
 | Path | Contents |
 |---|---|
-| `symbol/OpenDrone.kicad_sym` | 39 symbols, one library, nickname `OpenDrone` |
+| `symbol/OpenDrone.kicad_sym` | 54 symbols, one library, nickname `OpenDrone` |
 | `footprint/OpenDrone.pretty/` | 143 footprints |
 | `3dmodel/` | 244 model files (129 STEP, 115 WRL). Footprints reference the WRL set; the STEP set is the MCAD counterpart |
 | `datasheet/` | Exact component PDFs, deduplicated by document and tracked by `manifest.json` |
@@ -70,11 +70,13 @@ directories when packaging. Keep new library items on those forms.
 
 ## Rules
 
-**Membership.** A symbol, footprint or 3D model belongs here only if it is used
-on a board whose repo is at `status-alpha` or beyond. Alpha means the board was
-manufactured, so everything here has been through a real assembly run. Parts
-that exist only on a planned or in-progress design do not qualify, however good
-they look on paper. When a board reaches alpha, its parts join.
+**Membership.** Every reusable, datasheet-bearing component used on a board
+whose repo is at `status-alpha` or beyond belongs here. Alpha means the board
+was manufactured, so everything here has been through a real assembly run.
+Parts that exist only on a planned or in-progress design do not qualify,
+however good they look on paper. When a board reaches alpha, its ICs,
+semiconductors, sensors, connectors and other non-generic parts join; ordinary
+R/C/L/LED primitives remain in KiCad's standard libraries.
 
 **Datasheets.** Every custom symbol for an orderable physical component maps to
 one exact PDF in `datasheet/manifest.json`; a family PDF may serve several
@@ -86,8 +88,10 @@ repositories do not duplicate these PDFs.
 
 **Check before you trust it.** `python3 tools/build-parts-index.py --check`
 reports every symbol whose part is on no manufactured board, every symbol with
-no LCSC number, and every manufactured part still missing from the library.
-Run it after any change here and after any board reaches alpha.
+no LCSC number, every intentionally unpromoted generic primitive, and every
+datasheet-bearing manufactured part still missing from the library. Missing
+non-generic parts fail the check. Run it after any change here and after any
+board reaches alpha.
 
 **Authoring.** Edit symbols and footprints in the KiCad editors, or scripted
 via kicad-skip or the pcbnew API; never text-edit `.kicad_sym` or `.kicad_mod`
@@ -121,6 +125,11 @@ Third-party PDFs retain their publishers' copyrights and notices.
 
 - **2026-09-01**: exact component PDFs moved into the shared catalogue, linked
   through `OPENDRONE_LIB`, hash-checked by a manifest and included in PCM builds.
+  The alpha-board audit then promoted every remaining datasheet-bearing part:
+  54 symbols now map 53 physical components to 46 deduplicated PDFs, with one
+  virtual exemption. The membership check fails when a future manufactured
+  non-generic part is missing; 71 ordinary R/C/L/LED primitives remain outside
+  the catalogue by design.
 - **2026-08-15**: library nickname and files renamed `Incutec` to `OpenDrone`
   (`symbol/OpenDrone.kicad_sym`, `footprint/OpenDrone.pretty`). PCM package
   1.1.0. Board repos now carry the library as a pinned submodule from the

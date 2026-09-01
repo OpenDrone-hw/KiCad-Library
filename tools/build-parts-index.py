@@ -22,6 +22,22 @@ SKIP = {'KiCad-Library'}
 PRODUCED = {'status-alpha', 'status-beta', 'status-launched'}
 PROP = re.compile(r'\(property "([^"]+)" "([^"]*)"')
 
+# These remain KiCad primitives rather than catalogue symbols. Their exact
+# supplier choices still appear in PARTS-USED.md, but they do not require a
+# custom symbol or a centrally tracked datasheet. Everything else used on a
+# manufactured board must be promoted into the shared catalogue.
+GENERIC_FOOTPRINT_PREFIXES = (
+    'R_', 'R0201',
+    'C_', 'C0201',
+    'L_', 'IND-SMD_',
+    'LED_',
+)
+
+
+def is_generic_primitive(part):
+    footprint = part.get('fp', '').split(':')[-1]
+    return footprint.startswith(GENERIC_FOOTPRINT_PREFIXES)
+
 
 def repo_status(repos):
     """status-* topic per repo. Live from gh, falling back to the cache."""
@@ -158,6 +174,8 @@ def main():
     stale = sorted(n for n, l in syms.items() if l and l not in kept)
     unmapped = sorted(n for n, l in syms.items() if not l and n not in exemptions)
     missing = sorted(l for l in kept if l not in by_lcsc)
+    generic_missing = [l for l in missing if is_generic_primitive(kept[l])]
+    required_missing = [l for l in missing if not is_generic_primitive(kept[l])]
 
     lcsc_count = sum(bool(value) for value in syms.values())
     print(f"\nlibrary: {len(syms)} symbols, {lcsc_count} carry "
@@ -172,9 +190,17 @@ def main():
         print(f"        {n}")
     if len(unmapped) > 10:
         print(f"        ... and {len(unmapped) - 10} more")
-    print(f"\n  {len(missing):>3} manufactured parts not in the library (promotion candidates)")
+    print(f"\n  {len(generic_missing):>3} manufactured generic R/C/L/LED primitives "
+          "intentionally not promoted")
+    print(f"\n  {len(required_missing):>3} datasheet-bearing manufactured parts missing "
+          "from the library")
+    for lcsc in required_missing[:20]:
+        part = kept[lcsc]
+        print(f"        {lcsc}  {part['value']}  ({part['fp'].split(':')[-1]})")
+    if len(required_missing) > 20:
+        print(f"        ... and {len(required_missing) - 20} more")
 
-    return 1 if (stale or unmapped) else 0
+    return 1 if (stale or unmapped or required_missing) else 0
 
 
 if __name__ == '__main__':

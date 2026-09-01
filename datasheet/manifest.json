@@ -26,10 +26,30 @@
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/0ca6a1bbc70fd13a89f7695ff7dd8558.pdf?productCode=C42411119",
       "sha256": "b15dcb32224c50ddf5c7643358bdef49177b451d72933d7fbb02f3756aca7827"
     },
+    "AP1606.pdf": {
+      "symbols": ["AP1606"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/fe90c356b1db3f685b0dad34b80fa1f5.pdf?productCode=C2849580",
+      "sha256": "8f0762b69f29c6c3ee1110801ba8fd0d4bd9cbb5c9b43110986db0b0a87babe8"
+    },
+    "AT32F421.pdf": {
+      "symbols": ["AT32F421G8U7"],
+      "source_url": "https://www.arterychip.com/download/DS/DS_AT32F421_V2.03_EN.pdf",
+      "sha256": "953409957662e1fe4fada766411913ca832382551500f20fad474dec0739c0de"
+    },
+    "BMI270.pdf": {
+      "symbols": ["BMI270"],
+      "source_url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf",
+      "sha256": "f68ce3c74f011a80bbe4b0279c4abe9609a71a5dcda75a951381d77112e005fb"
+    },
     "CJ17-400001010B20.pdf": {
       "symbols": ["CJ17-400001010B20"],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/c8b76024e4ef51cd716e9632a86f6b39.pdf?productCode=C2875272",
       "sha256": "632f38938949569b2434fcec2b24b3014b15d152edfe533af8172cbbd4b91de4"
+    },
+    "COS8051SOT.pdf": {
+      "symbols": ["COS8051SOT"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/98bbff1bec6ae45bf182a8d65686c9d2.pdf?productCode=C7463385",
+      "sha256": "59babd131cdd748cb6a56120b4e32ce5fdcd42d89486e0730215960f6afde70a"
     },
     "DEA102700LT-6307A2.pdf": {
       "symbols": ["DEA102700LT-6307A2"],
@@ -40,6 +60,16 @@
       "symbols": ["DMN1150UFB-7B"],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8cad6b28c9eb5739a9571c63cd7409f.pdf?productCode=C459538",
       "sha256": "98d2cb93975eed7847ca6378a44f7530cf25023ee5d0e04d1b7573bf3efadefe"
+    },
+    "DOY180N03T.pdf": {
+      "symbols": ["DOY180N03T"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/9de45436d493e0f6a2d31f151d604b7a.pdf?productCode=C49441966",
+      "sha256": "ff02def58dff0b1a0be4d7410bc7e3e41598bfe72eb3a3f242e8020221aba3bc"
+    },
+    "DSK24.pdf": {
+      "symbols": ["DSK24"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8af0aed27a586a581d711cfe0a7446f.pdf?productCode=C64890",
+      "sha256": "d170672f49e1fc4deb50b32b3d3ad96f9d7707b448b4f355dcafda24b7696698"
     },
     "ESP32-C3FH4.pdf": {
       "symbols": ["ESP32-C3FH4"],
@@ -52,9 +82,29 @@
       "sha256": "1517831c6395c89f72aee6afbd997d5683c8fa1e015631e1311a6f56c372f550"
     },
     "JST-SH-SR-Series.pdf": {
-      "symbols": ["SM06B-SRSS-TB(LF)(SN)", "SM08B-SRSS-TB", "SM08B-SRSS-TB(LF)(SN)"],
+      "symbols": ["SM03B-SRSS-TB", "SM04B-SRSS-TB", "SM06B-SRSS-TB(LF)(SN)", "SM08B-SRSS-TB", "SM08B-SRSS-TB(LF)(SN)"],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/e03a82bcc66e3c3589917313e54d45e2.pdf?productCode=C160405",
       "sha256": "8f01930d3601fd55f889f635c8bd71aae1154cbbec2401d07ec740c98e8186d0"
+    },
+    "LMR51430.pdf": {
+      "symbols": ["LMR51430YFDDCR"],
+      "source_url": "https://www.ti.com/lit/ds/symlink/lmr51430.pdf",
+      "sha256": "f7d8053844fb07ae773844f023373c0c570507ca61603fe28dda15364987296c"
+    },
+    "LMR51635.pdf": {
+      "symbols": ["LMR51635YDDCR"],
+      "source_url": "https://www.ti.com/lit/ds/symlink/lmr51635.pdf",
+      "sha256": "e1f7a10d36b45dc96764b8719848380f1e1177fdfd6879728942237b4777513c"
+    },
+    "LMR54406.pdf": {
+      "symbols": ["LMR54406DBVR"],
+      "source_url": "https://www.ti.com/lit/ds/symlink/lmr54406.pdf",
+      "sha256": "f0dc0ace8430cad919ef1f590d65d217362ee3d3a975406ded57b98f228ffaf7"
+    },
+    "LP5912.pdf": {
+      "symbols": ["LP5912-1.8DRVR", "LP5912-3.3DRVR"],
+      "source_url": "https://www.ti.com/lit/ds/symlink/lp5912.pdf",
+      "sha256": "6d2435e016f88dddf6eeea6b7415c3f81cce19b4285a5b9842b8d5bb3b8b1b7f"
     },
     "LMR51420YDDCR.pdf": {
       "symbols": ["LMR51420YDDCR"],
@@ -106,6 +156,11 @@
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f2adb6469adea4e6a80ab1e7aeca9799.pdf?productCode=C2673087",
       "sha256": "7ecaeaa214c93e1df84913ea23bb9e2d3f139180b5caf1b8d1a1fcfeaada2b58"
     },
+    "SP40N01GHNK.pdf": {
+      "symbols": ["SP40N01GHNK"],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/afe1b9d2d287b2937a27623201a91019.pdf?productCode=C22385416",
+      "sha256": "fa4e0d30de923aa26649fef2fff0d46f0617267026711d3b12177add38b608b9"
+    },
     "SX1281IMLTRT.pdf": {
       "symbols": ["SX1281IMLTRT"],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/a45ba65d2c8690c33c912536eaac205e.pdf?productCode=C2151551",
@@ -120,6 +175,11 @@
       "symbols": ["TFPUSH"],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/dc83ceb7bc09989eab2815b685da60e4.pdf?productCode=C393941",
       "sha256": "0c38fd72c20e453a250014e8fcd771b43f3c042746db08ff700b7be96397ca04"
+    },
+    "TLV7031.pdf": {
+      "symbols": ["TLV7031DPWR"],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tlv7031.pdf",
+      "sha256": "15d8c7e1b12f3bad6aa02c332ed9fa769b0a727ad426f5aac0cf471b89c6fc8f"
     },
     "TLV75533PDQNR.pdf": {
       "symbols": ["TLV75533PDQNR"],
