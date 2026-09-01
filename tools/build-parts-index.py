@@ -12,7 +12,7 @@ value of the library, and it only stays true if something checks.
 Stage comes from each repo's status-* GitHub topic, fetched with gh and cached
 in tools/.status-cache.json so the script still runs offline.
 """
-import os, re, glob, json, collections, subprocess, sys
+import os, re, json, collections, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BOARDS = os.path.abspath(os.path.join(HERE, '..', '..'))
@@ -44,6 +44,7 @@ def repo_status(repos):
     cache = {}
     if os.path.exists(CACHE):
         cache = json.load(open(CACHE))
+    cache = {repo: cache[repo] for repo in repos if repo in cache}
     fresh = {}
     for r in repos:
         try:
@@ -86,10 +87,23 @@ def scan_boards(catalog_by_value=None):
     parts = collections.defaultdict(lambda: {'boards': set(), 'value': '', 'fp': '', 'mpn': ''})
     repos = []
     for repo in sorted(os.listdir(BOARDS)):
-        if repo in SKIP or not os.path.isdir(os.path.join(BOARDS, repo, '.git')):
+        repo_path = os.path.join(BOARDS, repo)
+        if repo in SKIP or not os.path.isdir(os.path.join(repo_path, '.git')):
+            continue
+        tracked = subprocess.run(
+            ['git', '-C', repo_path, 'ls-files', '-z', '--', '*.kicad_sch'],
+            capture_output=True,
+        )
+        if tracked.returncode:
+            continue
+        schematics = [
+            os.path.join(repo_path, name.decode())
+            for name in tracked.stdout.split(b'\0') if name
+        ]
+        if not schematics:
             continue
         repos.append(repo)
-        for sch in glob.glob(os.path.join(BOARDS, repo, '**', '*.kicad_sch'), recursive=True):
+        for sch in schematics:
             if '/libs/' in sch or '/archive/' in sch:
                 continue
             try:
