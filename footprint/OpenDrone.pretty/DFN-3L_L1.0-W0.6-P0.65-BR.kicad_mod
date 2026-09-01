@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -4.22 0)
 		(layer "F.SilkS")
-		(uuid "5fb92d4c-090a-4d8e-a761-39d8d54ba5ff")
+		(uuid "9879215f-1b52-4cd9-aa08-f4b9670d83f2")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "DFN-3L_L1.0-W0.6-P0.65-BR"
 		(at 0 4.22 0)
 		(layer "F.Fab")
-		(uuid "0bc76d79-0c78-4f5f-9eec-b9dfd6a8d95c")
+		(uuid "3d0fa454-1439-49e1-8fbc-59528ed5b87f")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8de34afc-df98-4bf0-8176-e7222adb8298")
+		(uuid "209b7493-c2ec-486e-b65e-4f239d13c1eb")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e93c17f0-3b4b-4389-af80-1ae882d90aea")
+		(uuid "8b69731c-c50e-4df2-af59-e4d5d71746eb")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -60,7 +60,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "cafbf05b-738e-4006-9d4e-7dd8d5575905")
+		(uuid "84528395-48a8-403c-bd11-642928fee865")
 	)
 	(fp_circle
 		(center 0.65 0.25)
@@ -71,7 +71,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "73564183-80b8-48eb-b81d-063981de9211")
+		(uuid "5a6a49f1-366c-45a2-a198-7a998ca0d1ad")
 	)
 	(fp_circle
 		(center 0.51 0.3)
@@ -82,12 +82,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "c1d36f36-81b3-4223-aa8f-5f2e28e0d343")
+		(uuid "11830e4b-c785-410e-8640-7bb8dad3b4b9")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "d40af25b-db00-4e50-b3a4-6e3b73d86cd2")
+		(uuid "4c05cc98-5dbf-4917-933f-86362274c27c")
 		(effects
 			(font
 				(size 1 1)
@@ -99,24 +99,24 @@
 		(at 0.34 0.22 90)
 		(size 0.25 0.35)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "90a3ef57-4ad2-4e01-9a76-5644b1ad0520")
+		(uuid "0aca0db6-15fb-4d69-8b88-ae94ed6d57c6")
 	)
 	(pad "2" smd rect
 		(at 0.34 -0.22 90)
 		(size 0.25 0.35)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "a0b9e9d7-afdb-4ba8-8e54-d3ed6b454c85")
+		(uuid "27c9d82f-82a3-4d8d-9f78-cb9ca083556c")
 	)
 	(pad "3" smd rect
 		(at -0.34 0 270)
 		(size 0.6 0.35)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "3056c6d7-bfc3-4443-b14c-406e81c6696a")
+		(uuid "e183638c-c453-4c31-911a-70d8e5d050e3")
 	)
 	(embedded_fonts no)
 	(model "${OPENDRONE_LIB}/3dmodel/DFN-3L_L1.0-W0.6-H0.5-P0.65-BR.wrl"
 		(offset
-			(xyz 0.01 -0 -0)
+			(xyz 0 0 0.5)
 		)
 		(scale
 			(xyz 1 1 1)
