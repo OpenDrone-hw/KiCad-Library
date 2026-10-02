@@ -9,8 +9,10 @@ value of the library, and it only stays true if something checks.
     python3 tools/build-parts-index.py            regenerate PARTS-USED.md
     python3 tools/build-parts-index.py --check     report drift, exit 1 if any
 
-Stage comes from each repo's status-* GitHub topic, fetched with gh and cached
-in tools/.status-cache.json so the script still runs offline.
+Only public OpenDrone-hw board repositories are indexed; a private or
+unpublished checkout next to this one is never read. Visibility and stage come
+from GitHub through gh; stages of public repos are cached in
+tools/.status-cache.json so the script still runs offline.
 """
 import os, re, json, collections, subprocess, sys
 
@@ -37,6 +39,25 @@ GENERIC_FOOTPRINT_PREFIXES = (
 def is_generic_primitive(part):
     footprint = part.get('fp', '').split(':')[-1]
     return footprint.startswith(GENERIC_FOOTPRINT_PREFIXES)
+
+
+def public_repos(names):
+    """Names whose OpenDrone-hw repository is public. Offline: the cached ones."""
+    public, reached = set(), False
+    for r in names:
+        try:
+            out = subprocess.run(['gh', 'api', f'repos/OpenDrone-hw/{r}',
+                                  '--jq', '.visibility'], capture_output=True,
+                                 text=True, timeout=15)
+        except Exception:
+            continue
+        if out.returncode == 0:
+            reached = True
+            if out.stdout.strip() == 'public':
+                public.add(r)
+    if not reached and os.path.exists(CACHE):
+        public = set(json.load(open(CACHE))) & set(names)
+    return public
 
 
 def repo_status(repos):
@@ -86,10 +107,10 @@ def scan_boards(catalog_by_value=None):
     catalog_by_value = catalog_by_value or {}
     parts = collections.defaultdict(lambda: {'boards': set(), 'value': '', 'fp': '', 'mpn': ''})
     repos = []
-    for repo in sorted(os.listdir(BOARDS)):
+    candidates = [r for r in sorted(os.listdir(BOARDS)) if r not in SKIP
+                  and os.path.exists(os.path.join(BOARDS, r, '.git'))]
+    for repo in sorted(public_repos(candidates)):
         repo_path = os.path.join(BOARDS, repo)
-        if repo in SKIP or not os.path.isdir(os.path.join(repo_path, '.git')):
-            continue
         tracked = subprocess.run(
             ['git', '-C', repo_path, 'ls-files', '-z', '--', '*.kicad_sch'],
             capture_output=True,

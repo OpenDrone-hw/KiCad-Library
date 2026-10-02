@@ -1,9 +1,9 @@
 {
   "OpenAIO": "status-in-progress",
-  "OpenESC-20x20": "status-alpha",
-  "OpenESC-30x30": "status-alpha",
-  "OpenFC-Lite": "status-alpha",
-  "OpenFC-Lite-Mini": "status-alpha",
+  "OpenESC-20x20": "status-beta",
+  "OpenESC-30x30": "status-beta",
+  "OpenFC-Lite": "status-beta",
+  "OpenFC-Lite-Mini": "status-beta",
   "OpenRX-Gemini": "status-alpha",
   "OpenRX-Lite": "status-alpha",
   "OpenRX-Lite-UFL": "status-alpha",
