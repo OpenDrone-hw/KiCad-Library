@@ -20,3 +20,6 @@ __pycache__/
 .claude/
 CLAUDE.md
 dist/
+
+# Datasheet PDFs are fetched, not committed: tools/fetch-datasheets.py
+datasheet/*.pdf
