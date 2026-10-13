@@ -137,7 +137,7 @@ Third-party PDFs retain their publishers' copyrights and notices.
 - **2026-08-14**: pruned to the membership rule: 41 symbols, 143 footprints,
   244 models remain, all on manufactured boards or awaiting an LCSC number.
   3D paths recontracted from the removed submodule layout to
-  `${OPENDRONE_LIB}`. First PCM package published. `tools/bump-all.sh`
+  `${OPENDRONE_LIB}`. First PCM package published. `tools/bump-all.sh` <!-- pointer-check: skip -->
   deleted with the submodule model.
-- **2026-08-04**: library assembled by merging the per-project board libraries: 105 symbols, 195 footprints, full 3D model set. LCSC property unified to `LCSC`, verified FC redraws adopted (`ESP32-C3FH4`, `SX1281IMLTRT`). `tools/bump-all.sh` fixed to commit via pathspec.
+- **2026-08-04**: library assembled by merging the per-project board libraries: 105 symbols, 195 footprints, full 3D model set. LCSC property unified to `LCSC`, verified FC redraws adopted (`ESP32-C3FH4`, `SX1281IMLTRT`). `tools/bump-all.sh` fixed to commit via pathspec. <!-- pointer-check: skip -->
 - **2026-06-29**: initial `Incutec.kicad_sym` from the OpenRX lineage (21 symbols).
