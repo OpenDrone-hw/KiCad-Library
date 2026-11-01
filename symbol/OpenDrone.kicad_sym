@@ -7860,24 +7860,6 @@
 				)
 			)
 			(pin unspecified line
-				(at -12.7 1.27 0)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin unspecified line
 				(at -12.7 -1.27 0)
 				(length 2.54)
 				(name "GND"
@@ -7924,6 +7906,26 @@
 					)
 				)
 				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "OW7EL89CENUNFAYLC-52M_1_1"
+			(pin unspecified line
+				(at -12.7 1.27 0)
+				(length 2.54)
+				(name "DNC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
