@@ -2,232 +2,1087 @@
   "version": 1,
   "documents": {
     "0900PC16J0042001E.pdf": {
-      "symbols": ["0900PC16J0042001E"],
+      "symbols": [
+        "0900PC16J0042001E"
+      ],
+      "parts": [
+        "0900PC16J0042001E"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8efe48688efd6d819c6dde82b4d4471.pdf?productCode=C19842466",
       "sha256": "195ea917bf0fd31967ced80f524b22d25f038ff3d21209bb39c598e5143979c4"
     },
+    "2450AT07A0100001T.pdf": {
+      "symbols": [],
+      "parts": [
+        "2450AT07A0100001T"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/0fd736d5d6873cf37e062fd6fe3fbbcc.pdf?productCode=C17531353",
+      "sha256": "f32b712689bb53d2a58ee4d7e2273951d4c33467bf6be16ee274d836f24256ad"
+    },
     "2450AT18A100E.pdf": {
-      "symbols": ["2450AT18A100E"],
+      "symbols": [
+        "2450AT18A100E"
+      ],
+      "parts": [
+        "2450AT18A100E"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/c87dff78bbd34c51b049f74f3fe01d84.pdf?productCode=C89334",
       "sha256": "c051a99d2eb7ef9b9733b07da106d108fed493ceec90133a48298816a595d048"
     },
     "2450FM07D0034T.pdf": {
-      "symbols": ["2450FM07D0034T"],
+      "symbols": [
+        "2450FM07D0034T"
+      ],
+      "parts": [
+        "2450FM07D0034T"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenAIO-Whoop",
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/ae321d7d717f94645c947fed61e37a58.pdf?productCode=C2651081",
       "sha256": "5f6f8d16413813684ffaaa542ccfd0170d9a8ab65e39d74dad1b1af6307b0efd"
     },
+    "2N7002BKM.pdf": {
+      "symbols": [],
+      "parts": [
+        "2N7002BKM,315"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/2N7002BKM.pdf",
+      "sha256": "486cbfa361172d44dab3b4d2196a2a32ddd39526053b2cb25141a903068164e6"
+    },
+    "3X008000BP.pdf": {
+      "symbols": [],
+      "parts": [
+        "3X008000BP"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/705a3896ee7102df2b039af3f25e8da7.pdf?productCode=C19723344",
+      "sha256": "5e511191fa7e368137c12999ae1c0c218c61a332e48bee439076be3b8d1523e1"
+    },
     "47948-0001.pdf": {
-      "symbols": ["47948-0001"],
+      "symbols": [
+        "47948-0001"
+      ],
+      "parts": [
+        "479480001"
+      ],
+      "boards": [
+        "OpenRX-Lite"
+      ],
       "source_url": "https://www.farnell.com/datasheets/2696888.pdf",
       "sha256": "713c6352616497cdef269952171413660c182ed25d41db5c81258276c20b3ac7"
     },
+    "AGM210MAP.pdf": {
+      "symbols": [],
+      "parts": [
+        "AGM210MAP"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/003bd150bd5c555060280317fe5edd43.pdf?productCode=C7431169",
+      "sha256": "dee5896d4af8b65f6253443cce11b2991fc69598c13de47837a970adbd6877cf"
+    },
     "AOTA-B201610S3R3-101-T.pdf": {
-      "symbols": ["AOTA-B201610S3R3-101-T"],
+      "symbols": [
+        "AOTA-B201610S3R3-101-T"
+      ],
+      "parts": [
+        "AOTA-B201610S3R3-101-T"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/0ca6a1bbc70fd13a89f7695ff7dd8558.pdf?productCode=C42411119",
       "sha256": "b15dcb32224c50ddf5c7643358bdef49177b451d72933d7fbb02f3756aca7827"
     },
     "AP1606.pdf": {
-      "symbols": ["AP1606"],
+      "symbols": [
+        "AP1606"
+      ],
+      "parts": [
+        "AP1606"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/fe90c356b1db3f685b0dad34b80fa1f5.pdf?productCode=C2849580",
       "sha256": "8f0762b69f29c6c3ee1110801ba8fd0d4bd9cbb5c9b43110986db0b0a87babe8"
     },
     "AT32F421.pdf": {
-      "symbols": ["AT32F421G8U7"],
+      "symbols": [
+        "AT32F421G8U7"
+      ],
+      "parts": [
+        "AT32F421G8U7"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenESC-20x20",
+        "OpenESC-30x30",
+        "OpenESC-Single"
+      ],
       "source_url": "https://www.arterychip.com/download/DS/DS_AT32F421_V2.03_EN.pdf",
       "sha256": "953409957662e1fe4fada766411913ca832382551500f20fad474dec0739c0de"
     },
+    "AT7456E.pdf": {
+      "symbols": [],
+      "parts": [
+        "AT7456E"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/05e3e037fbf1dab52895a7a9e3a9c97c.pdf?productCode=C82351",
+      "sha256": "bc0500dff1b12afbb80dda24d048333eabeb80d354a412cc44eb6f606230fc51"
+    },
+    "BC857BM.pdf": {
+      "symbols": [],
+      "parts": [
+        "BC857BM,315"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/626210144c0c35f9df6d101bc382a1ed.pdf?productCode=C549525",
+      "sha256": "d21cc1150021712e2aceec10322b54521ee27f2000832e63242bcf6380987916"
+    },
+    "BM04B-SRSS-TB.pdf": {
+      "symbols": [],
+      "parts": [
+        "BM04B-SRSS-TB(LF)(SN)"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/00659630c8ad1e2184fc3218d8262faf.pdf?productCode=C160390",
+      "sha256": "25c2aa750d4a0918ba86cd8181b9eb7f30db70c22dc4ec975a07bcdb17257655"
+    },
     "BMI270.pdf": {
-      "symbols": ["BMI270"],
+      "symbols": [
+        "BMI270"
+      ],
+      "parts": [
+        "BMI270"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi270-ds000.pdf",
       "sha256": "f68ce3c74f011a80bbe4b0279c4abe9609a71a5dcda75a951381d77112e005fb"
     },
     "CJ17-400001010B20.pdf": {
-      "symbols": ["CJ17-400001010B20"],
+      "symbols": [
+        "CJ17-400001010B20"
+      ],
+      "parts": [
+        "CJ17-400001010B20"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/c8b76024e4ef51cd716e9632a86f6b39.pdf?productCode=C2875272",
       "sha256": "632f38938949569b2434fcec2b24b3014b15d152edfe533af8172cbbd4b91de4"
     },
     "COS8051SOT.pdf": {
-      "symbols": ["COS8051SOT"],
+      "symbols": [
+        "COS8051SOT"
+      ],
+      "parts": [
+        "COS8051SOT"
+      ],
+      "boards": [
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/98bbff1bec6ae45bf182a8d65686c9d2.pdf?productCode=C7463385",
       "sha256": "59babd131cdd748cb6a56120b4e32ce5fdcd42d89486e0730215960f6afde70a"
     },
     "DEA102700LT-6307A2.pdf": {
-      "symbols": ["DEA102700LT-6307A2"],
+      "symbols": [
+        "DEA102700LT-6307A2"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/65adb563221306da606b60f091db3f88.pdf?productCode=C574024",
       "sha256": "f90fdee93709ddb5d67401f1fb1fe680380bc6dd58111997d2b8f64b0f7df70c"
     },
     "DMN1150UFB-7B.pdf": {
-      "symbols": ["DMN1150UFB-7B"],
+      "symbols": [
+        "DMN1150UFB-7B"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8cad6b28c9eb5739a9571c63cd7409f.pdf?productCode=C459538",
       "sha256": "98d2cb93975eed7847ca6378a44f7530cf25023ee5d0e04d1b7573bf3efadefe"
     },
+    "DMP6023LFG.pdf": {
+      "symbols": [],
+      "parts": [
+        "DMP6023LFG-7"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://www.diodes.com/assets/Datasheets/DMP6023LFG.pdf",
+      "sha256": "05ec84cb50a7eb5be23a63f6e139f6761a8243384dcfa2391540bde4461b8174"
+    },
     "DOY180N03T.pdf": {
-      "symbols": ["DOY180N03T"],
+      "symbols": [
+        "DOY180N03T"
+      ],
+      "parts": [
+        "DOY180N03T"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenESC-20x20"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/9de45436d493e0f6a2d31f151d604b7a.pdf?productCode=C49441966",
       "sha256": "ff02def58dff0b1a0be4d7410bc7e3e41598bfe72eb3a3f242e8020221aba3bc"
     },
+    "DPS368.pdf": {
+      "symbols": [],
+      "parts": [
+        "DPS368XTSA1"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/15dca0e4559452abfe61522499f4c603.pdf?productCode=C3232508",
+      "sha256": "16d3f60378b9554c2ae6406f709a03624977fd29afc005c9a423e0dee36c281a"
+    },
     "DSK24.pdf": {
-      "symbols": ["DSK24"],
+      "symbols": [
+        "DSK24"
+      ],
+      "parts": [
+        "DSK24"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f8af0aed27a586a581d711cfe0a7446f.pdf?productCode=C64890",
       "sha256": "d170672f49e1fc4deb50b32b3d3ad96f9d7707b448b4f355dcafda24b7696698"
     },
+    "EFM8BB51.pdf": {
+      "symbols": [],
+      "parts": [
+        "EFM8BB51F16I-C-QFN20R"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/15a9999a110e0098d547a0de212a0103.pdf?productCode=C3232998",
+      "sha256": "b85c7443bf2724692ad472e9edbbdfc4a8edb6517e871dc852d6cc7ee7e17d76"
+    },
+    "ESP32-C3-MINI-1.pdf": {
+      "symbols": [],
+      "parts": [
+        "ESP32-C3-MINI-1-N4"
+      ],
+      "boards": [
+        "OpenRemoteID"
+      ],
+      "source_url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf",
+      "sha256": "de7361381348d82a1abd337f10170be7a420675987568f71fe3c5b100deed270"
+    },
     "ESP32-C3FH4.pdf": {
-      "symbols": ["ESP32-C3FH4"],
+      "symbols": [
+        "ESP32-C3FH4"
+      ],
+      "parts": [
+        "ESP32-C3FH4"
+      ],
+      "boards": [
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f09556da75fd022dc111fe5517530eae.pdf?productCode=C2858491",
       "sha256": "85ca330ab81d69674f941ee22d8e0ac785cd293b4d5f9698109f441661d8bb30"
     },
+    "ESP32-PICO-V3.pdf": {
+      "symbols": [],
+      "parts": [
+        "ESP32-PICO-V3"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://www.espressif.com/sites/default/files/documentation/esp32-pico-v3_datasheet_en.pdf",
+      "sha256": "652834c31a0ac4930aec4ac23754d2737e8bdecb76410edf3c48be519a6c40af"
+    },
+    "FXMAR2104.pdf": {
+      "symbols": [],
+      "parts": [
+        "FXMAR2104UMX"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/db6011b4cb9f7f5a6a9bd0c7e88fd9c4.pdf?productCode=C457752",
+      "sha256": "54caa6c81abf9cbf4da74f225050c3b35d6793a2d305cf10d10f09efd9a34b3b"
+    },
+    "ICM-42688-P.pdf": {
+      "symbols": [],
+      "parts": [
+        "ICM-42688-P"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/d5f9e170444ac167b391a8574fc574ca.pdf?productCode=C1850418",
+      "sha256": "4d7c04e3e86f37defe27c20a82b9fcd9d4ddbd3b9d68a525c2d49595d52cf97a"
+    },
     "INA186A3IDCKR.pdf": {
-      "symbols": ["INA186A3IDCKR"],
+      "symbols": [
+        "INA186A3IDCKR"
+      ],
+      "parts": [
+        "INA186A3IDCKR"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenAIO-Whoop",
+        "OpenESC-20x20",
+        "OpenESC-30x30"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/41988dc4b496b8350137e0236fc4339f.pdf?productCode=C2058245",
       "sha256": "1517831c6395c89f72aee6afbd997d5683c8fa1e015631e1311a6f56c372f550"
     },
+    "JST-GH-Series.pdf": {
+      "symbols": [],
+      "parts": [
+        "SM04B-GHS-TB(LF)(SN)",
+        "SM06B-GHS-TB(LF)(SN)"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/145d85af57fc54ac5a4f36dce2b36dd3.pdf?productCode=C189895",
+      "sha256": "fe239aeccf1708802766d67888172423bbca155762a4d24fbd31a6f5bbe6f06b"
+    },
     "JST-SH-SR-Series.pdf": {
-      "symbols": ["SM03B-SRSS-TB", "SM04B-SRSS-TB", "SM06B-SRSS-TB(LF)(SN)", "SM08B-SRSS-TB", "SM08B-SRSS-TB(LF)(SN)"],
+      "symbols": [
+        "SM03B-SRSS-TB",
+        "SM04B-SRSS-TB",
+        "SM06B-SRSS-TB(LF)(SN)",
+        "SM08B-SRSS-TB",
+        "SM08B-SRSS-TB(LF)(SN)"
+      ],
+      "parts": [
+        "SM03B-SRSS-TB(LF)(SN)",
+        "SM04B-SRSS-TB(LF)(SN)",
+        "SM06B-SRSS-TB(LF)(SN)",
+        "SM08B-SRSS-TB(LF)(SN)"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenESC-20x20",
+        "OpenESC-30x30",
+        "OpenFC-H7",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/e03a82bcc66e3c3589917313e54d45e2.pdf?productCode=C160405",
       "sha256": "8f01930d3601fd55f889f635c8bd71aae1154cbbec2401d07ec740c98e8186d0"
     },
+    "LMR51420YDDCR.pdf": {
+      "symbols": [
+        "LMR51420YDDCR"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/5e19be5dd53d60c1459b26475bdff8d3.pdf?productCode=C5383002",
+      "sha256": "0ad3d2ef438f42cac8d7200b261afce2bb2ef1a43cf63ae5a0cbc3fb37c7e051"
+    },
     "LMR51430.pdf": {
-      "symbols": ["LMR51430YFDDCR"],
+      "symbols": [
+        "LMR51430YFDDCR"
+      ],
+      "parts": [
+        "LMR51430YFDDCR"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://www.ti.com/lit/ds/symlink/lmr51430.pdf",
       "sha256": "f7d8053844fb07ae773844f023373c0c570507ca61603fe28dda15364987296c"
     },
     "LMR51635.pdf": {
-      "symbols": ["LMR51635YDDCR"],
+      "symbols": [
+        "LMR51635YDDCR"
+      ],
+      "parts": [
+        "LMR51635YDDCR",
+        "LMR51635XDDCR",
+        "LMR51625XDDCR"
+      ],
+      "boards": [
+        "OpenFC-H7",
+        "OpenFC-Lite"
+      ],
       "source_url": "https://www.ti.com/lit/ds/symlink/lmr51635.pdf",
       "sha256": "e1f7a10d36b45dc96764b8719848380f1e1177fdfd6879728942237b4777513c"
     },
     "LMR54406.pdf": {
-      "symbols": ["LMR54406DBVR"],
+      "symbols": [
+        "LMR54406DBVR"
+      ],
+      "parts": [
+        "LMR54406DBVR"
+      ],
+      "boards": [
+        "OpenESC-20x20",
+        "OpenESC-30x30",
+        "OpenESC-Single"
+      ],
       "source_url": "https://www.ti.com/lit/ds/symlink/lmr54406.pdf",
       "sha256": "f0dc0ace8430cad919ef1f590d65d217362ee3d3a975406ded57b98f228ffaf7"
     },
     "LP5912.pdf": {
-      "symbols": ["LP5912-1.8DRVR", "LP5912-3.3DRVR"],
+      "symbols": [
+        "LP5912-1.8DRVR",
+        "LP5912-3.3DRVR"
+      ],
+      "parts": [
+        "LP5912-1.8DRVR",
+        "LP5912-3.3DRVR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://www.ti.com/lit/ds/symlink/lp5912.pdf",
       "sha256": "6d2435e016f88dddf6eeea6b7415c3f81cce19b4285a5b9842b8d5bb3b8b1b7f"
     },
-    "LMR51420YDDCR.pdf": {
-      "symbols": ["LMR51420YDDCR"],
-      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/5e19be5dd53d60c1459b26475bdff8d3.pdf?productCode=C5383002",
-      "sha256": "0ad3d2ef438f42cac8d7200b261afce2bb2ef1a43cf63ae5a0cbc3fb37c7e051"
-    },
     "LR1121IMLTRT.pdf": {
-      "symbols": ["LR1121IMLTRT"],
+      "symbols": [
+        "LR1121IMLTRT"
+      ],
+      "parts": [
+        "LR1121IMLTRT"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/2622341ceb0fb8e7ef53786c73036201.pdf?productCode=C7498014",
       "sha256": "f36bcf2d912cab2360a4cd185e731aee87314bee092fbd047f1f5a765d878fb9"
     },
     "LSM6DSV16XTR.pdf": {
-      "symbols": ["LSM6DSV16XTR"],
+      "symbols": [
+        "LSM6DSV16XTR"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/7d66556bb254f99e058243c7371e051d.pdf?productCode=C5267406",
       "sha256": "ec53c0e5952fc0c9587ed32b56d066016c2954bc6e9d18355b13a1c4cda17894"
     },
+    "MS2A40LDF.pdf": {
+      "symbols": [],
+      "parts": [
+        "MS2A40LDF"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/b245d311027883dd26c3826404872d47.pdf?productCode=C7380000",
+      "sha256": "312f279b0be7cf6e18ccb3d1e3d30e248c6761d22ef215fe39642e34a250bf9b"
+    },
     "NSG2065Q.pdf": {
-      "symbols": ["NSG2065Q"],
+      "symbols": [
+        "NSG2065Q"
+      ],
+      "parts": [
+        "NSG2065Q"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenESC-20x20",
+        "OpenESC-30x30",
+        "OpenESC-Single"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/572cbac628b395c28845645e0a176c8c.pdf?productCode=C41414478",
       "sha256": "7fe2bc9d97064839cd582e1b5b0011756c1de52a67e30c1700bd2472b4c126dc"
     },
+    "OT201612MJBA4SL.pdf": {
+      "symbols": [],
+      "parts": [
+        "OT201612MJBA4SL"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/b336a5b52993e15e0134a8f3d7decec7.pdf?productCode=C669076",
+      "sha256": "d155dd2bc59fe81f90c6c434328061beb8159ce3c6d0538de4ce96c34d44b8e5"
+    },
+    "PESD2CANFD24V-U.pdf": {
+      "symbols": [],
+      "parts": [
+        "PESD2CANFD24V-UX"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PESD2CANFD24V-U.pdf",
+      "sha256": "07bdfff10b32a9f87a614ea5e3ececd500cf95b9be809db5559d30928336b1a2"
+    },
+    "PMEG3020EPA.pdf": {
+      "symbols": [],
+      "parts": [
+        "PMEG3020EPA,115"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PMEG3020EPA.pdf",
+      "sha256": "3a0bfc22d79a9e28ee7560cedac90033768d8f3568ca4ed6c782a2c3cc351662"
+    },
+    "PMZ290UNE.pdf": {
+      "symbols": [],
+      "parts": [
+        "PMZ290UNEYL"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PMZ290UNE.pdf",
+      "sha256": "c4c9dab03ac57a67b0a11e5d7483c76544a7aec54b9203f31f7364d36896cca1"
+    },
+    "PTVS36VS1UR.pdf": {
+      "symbols": [],
+      "parts": [
+        "PTVS36VS1UR,115"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/870f5dbb701241a623a46574e09d3413.pdf?productCode=C171823",
+      "sha256": "09923aed7cdbad3f588a5d3069416b8d8af4b55356d9dbe99602248b005c60ed"
+    },
+    "PY25Q128HA.pdf": {
+      "symbols": [],
+      "parts": [
+        "PY25Q128HA-DFH-IR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250117/E5397163A091235CFF3CDB19865BC1CE.pdf",
+      "sha256": "7c517dc149feb52935e5a959b3d53f444b2d781065f25ef9495bc6c19fd22729"
+    },
+    "RFBPF1608060K98Q1C.pdf": {
+      "symbols": [],
+      "parts": [
+        "RFBPF1608060K98Q1C"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/5e6290a4503b3b54e52e2e6258e58cb8.pdf?productCode=C2442150",
+      "sha256": "7a3aaa0edc551b83ae776d61cb12750036b4540be901eba3f8ae7fc4a170833a"
+    },
     "RFX2401C.pdf": {
-      "symbols": ["RFX2401C"],
+      "symbols": [
+        "RFX2401C"
+      ],
+      "parts": [
+        "RFX2401C"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/cafc8667c8cc440ea391621934037a09.pdf?productCode=C19213",
       "sha256": "d09a22901ef8c7c99d1cfc6cf46c6c6686d844aa814eea564e535793614162f0"
     },
     "RP2350.pdf": {
-      "symbols": ["RP2354A", "RP2354B_C39843328"],
+      "symbols": [
+        "RP2354A",
+        "RP2354B_C39843328"
+      ],
+      "parts": [
+        "RP2354A",
+        "RP2354B"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf",
       "sha256": "2877d0f270fb6d6a57943bee58aaad536aa027bea1e5b1c4ce2541a3230d4be8"
     },
+    "RTC6705.pdf": {
+      "symbols": [],
+      "parts": [
+        "RTC6705"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/7e020bec5b18bc7a241687b74c0020d6.pdf?productCode=C913074",
+      "sha256": "34490ab447e3e13cad9a329cbfb16ace2bb8489a7aad1d31ae2e7fe0a738bbc2"
+    },
+    "SDM02M30CLP3-7B.pdf": {
+      "symbols": [],
+      "parts": [
+        "SDM02M30CLP3-7B"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://www.diodes.com/assets/Datasheets/SDM02M30CLP3.pdf",
+      "sha256": "2063484806354e6f79cfe93c5ebd65c393a4fcb3efe771ba3abd3866f360a9e3"
+    },
     "SDM02U30LP3-7B.pdf": {
-      "symbols": ["SDM02U30LP3-7B"],
+      "symbols": [
+        "SDM02U30LP3-7B"
+      ],
+      "parts": [
+        "SDM02U30LP3-7B"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/acaf7828f5bc830b7503d2283250fd9c.pdf?productCode=C151629",
       "sha256": "460e61cfa7216c245ac333bc0189d9ea217ce96d639564e0b34e5051d92115f8"
     },
+    "SE5004L.pdf": {
+      "symbols": [],
+      "parts": [
+        "SE5004L-R"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/cf0c3d6571d2ce5e5e8f75820d212c2f.pdf?productCode=C210263",
+      "sha256": "3236a5ff9a30a2a7067775d4b8e55f0d9138a55b21282354a968649672dbbdf6"
+    },
     "SKY13373-460LF.pdf": {
-      "symbols": ["SKY13373-460LF"],
+      "symbols": [
+        "SKY13373-460LF"
+      ],
+      "parts": [
+        "SKY13373-460LF"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://www.skyworksinc.com/-/media/SkyWorks/Documents/Products/601-700/SKY13373_460LF_201264O.pdf",
       "sha256": "f4310ed8f7808b093ee9186b50da8fda04c3e7978d901fcbd69ffa221287d5cc"
     },
     "SKY13414-485LF.pdf": {
-      "symbols": ["SKY13414-485LF"],
+      "symbols": [
+        "SKY13414-485LF"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/226e6f816916d79fc5debb0453d8c748.pdf?productCode=C255353",
       "sha256": "b6b914faf052d5cc60770b3f12247d4e0f4814744bf1012ce5cacd2760390c3f"
     },
+    "SM03B-SURS-TF.pdf": {
+      "symbols": [],
+      "parts": [
+        "SM03B-SURS-TF(LF)(SN)"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/84097e067dbe789210d9a43a75e2070f.pdf?productCode=C265338",
+      "sha256": "5975a05ebadd6624c6ad35ffd5e605c3c3103029379cedceba56860e03bd93fa"
+    },
     "SN74LVC1G3157DTBR.pdf": {
-      "symbols": ["SN74LVC1G3157DTBR"],
+      "symbols": [
+        "SN74LVC1G3157DTBR"
+      ],
+      "parts": [
+        "SN74LVC1G3157DTBR",
+        "SN74LVC1G3157DRYR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-H7",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/f2adb6469adea4e6a80ab1e7aeca9799.pdf?productCode=C2673087",
       "sha256": "7ecaeaa214c93e1df84913ea23bb9e2d3f139180b5caf1b8d1a1fcfeaada2b58"
     },
     "SP40N01GHNK.pdf": {
-      "symbols": ["SP40N01GHNK"],
+      "symbols": [
+        "SP40N01GHNK"
+      ],
+      "parts": [
+        "SP40N01GHNK"
+      ],
+      "boards": [
+        "OpenESC-30x30",
+        "OpenESC-Single"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/afe1b9d2d287b2937a27623201a91019.pdf?productCode=C22385416",
       "sha256": "fa4e0d30de923aa26649fef2fff0d46f0617267026711d3b12177add38b608b9"
     },
+    "STM32H743.pdf": {
+      "symbols": [],
+      "parts": [
+        "STM32H743VIH6TR"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/a7aa1bba41ecd40a0ffdd37ccbadb76c.pdf?productCode=C1857444",
+      "sha256": "1aaff172abf59e6d78504e735a428865f636b22f3af0d4871e30ff4ba7129b13"
+    },
     "SX1281IMLTRT.pdf": {
-      "symbols": ["SX1281IMLTRT"],
+      "symbols": [
+        "SX1281IMLTRT"
+      ],
+      "parts": [
+        "SX1281IMLTRT"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/a45ba65d2c8690c33c912536eaac205e.pdf?productCode=C2151551",
       "sha256": "ff541551f0d9ac7cb84c96d0ac0e364c68689fdf4ba3d38b0ad5562b45e1fa5c"
     },
+    "TAXM8M4RDBCCT2T.pdf": {
+      "symbols": [],
+      "parts": [
+        "TAXM8M4RDBCCT2T"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/d6017e1be8b7f6c306348fe3386a15ee.pdf?productCode=C400090",
+      "sha256": "4801ca5b00287fb05fa004a0148933f7ed330b98f7a87a8b326d31e63b1ef34d"
+    },
     "TF-021B-H265.pdf": {
-      "symbols": ["TF-021B-H265"],
+      "symbols": [
+        "TF-021B-H265"
+      ],
+      "parts": [
+        "TF-021B-H265"
+      ],
+      "boards": [
+        "OpenFC-H7",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/649033837db010158dd715a72dbc0940.pdf?productCode=C498185",
       "sha256": "469b6864442a1b074b73e3c8e1d5dbb78547c3f90779bf52a4a42d9238ff7156"
     },
     "TFPUSH.pdf": {
-      "symbols": ["TFPUSH"],
+      "symbols": [
+        "TFPUSH"
+      ],
+      "parts": [
+        "TF PUSH"
+      ],
+      "boards": [
+        "OpenFC-Lite"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/dc83ceb7bc09989eab2815b685da60e4.pdf?productCode=C393941",
       "sha256": "0c38fd72c20e453a250014e8fcd771b43f3c042746db08ff700b7be96397ca04"
     },
     "TLV7031.pdf": {
-      "symbols": ["TLV7031DPWR"],
+      "symbols": [
+        "TLV7031DPWR"
+      ],
+      "parts": [
+        "TLV7031DPWR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://www.ti.com/lit/ds/symlink/tlv7031.pdf",
       "sha256": "15d8c7e1b12f3bad6aa02c332ed9fa769b0a727ad426f5aac0cf471b89c6fc8f"
     },
     "TLV75533PDQNR.pdf": {
-      "symbols": ["TLV75533PDQNR"],
+      "symbols": [
+        "TLV75533PDQNR"
+      ],
+      "parts": [
+        "TLV75533PDQNR"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/345a969f8a31f5b0eab8be5fce3a1a5e.pdf?productCode=C2861882",
       "sha256": "56edc23c4774bdf4db8eb814c3ce8a95b17780a20f39157b4de14d4113544780"
     },
+    "TLV757P.pdf": {
+      "symbols": [],
+      "parts": [
+        "TLV75733PDRVR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tlv757p.pdf",
+      "sha256": "9f5e9602ed9366124dfee01dd773ceafca6b54c5c22cf3a7999453432c5cefb9"
+    },
     "TLV76733DRVR.pdf": {
-      "symbols": ["TLV76733DRVR"],
+      "symbols": [
+        "TLV76733DRVR"
+      ],
+      "parts": [
+        "TLV76733DRVR"
+      ],
+      "boards": [
+        "OpenESC-20x20",
+        "OpenESC-30x30",
+        "OpenESC-Single",
+        "OpenFC-H7"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/8f9ae569d9e00b4f6c6b122dbc277210.pdf?productCode=C2848334",
       "sha256": "4b6c90cec1ba8e19f68575cfdfeb5666913d6124be1a7a0715dd8064d81823c3"
     },
+    "TPD2EUSB30.pdf": {
+      "symbols": [],
+      "parts": [
+        "TPD2EUSB30DRTR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+      "sha256": "0598c5db22020f75981a25648f963d7065f76d9a3635c2bacb98cbfc49884d33"
+    },
+    "TPD4E05U06.pdf": {
+      "symbols": [],
+      "parts": [
+        "TPD4E05U06DQAR"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf",
+      "sha256": "c167cf1e72a5473a4d2c59b6a3c0251498701da05b7785919b9ceaae3b3e02c6"
+    },
+    "TPS61022.pdf": {
+      "symbols": [],
+      "parts": [
+        "TPS61022RWUR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps61022.pdf",
+      "sha256": "1177eda04f20e0ea824beb8fae03bdafdb02a3a377a34a00972e4de9eb3c990b"
+    },
+    "TPS7A20.pdf": {
+      "symbols": [],
+      "parts": [
+        "TPS7A2018PDQNRM3",
+        "TPS7A20285PDQNR",
+        "TPS7A2033PDQNR"
+      ],
+      "boards": [
+        "OpenAIO-Whoop",
+        "OpenFC-H7"
+      ],
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps7a20.pdf",
+      "sha256": "b6c487d79ebed6dd43bf220b07fc5b3ecb9ee55d87e6daa2312acda6546046c0"
+    },
     "TS2306A240GFMSM9-C2976675.pdf": {
-      "symbols": ["TS2306A240GFMSM9_C2976675"],
+      "symbols": [
+        "TS2306A240GFMSM9_C2976675"
+      ],
+      "parts": [
+        "TS2306A 240gf MSM 9"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini",
+        "OpenRX-Gemini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/032019575f882951d1b777f1587529ce.pdf?productCode=C2976675",
       "sha256": "6e5ddc9c3538152ee9eef800a124d894c22e800a73e34f3586a2f293c23a9b35"
     },
     "TXC-OW-Series.pdf": {
-      "symbols": ["OW7EL89CENUNFAYLC-52M", "OW7EL89CENUYO3YLC-32M"],
+      "symbols": [
+        "OW7EL89CENUNFAYLC-52M",
+        "OW7EL89CENUYO3YLC-32M"
+      ],
+      "parts": [
+        "OW7EL89CENUNFAYLC-52M",
+        "OW7EL89CENUYO3YLC-32M"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenAIO-Whoop",
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/59950255efca2f8b573029002ac76a55.pdf?productCode=C22434888",
       "sha256": "51fd169c901eb310906fa112cafb9d45d98832826c8ead38e57f49450f4dd892"
     },
     "TYPE-C16PQTWT.pdf": {
-      "symbols": ["TYPE-C16PQTWT"],
+      "symbols": [
+        "TYPE-C16PQTWT"
+      ],
+      "parts": [
+        "TYPE-C 16P QTWT"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/d3846d73123f7a78a150a5dc80fdd645.pdf?productCode=C5187472",
       "sha256": "9d6d8a60a594feabe12d467c548536872af4b41b7a3798c258b9d49f24d3e4ab"
     },
     "U.FL-R-SMT-1-80.pdf": {
-      "symbols": ["U.FL-R-SMT-1(80)"],
+      "symbols": [
+        "U.FL-R-SMT-1(80)"
+      ],
+      "parts": [
+        "U.FL-R-SMT-1(80)"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenAIO-Whoop",
+        "OpenRX-Gemini",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/ade8681cf25347ad817fa65440db6a2c.pdf?productCode=C88374",
       "sha256": "3e7b368a3ae1167260baf0352c70629776490ea65e1e860824dac32a26db430a"
     },
+    "USB4105-GF-A.pdf": {
+      "symbols": [],
+      "parts": [
+        "USB4105-GF-A"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://gct.co/files/drawings/usb4105.pdf",
+      "sha256": "fb331fbabee8392ed2937ed757c1610cb0f174b84625147c0b580a18eea8c0e5"
+    },
+    "USBLC6-2.pdf": {
+      "symbols": [],
+      "parts": [
+        "USBLC6-2P6"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/0d3a2ab954b34651a0695e7ccf534db0.pdf?productCode=C15999",
+      "sha256": "8ba7ab4ec1781b7f6052f5999a2304bd611c0ed2b5e8f36ffa5092552932a42e"
+    },
+    "X252027MOB4SI.pdf": {
+      "symbols": [],
+      "parts": [
+        "X252027MOB4SI"
+      ],
+      "boards": [
+        "OpenFC-H7"
+      ],
+      "source_url": "https://datasheet.lcsc.com/datasheet/pdf/71ae9d1c4ae2a77c09297989e93c280e.pdf?productCode=C371132",
+      "sha256": "fcfea8bbb6808668c542e7070a7c843273299ddd4545692b96a70be45aeed2f7"
+    },
     "XL-1010RGBC-WS2812B.pdf": {
-      "symbols": ["XL-1010RGBC-WS2812B"],
+      "symbols": [
+        "XL-1010RGBC-WS2812B"
+      ],
+      "parts": [
+        "XL-1010RGBC-2812B"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenAIO-Whoop",
+        "OpenRX-Gemini",
+        "OpenRX-Lite",
+        "OpenRX-Lite-UFL",
+        "OpenRX-Mono"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/61bc6c9c567c27d05ec28078af87ff60.pdf?productCode=C5349953",
       "sha256": "6d4f13f2c2ed3bb16805d15b42b5ffde9566e926dbfd1ae9e9eae03d766d3a37"
     },
     "XRIM160808SR47MBCD.pdf": {
-      "symbols": ["XRIM160808SR47MBCD"],
+      "symbols": [
+        "XRIM160808SR47MBCD"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/7b61316e4ff636e5ce42006c3fc37d41.pdf?productCode=C48391583",
       "sha256": "75b985b49d9abedcb5f92475b8e30c9c6b24394dc03d6b3ffd45dbe8ba146c20"
     },
     "XRTC303020D4R7MBCA.pdf": {
-      "symbols": ["XRTC303020D4R7MBCA"],
+      "symbols": [
+        "XRTC303020D4R7MBCA"
+      ],
+      "parts": [
+        "XRTC303020D4R7MBCA"
+      ],
+      "boards": [
+        "OpenAIO",
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/885b80f22c6c785fc546f167f8abcc37.pdf?productCode=C39846837",
       "sha256": "67d7ff900e8a0039cac70faef99fdae7e351ad61350e349bcf2424f470479af3"
     },
     "XTM25012000JT00351001.pdf": {
-      "symbols": ["XTM25012000JT00351001"],
+      "symbols": [
+        "XTM25012000JT00351001"
+      ],
+      "parts": [
+        "XTM25012000JT00351001"
+      ],
+      "boards": [
+        "OpenFC-Lite",
+        "OpenFC-Lite-Mini"
+      ],
       "source_url": "https://datasheet.lcsc.com/datasheet/pdf/b1834cc40950f3b74c36f8374e7b751a.pdf?productCode=C37635340",
       "sha256": "9adc12a5ba08ac6e4d15c8460080353c221e7d2db62b6378f5ea15fc76402b32"
     }

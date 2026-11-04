@@ -1,20 +1,21 @@
 # Datasheets
 
-This directory pins the exact component documents linked from the shared KiCad
-symbols. A board repository gets the same files by pinning this repository as a
-submodule; it must not keep duplicate component PDFs in its own tree.
+`manifest.json` is the committed record of every component datasheet used on an
+OpenDrone board: file name, source URL, SHA-256, the library symbols that link
+to it (`symbols`), the manufacturer part numbers it covers (`parts`) and the
+board repositories that use them (`boards`). The PDFs themselves are git-ignored.
 
-`manifest.json` is the source of truth. It maps every physical shared symbol to
-one committed PDF and records the source URL and SHA-256 digest. A document may
-cover several symbols, so family datasheets are stored only once. Virtual
-symbols are listed explicitly under `exempt_symbols`.
+Rebuild the local PDF store on any machine:
 
-Every reusable, datasheet-bearing component from a `status-alpha`,
-`status-beta` or `status-launched` board belongs in the shared catalogue and in
-this manifest. Generic R/C/L/LED primitives use KiCad's standard libraries and
-do not need entries here. `python3 tools/build-parts-index.py --check` enforces
-that distinction against all manufactured boards.
+```sh
+python3 tools/fetch-datasheets.py           # download missing PDFs, verify SHA-256
+python3 tools/fetch-datasheets.py --check   # report only
+```
 
-Run `python3 tools/check-datasheets.py` after adding or replacing a document.
-PDFs retain their publishers' copyrights and notices; the repository hardware
-license does not replace the terms embedded in those documents.
+A family document is stored once and lists every part it covers. Virtual
+symbols are listed under `exempt_symbols`. Scope and the full schema are in the
+repository README, "Datasheets".
+
+Run `python3 tools/check-datasheets.py` after editing the manifest. PDFs retain
+their publishers' copyrights and notices; the repository hardware license does
+not replace the terms embedded in those documents.

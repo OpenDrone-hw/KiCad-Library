@@ -1,8 +1,9 @@
 # KiCad-Library
 
 The parts catalogue of the OpenDrone hardware line: every physical symbol
-links to an exact, committed datasheet, and every symbol, footprint and 3D
-model here is used on a board that has been through a real assembly run. Its
+links to an exact datasheet, and every symbol, footprint and 3D model here is
+used on a board that has been through a real assembly run. Datasheets also
+cover the important ICs of boards that have not reached assembly yet. Its
 job is lookup, not enforcement. Board repos pin this repository and keep only
 parts that have not yet qualified in their local libraries.
 
@@ -13,11 +14,13 @@ parts that have not yet qualified in their local libraries.
 | `symbol/OpenDrone.kicad_sym` | 54 symbols, one library, nickname `OpenDrone` |
 | `footprint/OpenDrone.pretty/` | 145 footprints |
 | `3dmodel/` | 246 model files (130 STEP, 116 WRL). Footprints reference the WRL set; the STEP set is the MCAD counterpart |
-| `datasheet/` | Exact component PDFs, deduplicated by document and tracked by `manifest.json` |
+| `datasheet/manifest.json` | Committed record of every datasheet: file, source URL, SHA-256, symbols, parts, boards |
+| `datasheet/*.pdf` | Local PDF store, git-ignored; rebuilt by `tools/fetch-datasheets.py` |
 | `PARTS-USED.md` | Every LCSC part used on a manufactured board, and which boards use it |
 | `ALTERNATES.md` | Second sources for the FETs and gate drivers, grouped by land pattern and pinout |
 | `tools/build-parts-index.py` | Regenerates `PARTS-USED.md`; `--check` audits membership |
-| `tools/check-datasheets.py` | Verifies symbol coverage, paths, PDF signatures and SHA-256 hashes |
+| `tools/check-datasheets.py` | Verifies symbol coverage, paths and manifest schema; checks PDF signatures and SHA-256 of local PDFs (`--require-local` fails on missing ones) |
+| `tools/fetch-datasheets.py` | Downloads every manifest PDF missing locally and verifies SHA-256 (`--check` only reports) |
 | `tools/build-pcm.py` | Builds the KiCad PCM package and repository metadata |
 | `pcm/` | The PCM repository files KiCad reads |
 
@@ -78,13 +81,37 @@ however good they look on paper. When a board reaches alpha, its ICs,
 semiconductors, sensors, connectors and other non-generic parts join; ordinary
 R/C/L/LED primitives remain in KiCad's standard libraries.
 
-**Datasheets.** Every custom symbol for an orderable physical component maps to
-one exact PDF in `datasheet/manifest.json`; a family PDF may serve several
-symbols and is stored once. Set its `Datasheet` field to
-`${OPENDRONE_LIB}/datasheet/<file>.pdf`. Virtual/interface symbols require an
-explicit manifest exemption. Generic R/C/L primitives stay in KiCad's standard
-libraries and do not get custom symbols or datasheet entries here. Product
-repositories do not duplicate these PDFs.
+**Datasheets.** Two scopes, different gates.
+
+- Symbols, footprints and 3D models: only parts used on a board at
+  `status-alpha` or beyond (the membership rule above).
+- Datasheets: every important component used on any OpenDrone board, at any
+  status. Important means ICs, MCUs, RF parts, regulators, drivers, MOSFETs,
+  protection and power diodes, sensors, connectors with custom footprints and
+  crystals or TCXOs. Generic R/C/L, ferrites, signal diodes and LEDs are not
+  stored (the WS2812 RGB LED is a driver IC and is).
+
+PDFs are git-ignored. `datasheet/manifest.json` is the committed record and
+`python3 tools/fetch-datasheets.py` rebuilds the local store on any machine.
+A family PDF serves several parts and is stored once. Every custom symbol for an
+orderable physical component maps to one manifest entry through `symbols`; set
+its `Datasheet` field to `${OPENDRONE_LIB}/datasheet/<file>.pdf`. Virtual or
+interface symbols need an explicit `exempt_symbols` entry. Product repositories
+do not duplicate these PDFs.
+
+Manifest schema (`datasheet/manifest.json`, `documents` keyed by PDF filename):
+
+| Field | Required | Meaning |
+|---|---|---|
+| `symbols` | yes (may be `[]`) | Library symbol names that link to this PDF |
+| `parts` | no | Manufacturer part numbers covered, spelled as in the board BOM |
+| `boards` | no | Board repository names that use any of those parts |
+| `source_url` | yes | Where `tools/fetch-datasheets.py` downloads it |
+| `sha256` | yes | SHA-256 of the exact PDF |
+
+Each entry needs at least one of `symbols` or `parts`. Parts without a
+datasheet in the manifest are listed in the pull request that added the
+store, not in the manifest.
 
 **Check before you trust it.** `python3 tools/build-parts-index.py --check`
 reports every symbol whose part is on no manufactured board, every symbol with
@@ -104,6 +131,7 @@ resistors and capacitors we use. Validate before opening a PR:
 ```sh
 kicad-cli sym export svg symbol/OpenDrone.kicad_sym -o /tmp/symcheck
 kicad-cli fp upgrade /tmp/fpcheck   # on a copy of footprint/OpenDrone.pretty
+python3 tools/fetch-datasheets.py   # once per machine; --check to only report
 python3 tools/check-datasheets.py
 
 # every OpenDrone: footprint ref in the symbol lib resolves to a committed .kicad_mod
@@ -122,6 +150,12 @@ Licensed under [CERN-OHL-S-2.0](https://ohwr.org/cern_ohl_s_v2.txt), the same li
 Third-party PDFs retain their publishers' copyrights and notices.
 
 ## Revisions
+
+- **2026-10-13**: datasheet PDFs are git-ignored and rebuilt from
+  `datasheet/manifest.json` by `tools/fetch-datasheets.py`. The manifest now also
+  records `parts` and `boards`, and covers the important ICs of every OpenDrone
+  board, not only alpha boards. The symbol, footprint and 3D model membership
+  rule is unchanged.
 
 - **2026-09-01**: exact component PDFs moved into the shared catalogue, linked
   through `OPENDRONE_LIB`, hash-checked by a manifest and included in PCM builds.

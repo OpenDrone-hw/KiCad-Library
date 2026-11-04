@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Verify committed datasheets and their shared-symbol mappings."""
+"""Verify the datasheet manifest, symbol mappings and any local PDFs.
+
+PDFs are git-ignored (tools/fetch-datasheets.py rebuilds them). A missing local
+PDF is reported but does not fail unless --require-local is given. A present PDF
+must still be a PDF with the manifest SHA-256.
+"""
 
 import hashlib
 import json
@@ -45,7 +50,9 @@ def symbol_properties(text):
 
 
 def main():
+    require_local = "--require-local" in sys.argv[1:]
     errors = []
+    missing = []
     manifest = json.loads(MANIFEST.read_text())
     documents = manifest.get("documents", {})
     exemptions = manifest.get("exempt_symbols", {})
@@ -58,18 +65,31 @@ def main():
         if pathlib.Path(filename).name != filename or not filename.endswith(".pdf"):
             errors.append(f"invalid document filename: {filename}")
             continue
+        expected = entry.get("sha256", "")
+        if len(expected) != 64 or expected in digests:
+            errors.append(
+                f"duplicate PDFs: {digests[expected]} and {filename}"
+                if expected in digests
+                else f"invalid SHA-256 in manifest: {filename}"
+            )
+        digests[expected] = filename
+        if not (entry.get("symbols") or entry.get("parts")):
+            errors.append(f"entry names no symbols or parts: {filename}")
+        for key in ("symbols", "parts", "boards"):
+            if key in entry and not (
+                isinstance(entry[key], list) and all(isinstance(v, str) for v in entry[key])
+            ):
+                errors.append(f"{key} must be a list of strings: {filename}")
         if not path.is_file():
-            errors.append(f"missing document: {filename}")
-            continue
-        data = path.read_bytes()
-        if not data.startswith(b"%PDF-"):
-            errors.append(f"not a PDF: {filename}")
-        digest = hashlib.sha256(data).hexdigest()
-        if digest != entry.get("sha256"):
-            errors.append(f"SHA-256 mismatch: {filename}")
-        if digest in digests:
-            errors.append(f"duplicate PDFs: {digests[digest]} and {filename}")
-        digests[digest] = filename
+            missing.append(filename)
+            if require_local:
+                errors.append(f"missing document: {filename}")
+        else:
+            data = path.read_bytes()
+            if not data.startswith(b"%PDF-"):
+                errors.append(f"not a PDF: {filename}")
+            if hashlib.sha256(data).hexdigest() != expected:
+                errors.append(f"SHA-256 mismatch: {filename}")
         if not entry.get("source_url", "").startswith(("https://", "http://")):
             errors.append(f"missing source URL: {filename}")
         for symbol in entry.get("symbols", []):
@@ -101,9 +121,15 @@ def main():
         for error in errors:
             print(f"  - {error}")
         return 1
+    if missing:
+        print(
+            f"note: {len(missing)} of {len(documents)} PDFs are not stored locally "
+            "(git-ignored); run python3 tools/fetch-datasheets.py"
+        )
     print(
         f"datasheet check passed: {len(mapped)} physical symbols, "
-        f"{len(documents)} unique PDFs, {len(exemptions)} explicit exemption"
+        f"{len(documents)} manifest entries, {len(documents) - len(missing)} PDFs verified locally, "
+        f"{len(exemptions)} explicit exemption"
     )
     return 0
 
