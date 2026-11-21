@@ -19,6 +19,9 @@ import hashlib, json, os, re, shutil, sys, time, zipfile
 # matches IDENT_RE: letters, digits, '-' and '.', no underscores.
 IDENT = "com.github.opendrone-hw.kicad-library"
 IDENT_RE = r"^[a-zA-Z][-a-zA-Z0-9.]{0,98}[a-zA-Z0-9]$"
+# KiCad installs each part of the archive under <dir>/<identifier with dots
+# replaced by underscores>/, e.g. 3dmodels/com_github_..._kicad-library/.
+INSTALL_DIR = IDENT.replace(".", "_")
 KICAD_VER = "10.0"
 THIRD_PARTY = "${KICAD10_3RD_PARTY}"
 REPO_RAW = "https://raw.githubusercontent.com/OpenDrone-hw/KiCad-Library/main/pcm"
@@ -44,13 +47,13 @@ def main():
     os.makedirs(f"{stage}/symbols", exist_ok=True)
     os.makedirs(f"{stage}/footprints/OpenDrone.pretty", exist_ok=True)
     os.makedirs(f"{stage}/3dmodels/OpenDrone.3dshapes", exist_ok=True)
-    os.makedirs(f"{stage}/resources/{IDENT}/datasheet", exist_ok=True)
+    os.makedirs(f"{stage}/resources/datasheet", exist_ok=True)
 
     symbol_text = open("symbol/OpenDrone.kicad_sym").read()
-    datasheet_base = f"{THIRD_PARTY}/resources/{IDENT}/datasheet"
+    datasheet_base = f"{THIRD_PARTY}/resources/{INSTALL_DIR}/datasheet"
     symbol_text = symbol_text.replace("${OPENDRONE_LIB}/datasheet", datasheet_base)
     open(f"{stage}/symbols/OpenDrone.kicad_sym", "w").write(symbol_text)
-    model_base = f"{THIRD_PARTY}/3dmodels/{IDENT}/OpenDrone.3dshapes"
+    model_base = f"{THIRD_PARTY}/3dmodels/{INSTALL_DIR}/OpenDrone.3dshapes"
     for f in os.listdir("footprint/OpenDrone.pretty"):
         s = open(f"footprint/OpenDrone.pretty/{f}").read()
         s = s.replace("${OPENDRONE_LIB}/3dmodel", model_base)
@@ -59,7 +62,7 @@ def main():
         shutil.copy(f"3dmodel/{f}", f"{stage}/3dmodels/OpenDrone.3dshapes/{f}")
     for f in os.listdir("datasheet"):
         if f.endswith(".pdf"):
-            shutil.copy(f"datasheet/{f}", f"{stage}/resources/{IDENT}/datasheet/{f}")
+            shutil.copy(f"datasheet/{f}", f"{stage}/resources/datasheet/{f}")
 
     meta = {
         "$schema": "https://go.kicad.org/pcm/schemas/v1",
