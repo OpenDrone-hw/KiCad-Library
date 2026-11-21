@@ -15,7 +15,13 @@ Then attach the zip to a GitHub release tagged pcm-v<version>.
 """
 import hashlib, json, os, re, shutil, sys, time, zipfile
 
-IDENT = "com_github_opendrone-hw_kicad-library"
+# KiCad PCM rejects the whole repository on refresh unless the identifier
+# matches IDENT_RE: letters, digits, '-' and '.', no underscores.
+IDENT = "com.github.opendrone-hw.kicad-library"
+IDENT_RE = r"^[a-zA-Z][-a-zA-Z0-9.]{0,98}[a-zA-Z0-9]$"
+# KiCad installs each part of the archive under <dir>/<identifier with dots
+# replaced by underscores>/, e.g. 3dmodels/com_github_..._kicad-library/.
+INSTALL_DIR = IDENT.replace(".", "_")
 KICAD_VER = "10.0"
 THIRD_PARTY = "${KICAD10_3RD_PARTY}"
 REPO_RAW = "https://raw.githubusercontent.com/OpenDrone-hw/KiCad-Library/main/pcm"
@@ -31,6 +37,8 @@ def sha256(path):
 
 
 def main():
+    if not re.match(IDENT_RE, IDENT):
+        sys.exit(f"invalid PCM identifier: {IDENT}")
     version = sys.argv[1] if len(sys.argv) > 1 else "1.0.0"
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(root)
@@ -39,13 +47,13 @@ def main():
     os.makedirs(f"{stage}/symbols", exist_ok=True)
     os.makedirs(f"{stage}/footprints/OpenDrone.pretty", exist_ok=True)
     os.makedirs(f"{stage}/3dmodels/OpenDrone.3dshapes", exist_ok=True)
-    os.makedirs(f"{stage}/resources/{IDENT}/datasheet", exist_ok=True)
+    os.makedirs(f"{stage}/resources/datasheet", exist_ok=True)
 
     symbol_text = open("symbol/OpenDrone.kicad_sym").read()
-    datasheet_base = f"{THIRD_PARTY}/resources/{IDENT}/datasheet"
+    datasheet_base = f"{THIRD_PARTY}/resources/{INSTALL_DIR}/datasheet"
     symbol_text = symbol_text.replace("${OPENDRONE_LIB}/datasheet", datasheet_base)
     open(f"{stage}/symbols/OpenDrone.kicad_sym", "w").write(symbol_text)
-    model_base = f"{THIRD_PARTY}/3dmodels/{IDENT}/OpenDrone.3dshapes"
+    model_base = f"{THIRD_PARTY}/3dmodels/{INSTALL_DIR}/OpenDrone.3dshapes"
     for f in os.listdir("footprint/OpenDrone.pretty"):
         s = open(f"footprint/OpenDrone.pretty/{f}").read()
         s = s.replace("${OPENDRONE_LIB}/3dmodel", model_base)
@@ -54,7 +62,7 @@ def main():
         shutil.copy(f"3dmodel/{f}", f"{stage}/3dmodels/OpenDrone.3dshapes/{f}")
     for f in os.listdir("datasheet"):
         if f.endswith(".pdf"):
-            shutil.copy(f"datasheet/{f}", f"{stage}/resources/{IDENT}/datasheet/{f}")
+            shutil.copy(f"datasheet/{f}", f"{stage}/resources/datasheet/{f}")
 
     meta = {
         "$schema": "https://go.kicad.org/pcm/schemas/v1",
@@ -64,11 +72,16 @@ def main():
         "identifier": IDENT,
         "type": "library",
         "author": {"name": "incutec", "contact": {"web": "https://opendrone.be"}},
-        "license": "CERN-OHL-S-2.0",
+        # PCM license is a schema enum without CERN-OHL-S-2.0; LICENSE is unchanged.
+        "license": "CERN-OHL",
         "resources": {"homepage": "https://github.com/OpenDrone-hw/KiCad-Library"},
         "versions": [],
     }
-    json.dump(meta, open(f"{stage}/metadata.json", "w"), indent=2)
+    # The archive's metadata.json carries exactly one version entry, without
+    # the download_* fields; KiCad rejects an archive with an empty list.
+    archive_meta = dict(meta, versions=[
+        {"version": version, "status": "stable", "kicad_version": KICAD_VER}])
+    json.dump(archive_meta, open(f"{stage}/metadata.json", "w"), indent=2)
 
     zip_name = f"OpenDrone-KiCad-Library_{version}.zip"
     zip_path = f"dist/{zip_name}"
