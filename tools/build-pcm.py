@@ -74,7 +74,11 @@ def main():
         "resources": {"homepage": "https://github.com/OpenDrone-hw/KiCad-Library"},
         "versions": [],
     }
-    json.dump(meta, open(f"{stage}/metadata.json", "w"), indent=2)
+    # The archive's metadata.json carries exactly one version entry, without
+    # the download_* fields; KiCad rejects an archive with an empty list.
+    archive_meta = dict(meta, versions=[
+        {"version": version, "status": "stable", "kicad_version": KICAD_VER}])
+    json.dump(archive_meta, open(f"{stage}/metadata.json", "w"), indent=2)
 
     zip_name = f"OpenDrone-KiCad-Library_{version}.zip"
     zip_path = f"dist/{zip_name}"
