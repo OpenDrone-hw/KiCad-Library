@@ -69,7 +69,8 @@ def main():
         "identifier": IDENT,
         "type": "library",
         "author": {"name": "incutec", "contact": {"web": "https://opendrone.be"}},
-        "license": "CERN-OHL-S-2.0",
+        # PCM license is a schema enum without CERN-OHL-S-2.0; LICENSE is unchanged.
+        "license": "CERN-OHL",
         "resources": {"homepage": "https://github.com/OpenDrone-hw/KiCad-Library"},
         "versions": [],
     }
