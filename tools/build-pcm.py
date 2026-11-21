@@ -15,7 +15,10 @@ Then attach the zip to a GitHub release tagged pcm-v<version>.
 """
 import hashlib, json, os, re, shutil, sys, time, zipfile
 
-IDENT = "com_github_opendrone-hw_kicad-library"
+# KiCad PCM rejects the whole repository on refresh unless the identifier
+# matches IDENT_RE: letters, digits, '-' and '.', no underscores.
+IDENT = "com.github.opendrone-hw.kicad-library"
+IDENT_RE = r"^[a-zA-Z][-a-zA-Z0-9.]{0,98}[a-zA-Z0-9]$"
 KICAD_VER = "10.0"
 THIRD_PARTY = "${KICAD10_3RD_PARTY}"
 REPO_RAW = "https://raw.githubusercontent.com/OpenDrone-hw/KiCad-Library/main/pcm"
@@ -31,6 +34,8 @@ def sha256(path):
 
 
 def main():
+    if not re.match(IDENT_RE, IDENT):
+        sys.exit(f"invalid PCM identifier: {IDENT}")
     version = sys.argv[1] if len(sys.argv) > 1 else "1.0.0"
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(root)
